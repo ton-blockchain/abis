@@ -39,6 +39,16 @@ struct (0x9a1f0c09) FrtGramCoordinatorRouteRequest {
     action: uint8
 }
 
+/// Registers an indexed route sequence and optionally sends a success notification.
+struct (0x9a1f0c08) FrtGramCoordinatorRouteRegistration {
+    /// 16-bit route selector.
+    routeIndex: uint16
+    /// 32-bit request identifier.
+    sequence: uint32
+    /// Whether to send the configured success notification.
+    notifySuccess: bool
+}
+
 /// Forwarded request with value, two addresses, and an extensible inline tail.
 struct (0x9a1f0c0a) FrtGramCoordinatorDispatch {
     /// 16-bit operation-group selector.
@@ -67,12 +77,13 @@ struct (0x9a1f0c0d) FrtGramCoordinatorCallback {
     amount: coins
 }
 
-/// Curated internal messages accepted by the coordinator.
+/// Internal message bodies accepted by the coordinator.
 type FrtGramAdapterCoordinatorIncomingMessage =
+    | FrtGramCoordinatorRouteRegistration
     | FrtGramCoordinatorRouteRequest
     | FrtGramCoordinatorCallback
 
-/// Curated internal messages emitted by the coordinator.
+/// Internal message bodies emitted by the coordinator.
 type FrtGramAdapterCoordinatorOutgoingMessage = FrtGramCoordinatorDispatch
 
 /// Return both fixed addresses and the stored amount.

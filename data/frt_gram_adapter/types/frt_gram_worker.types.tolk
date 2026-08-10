@@ -45,6 +45,18 @@ struct FrtGramAdapterWorkerLookupTables {
     amounts: map<uint32, coins>
 }
 
+/// Indexed route state received while preparing a worker step.
+struct (0x9a1f0f03) FrtGramWorkerRouteState {
+    /// 32-bit request identifier used as the lookup key.
+    sequence: uint32
+    /// Address stored for the indexed request.
+    destination: address
+    /// Positive route action value whose predecessor is stored by the worker.
+    action: uint8
+    /// Optional referenced worker state.
+    state: cell?
+}
+
 /// Worker step request received from the orchestrator.
 struct (0x9a1f0f0e) FrtGramWorkerStepRequest {
     /// 32-bit request identifier.
@@ -73,10 +85,12 @@ struct (0x9a1f0f0f) FrtGramWorkerStepResult {
     enabled: bool
 }
 
-/// Curated internal messages accepted by the worker.
-type FrtGramAdapterWorkerIncomingMessage = FrtGramWorkerStepRequest
+/// Internal message bodies accepted by the worker.
+type FrtGramAdapterWorkerIncomingMessage =
+    | FrtGramWorkerRouteState
+    | FrtGramWorkerStepRequest
 
-/// Curated internal messages emitted by the worker.
+/// Internal message bodies emitted by the worker.
 type FrtGramAdapterWorkerOutgoingMessage = FrtGramWorkerStepResult
 
 /// Return the first stored 32-bit value.

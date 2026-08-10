@@ -8,6 +8,33 @@ import "../types/frt_gram_orchestrator.types"
 const ROUTE_DESTINATION = "EQCcSVxmNtWGfJ3lcNXU93YgDIHuAMcTlJBMBbx-NTjFq3rp"
 const COORDINATOR = "EQAOYIpqiuS0blDySfqSPKHhYoJRRV8RxUHGQUw_hw8WUQth"
 
+get fun `test frt gram orchestrator decodes real worker route state`() {
+    // Outgoing body from transaction k1Eqgwvj5mMsAmjhXX/XYv3l/CT+ZO1j7KNdQTfiDA4= at LT 94153320000017.
+    val bodyBoc = "te6cckEBAQEALQAAVZofDwMAACSTgAqc1o8/KzB+VpaTKslWYVXN39tYr3tJMjHMmzwL7nSHYEivB4ii";
+    val body = parseCellFromBase64(bodyBoc);
+    val decoded = FrtGramOrchestratorWorkerRouteState.fromCell(body);
+
+    expect(decoded.sequence).toEqual(9363);
+    expect(decoded.destination).toEqual(
+        address("EQBU5rR5-VmD8rS0mVZKswqubv7axXvaSZGOZNngX3OkO5rt"),
+    );
+    expect(decoded.action).toEqual(2);
+    expect(decoded.state).toBeNull();
+    expect(decoded.toCell().hash()).toEqual(body.hash());
+}
+
+get fun `test frt gram orchestrator decodes real route registration`() {
+    // Outgoing body from transaction k1Eqgwvj5mMsAmjhXX/XYv3l/CT+ZO1j7KNdQTfiDA4= at LT 94153320000017.
+    val bodyBoc = "te6cckEBAQEADQAAFZofDAgAAwAAJJPABgTubg==";
+    val body = parseCellFromBase64(bodyBoc);
+    val decoded = FrtGramOrchestratorRouteRegistration.fromCell(body);
+
+    expect(decoded.routeIndex).toEqual(3);
+    expect(decoded.sequence).toEqual(9363);
+    expect(decoded.notifySuccess).toBeTrue();
+    expect(decoded.toCell().hash()).toEqual(body.hash());
+}
+
 get fun `test frt gram orchestrator decodes real work request`() {
     val bodyBoc = "te6cckEBAQEALQAAVZofDwwAAAFaBoATiSuMxtqwz5O8rhq6nu7EAZA9wBjicpIJgLePxqcYtXiL+EIF";
     val body = parseCellFromBase64(bodyBoc);

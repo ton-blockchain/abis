@@ -73,6 +73,28 @@ struct (0x9a1f0f0f) FrtGramOrchestratorWorkerResult {
     enabled: bool
 }
 
+/// Indexed route state sent while preparing a worker step.
+struct (0x9a1f0f03) FrtGramOrchestratorWorkerRouteState {
+    /// 32-bit request identifier used as the lookup key.
+    sequence: uint32
+    /// Address stored by the worker for the indexed request.
+    destination: address
+    /// Positive route action value whose predecessor is stored by the worker.
+    action: uint8
+    /// Optional referenced worker state.
+    state: cell?
+}
+
+/// Registers an indexed route sequence and optionally requests a success notification.
+struct (0x9a1f0c08) FrtGramOrchestratorRouteRegistration {
+    /// 16-bit route selector.
+    routeIndex: uint16
+    /// 32-bit request identifier.
+    sequence: uint32
+    /// Whether the coordinator should send its configured success notification.
+    notifySuccess: bool
+}
+
 /// Continuation sent from the orchestrator to the dispatcher.
 struct (0x9a1f0f1b) FrtGramOrchestratorContinuation {
     /// GRAM amount assigned to the next continuation.
@@ -87,14 +109,16 @@ struct (0x9a1f0f1b) FrtGramOrchestratorContinuation {
     payload: RemainingBitsAndRefs
 }
 
-/// Curated internal messages accepted by the orchestrator.
+/// Internal message bodies accepted by the orchestrator.
 type FrtGramAdapterOrchestratorIncomingMessage =
     | FrtGramOrchestratorWorkRequest
     | FrtGramOrchestratorWorkerResult
 
-/// Curated internal messages emitted by the orchestrator.
+/// Internal message bodies emitted by the orchestrator.
 type FrtGramAdapterOrchestratorOutgoingMessage =
+    | FrtGramOrchestratorWorkerRouteState
     | FrtGramOrchestratorWorkerDispatch
+    | FrtGramOrchestratorRouteRegistration
     | FrtGramOrchestratorContinuation
 
 /// Return the control address, primary GRAM amount, and first 16-bit value.

@@ -8,6 +8,19 @@ import "../types/frt_gram_executor.types"
 const ROUTE_DESTINATION = "EQCcSVxmNtWGfJ3lcNXU93YgDIHuAMcTlJBMBbx-NTjFq3rp"
 const COORDINATOR = "EQAOYIpqiuS0blDySfqSPKHhYoJRRV8RxUHGQUw_hw8WUQth"
 
+get fun `test frt gram executor decodes real pool refresh request`() {
+    // Outgoing body from transaction 31Yf+2wTk7ZttmNt1D3MtvtIrHykCmdB34J6RXv0PO4=.
+    val bodyBoc = "te6cckEBAQEABgAACJofEAQ+eRQ5";
+    val body = parseCellFromBase64(bodyBoc);
+    val decoded = FrtGramExecutorRefreshPoolData.fromCell(body);
+    var raw = body.beginParse();
+
+    expect(raw.loadUint(32)).toEqual(0x9a1f1004);
+    expect(raw.remainingBitsCount()).toEqual(0);
+    expect(raw.remainingRefsCount()).toEqual(0);
+    expect(decoded.toCell().hash()).toEqual(body.hash());
+}
+
 get fun `test frt gram executor decodes real execution request`() {
     val bodyBoc = "te6cckEBAgEAXAABCJofEAkBAKZQFipcuASVAvkAwADmCKaorktG5Q8kn6kjyh4WKCUUVfEcVBxkFMP4cPFlGAE4krjMbasM+TvK4aup7uxAGQPcAY4nKSCYC3j8anGLVgAGAAACtZdTSnQ=";
     val body = parseCellFromBase64(bodyBoc);

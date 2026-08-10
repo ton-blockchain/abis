@@ -29,6 +29,9 @@ struct FrtGramAdapterExecutorStorage {
     registry2: cell?
 }
 
+/// Opcode-only request that refreshes cached pool data before execution.
+struct (0x9a1f1004) FrtGramExecutorRefreshPoolData {}
+
 /// Execution request delivered through a referenced payload cell.
 struct (0x9a1f1009) FrtGramExecutorExecute {
     /// Referenced execution payload.
@@ -85,12 +88,13 @@ struct (0x4185ff6a) FrtGramExecutorExecutionEvent {
     payload: RemainingBitsAndRefs
 }
 
-/// Curated internal messages accepted by the executor.
+/// Internal message bodies accepted by the executor.
 type FrtGramAdapterExecutorIncomingMessage =
+    | FrtGramExecutorRefreshPoolData
     | FrtGramExecutorExecute
     | FrtGramExecutorPoolDataResponse
 
-/// Curated messages emitted by the executor.
+/// Internal message bodies emitted by the executor.
 type FrtGramAdapterExecutorOutgoingMessage =
     | FrtGramExecutorPoolDataRequest
     | FrtGramExecutorJettonTransfer

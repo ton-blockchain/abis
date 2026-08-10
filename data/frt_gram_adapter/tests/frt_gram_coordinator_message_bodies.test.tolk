@@ -7,6 +7,18 @@ import "../types/frt_gram_coordinator.types"
 
 const ROUTE_DESTINATION = "EQCcSVxmNtWGfJ3lcNXU93YgDIHuAMcTlJBMBbx-NTjFq3rp"
 
+get fun `test frt gram coordinator decodes real route registration`() {
+    // Outgoing body from transaction k1Eqgwvj5mMsAmjhXX/XYv3l/CT+ZO1j7KNdQTfiDA4= at LT 94153320000017.
+    val bodyBoc = "te6cckEBAQEADQAAFZofDAgAAwAAJJPABgTubg==";
+    val body = parseCellFromBase64(bodyBoc);
+    val decoded = FrtGramCoordinatorRouteRegistration.fromCell(body);
+
+    expect(decoded.routeIndex).toEqual(3);
+    expect(decoded.sequence).toEqual(9363);
+    expect(decoded.notifySuccess).toBeTrue();
+    expect(decoded.toCell().hash()).toEqual(body.hash());
+}
+
 get fun `test frt gram coordinator decodes real route request`() {
     val bodyBoc = "te6cckEBAQEADQAAFpofDAkAAwAAAVoGH27VwQ==";
     val body = parseCellFromBase64(bodyBoc);
