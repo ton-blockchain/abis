@@ -6,6 +6,7 @@ contract WalletV5r1 {
     storage: WalletV5r1Storage
     incomingMessages: WalletV5r1IncomingMessage
     incomingExternal: WalletV5r1IncomingExternalMessage
+    outgoingMessages: WalletV5r1OutgoingMessage
     forceAbiExport: WalletV5r1ExtraAction
     thrownErrors: Errors
 }
@@ -97,6 +98,15 @@ type WalletV5r1IncomingMessage =
 
 /// External-in message bodies accepted by Wallet V5 R1.
 type WalletV5r1IncomingExternalMessage = WalletSignedExternalV5r1
+
+/// STON.fi excess notification carried in a wallet-created self-message.
+struct (0x76dbd306) StonfiExcesses {
+    /// Protocol payload retained losslessly because its fields are not publicly specified.
+    payload: RemainingBitsAndRefs
+}
+
+/// Application message bodies observed in Wallet V5 R1 action lists.
+type WalletV5r1OutgoingMessage = StonfiExcesses
 
 /// Wallet V5 R1 exit-code catalog from the source implementation.
 enum Errors {
