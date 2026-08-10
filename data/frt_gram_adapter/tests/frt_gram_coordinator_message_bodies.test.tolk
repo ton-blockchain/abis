@@ -6,6 +6,7 @@ import "../types/frt_gram_coordinator.types"
 // pinned to blocks 83536149-83536151.
 
 const ROUTE_DESTINATION = "EQCcSVxmNtWGfJ3lcNXU93YgDIHuAMcTlJBMBbx-NTjFq3rp"
+const VALUE_REQUESTER = "EQCwjhQdCRwLWC5VFCWi5dVvS7Y42w0eyoGEmIiok1Ed1m01"
 
 get fun `test frt gram coordinator decodes real route registration`() {
     // Outgoing body from transaction k1Eqgwvj5mMsAmjhXX/XYv3l/CT+ZO1j7KNdQTfiDA4= at LT 94153320000017.
@@ -54,5 +55,25 @@ get fun `test frt gram coordinator decodes real completion callback`() {
 
     expect(decoded.success).toBeTrue();
     expect(decoded.amount).toEqual(408942250);
+    expect(decoded.toCell().hash()).toEqual(body.hash());
+}
+
+get fun `test frt gram coordinator decodes real value request`() {
+    val body = parseCellFromBase64("te6cckEBAQEACwAAEZofDAxA7hBqKB1/rLY=");
+    val decoded = FrtGramCoordinatorValueRequest.fromCell(body);
+
+    expect(decoded.amount).toEqual(249628322);
+    expect(decoded.toCell().hash()).toEqual(body.hash());
+}
+
+get fun `test frt gram coordinator decodes real value dispatch`() {
+    val body = parseCellFromBase64("te6cckEBAQEAUgAAn5ofDA5A7hBqKAFhHCg6EjgWsFyqKEtFy6rel2xxtho9lQMJMRFRJqI7rJKgXyAQAsI4UHQkcC1guVRQlouXVb0u2ONsNHsqBhJiIqJNRHdbgnYHow==");
+    val decoded = FrtGramCoordinatorValueDispatch.fromCell(body);
+
+    expect(decoded.requestedAmount).toEqual(249628322);
+    expect(decoded.requester).toEqual(address(VALUE_REQUESTER));
+    expect(decoded.configuredAmount).toEqual(2500000000);
+    expect(decoded.responseAddress).toEqual(address(VALUE_REQUESTER));
+    expect(decoded.enabled).toBeTrue();
     expect(decoded.toCell().hash()).toEqual(body.hash());
 }

@@ -1,7 +1,7 @@
 [project]
 name = "frt-gram-adapter"
 category = "TON routed exchange contracts"
-description = "Five ForTON contracts that coordinate and execute a routed Jetton exchange through a STON.fi pool."
+description = "ForTON contracts that coordinate and execute routed Jetton exchanges through STON.fi pools."
 
 [contracts.FrtGramAdapterCoordinator]
 display_name = "FRT/GRAM Adapter Coordinator"
@@ -57,3 +57,25 @@ known_addresses = ["EQAG_1ccmTW0aBW97sKa0xEqMJuY-INSAG9JQPYsVW473RLf"]
 address = "EQAG_1ccmTW0aBW97sKa0xEqMJuY-INSAG9JQPYsVW473RLf"
 network = "mainnet"
 block_seqno = 83536151
+
+[contracts.FrtGramSwapRelay]
+display_name = "FRT/GRAM Swap Relay"
+types = "types/frt_gram_swap_relay.types.tolk"
+hashes = ["533695fd5bdbcb202f3b1143ec008b76043447b08a17448ed2479a7508ab8638"]
+known_addresses = ["EQChjaWeFqRvvFhPIQ9GB6yfg4Wsr4TGCt73yiYEquIC-2k6"]
+
+[contracts.FrtGramSwapRelay.instances.mainnet]
+address = "EQChjaWeFqRvvFhPIQ9GB6yfg4Wsr4TGCt73yiYEquIC-2k6"
+network = "mainnet"
+block_seqno = 83536784
+
+[contracts.FrtGramSwapExecutor]
+display_name = "FRT/GRAM Swap Executor"
+types = "types/frt_gram_swap_executor.types.tolk"
+hashes = ["e46c2316b3543b5a64e87bf7ce1f430ec76b94b7e524f2e85b8737de25de643f"]
+known_addresses = ["EQDNGuEuxoPuw6XafMT-HWJ0lDUHrITLty9hDYru2CKmt_2L"]
+
+[contracts.FrtGramSwapExecutor.instances.mainnet]
+address = "EQDNGuEuxoPuw6XafMT-HWJ0lDUHrITLty9hDYru2CKmt_2L"
+network = "mainnet"
+block_seqno = 83536784

@@ -85,6 +85,21 @@ fun FrtGramAdapterCoordinator.sendFrtGramCoordinatorRouteRequest(
     return net.send(from, genericMsg);
 }
 
+fun FrtGramAdapterCoordinator.sendFrtGramCoordinatorValueRequest(
+    self,
+    from: address,
+    amount: coins,
+    config: SendParams = {},
+): SendResultList {
+    val genericMsg = createMessage({
+        bounce: config.bounce,
+        value: config.value,
+        dest: self.address,
+        body: FrtGramCoordinatorValueRequest { amount },
+    });
+    return net.send(from, genericMsg);
+}
+
 fun FrtGramAdapterCoordinator.sendFrtGramCoordinatorCallback(
     self,
     from: address,

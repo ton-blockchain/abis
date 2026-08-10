@@ -77,14 +77,37 @@ struct (0x9a1f0c0d) FrtGramCoordinatorCallback {
     amount: coins
 }
 
+/// Authorized value request forwarded through the ForTON route chain.
+struct (0x9a1f0c0c) FrtGramCoordinatorValueRequest {
+    /// Amount selected for the forwarded request.
+    amount: coins
+}
+
+/// Value request enriched with coordinator routing state for the dispatcher.
+struct (0x9a1f0c0e) FrtGramCoordinatorValueDispatch {
+    /// Amount selected by the authorized requester.
+    requestedAmount: coins
+    /// Address that initiated the request.
+    requester: address
+    /// Amount configured in coordinator storage.
+    configuredAmount: coins
+    /// Destination used for the routed response.
+    responseAddress: address
+    /// Stored routing-mode flag.
+    enabled: bool
+}
+
 /// Internal message bodies accepted by the coordinator.
 type FrtGramAdapterCoordinatorIncomingMessage =
     | FrtGramCoordinatorRouteRegistration
     | FrtGramCoordinatorRouteRequest
+    | FrtGramCoordinatorValueRequest
     | FrtGramCoordinatorCallback
 
 /// Internal message bodies emitted by the coordinator.
-type FrtGramAdapterCoordinatorOutgoingMessage = FrtGramCoordinatorDispatch
+type FrtGramAdapterCoordinatorOutgoingMessage =
+    | FrtGramCoordinatorDispatch
+    | FrtGramCoordinatorValueDispatch
 
 /// Return both fixed addresses and the stored amount.
 get fun info(): (address, address, coins) {
