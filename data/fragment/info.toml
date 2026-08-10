@@ -1,7 +1,7 @@
 [project]
 name = "fragment"
-category = "Telegram NFT auction contracts"
-description = "Telegram Fragment TeleMint contracts for username and anonymous-number collections and NFT items."
+category = "Telegram marketplace contracts"
+description = "Telegram Fragment contracts for collectible items, marketplace proxies, and checkout payments."
 
 [[links]]
 kind = "website"
@@ -97,3 +97,14 @@ known_addresses = ["EQCpwa0v6lvGA01uKGfsW1CK1Nd59aO_xVFGGHPy7JTghHTB"]
 [contracts.FragmentMarketappProxyJetton.instances.mainnet]
 address = "EQCpwa0v6lvGA01uKGfsW1CK1Nd59aO_xVFGGHPy7JTghHTB"
 network = "mainnet"
+
+[contracts.FragmentCheckoutPaymentProxy]
+display_name = "Fragment Checkout Payment Proxy"
+types = "checkout_payment_proxy/types/fragment_checkout_payment_proxy.types.tolk"
+hashes = ["a7c2e6591f823692dcf4ccdb90a6d2ac83ec9b513a4e7076249e0a056f0aad32"]
+known_addresses = ["EQBELNs-kCde5ynY1RBv3Dtui5rOnP2i00WjQroPoLMKZ8aM"]
+
+[contracts.FragmentCheckoutPaymentProxy.instances.mainnet]
+address = "EQBELNs-kCde5ynY1RBv3Dtui5rOnP2i00WjQroPoLMKZ8aM"
+network = "mainnet"
+block_seqno = 83536223
