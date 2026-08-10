@@ -1,0 +1,56 @@
+[project]
+name = "MarketApp"
+category = "NFT rental contracts"
+description = "MarketApp contracts that hold an NFT during listing, rental, extension, completion, cancellation, and direct-sale flows."
+
+[[links]]
+kind = "website"
+title = "MarketApp"
+url = "https://marketapp.ws/"
+
+[[links]]
+kind = "docs"
+title = "MarketApp API documentation"
+url = "https://api.marketapp.org/docs"
+
+[[links]]
+kind = "docs"
+title = "MarketApp Rent v2r1 release"
+url = "https://t.me/marketapp_en/48"
+
+[[links]]
+kind = "docs"
+title = "MarketApp Rent v2r2 release"
+url = "https://t.me/marketapp_en/49"
+
+[contracts.MarketAppNftRentalV2R2Revision1]
+display_name = "MarketApp NFT Rental v2r2 Revision 1"
+types = "nft_rental_v2r2_revision1/types/marketapp_nft_rental_v2r2_revision1.types.tolk"
+hashes = ["42c6cb85fc037291674a2c61a0dae6756df24f39b6ec8bca463b79fb7564d141"]
+known_addresses = [
+    "EQAleBMirXy3ymMv-uXiR3DyiuSeIT8x2kst8JMAhxN0B3tO",
+    "EQADoXlMFWaZq-B_JCd_B6pFjruAxLxqm-DYcIfPw9Ko1gUX",
+    "EQDnm-d-F94XiF1wOvm1nczVQKvwm1HY1xd0SGPEA1DSfQC_",
+    "EQCvoAVnXXXzwlvz7EKgGMNfbvd9QT0Ukq8Vwkgfx06mOpQT",
+]
+
+[contracts.MarketAppNftRentalV2R2Revision1.instances.listing]
+address = "EQAleBMirXy3ymMv-uXiR3DyiuSeIT8x2kst8JMAhxN0B3tO"
+network = "mainnet"
+block_seqno = 83585844
+code_hash = "42c6cb85fc037291674a2c61a0dae6756df24f39b6ec8bca463b79fb7564d141"
+
+[contracts.MarketAppNftRentalV2R2Revision2]
+display_name = "MarketApp NFT Rental v2r2 Revision 2"
+types = "nft_rental_v2r2_revision2/types/marketapp_nft_rental_v2r2_revision2.types.tolk"
+hashes = ["7f14b7a4db7caaf7632ce0aa187968bf2cef7d7fca83f5232aa349b9868bc835"]
+known_addresses = [
+    "EQBqt5HnOibLNv1xrRTV7RF_Uqgl3EphUFs6L1LtVY4L-5Gb",
+    "EQCbJuc-ufVTTN1p6pktyacOHJeMvUv0W4q5Ntx6b0YlyH7X",
+]
+
+[contracts.MarketAppNftRentalV2R2Revision2.instances.derived_rental]
+address = "EQBqt5HnOibLNv1xrRTV7RF_Uqgl3EphUFs6L1LtVY4L-5Gb"
+network = "mainnet"
+block_seqno = 83585844
+code_hash = "7f14b7a4db7caaf7632ce0aa187968bf2cef7d7fca83f5232aa349b9868bc835"
