@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **276 contract entries**, **325 unique contract code hashes**, and **324 unique known contract addresses**.
+Current catalog size: **278 contract entries**, **327 unique contract code hashes**, and **326 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1267 unique opcode prefixes** and **588 unique get-method names**.
+Across the generated public catalog, the repository declares **1281 unique opcode prefixes** and **592 unique get-method names**.
 
 Each curated project group normally includes:
 
@@ -25,11 +25,12 @@ Each curated project group normally includes:
 | TON Verifier | On-chain source registry, verifier registry, and per-source verification records. | `VerifierSourcesRegistry`, `VerifierRegistry`, `VerifierSourceItem` |
 | Wallets | Standard wallet generations, highload wallets, vesting/lockup wallets, preprocessed wallet, and multisig v2. | `WalletV1r1`, `WalletV1r2`, `WalletV1r3`, `WalletV2r1`, `WalletV2r2`, `WalletV3r1`, `WalletV3r2`, `WalletV4r1`, `WalletV4r2`, `WalletV5r1`, `WalletHighloadV1r1`, `WalletHighloadV1r2`, `WalletHighloadV2`, `WalletHighloadV2r1`, `WalletHighloadV2r2`, `WalletHighloadV3r1`, `WalletPreprocessedV2`, `WalletVesting`, `LockupUniversal`, `LockupVesting`, `MultisigV2`, `MultisigOrderV2` |
 | Jettons | TEP-74, TEP-89, stablecoin, Notcoin, mintless, Jetton 2.0, and Scaled UI jetton interfaces. | `JettonV1Master`, `JettonV100Master`, `JettonV1Wallet`, `DiscoverableJettonMaster`, `DiscoverableJettonWallet`, `JettonDiscovery`, `StablecoinMaster`, `StablecoinWallet`, `JettonNotcoinMaster`, `JettonNotcoinWallet`, `Jetton2Master`, `Jetton2Wallet`, `MintlessJettonMaster`, `MintlessJettonWallet`, `ScaledUiJettonMaster` |
+| Jetton Vesting | Owner-controlled vesting contract that releases vested Jettons through standard wallet transfers. | `JettonVesting` |
 | pTON | pTON v2.1 minter and wallet contracts for tokenized GRAM. | `PtonMinterV2`, `PtonWalletV2` |
 | NFTs | TEP-62, TEP-64, TEP-66, and Getgems NFT v2 collection/item variants. | `NftV1Collection`, `NftV1Item`, `NftV1EditableItem`, `NftV2Collection`, `NftV2Item`, `NftV2EditableItem`, `GetgemsNftCollectionV2`, `GetgemsNftItemV2`, `GetgemsNftEditableItemV2` |
 | SBTs | TEP-85 SBT item contracts. | `SbtV1Item`, `SbtV1Single` |
 | TON DNS | TON DNS root resolver, `.ton` collection resolver, and `.ton` domain item contracts. | `DnsRootResolver`, `DnsCollection`, `DnsDomainItem` |
-| TON Storage | TON Storage provider and per-file storage agreement contracts. | `StorageProvider`, `StorageContract` |
+| TON Storage | TON Storage provider, per-file agreement, and aggregate storage contracts. | `StorageProvider`, `StorageContract`, `StorageAggregateContract` |
 
 ### DEX, AMM, And Trading Protocols
 
