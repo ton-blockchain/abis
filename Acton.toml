@@ -9,11 +9,17 @@ src = "data/locker/testdata/Locker.boc"
 types = "data/locker/types/locker.types.tolk"
 depends = []
 
+[contracts.Locker.wrappers.tolk]
+output-dir = "data/locker/wrappers"
+
 [contracts.LockerBill]
 display-name = "LockerBill"
 src = "data/locker/testdata/LockerBill.boc"
 types = "data/locker/types/locker_bill.types.tolk"
 depends = []
+
+[contracts.LockerBill.wrappers.tolk]
+output-dir = "data/locker/wrappers"
 
 [contracts.LockupVesting]
 display-name = "LockupVesting"
@@ -21,11 +27,17 @@ src = "data/wallets/lockup_vesting/testdata/LockupVesting.boc"
 types = "data/wallets/lockup_vesting/types/lockup_vesting.types.tolk"
 depends = []
 
+[contracts.LockupVesting.wrappers.tolk]
+output-dir = "data/wallets/lockup_vesting/wrappers"
+
 [contracts.LockupUniversal]
 display-name = "LockupUniversal"
 src = "data/wallets/lockup_universal/testdata/LockupUniversal.boc"
 types = "data/wallets/lockup_universal/types/lockup_universal.types.tolk"
 depends = []
+
+[contracts.LockupUniversal.wrappers.tolk]
+output-dir = "data/wallets/lockup_universal/wrappers"
 
 [contracts.WalletVesting]
 display-name = "WalletVesting"
@@ -33,11 +45,17 @@ src = "data/wallets/wallet_vesting/testdata/WalletVesting.boc"
 types = "data/wallets/wallet_vesting/types/wallet_vesting.types.tolk"
 depends = []
 
+[contracts.WalletVesting.wrappers.tolk]
+output-dir = "data/wallets/wallet_vesting/wrappers"
+
 [contracts.WalletV1r1]
 display-name = "WalletV1r1"
 src = "data/wallets/w1r1/testdata/WalletV1r1.boc"
 types = "data/wallets/w1r1/types/wallet_v1r1.types.tolk"
 depends = []
+
+[contracts.WalletV1r1.wrappers.tolk]
+output-dir = "data/wallets/w1r1/wrappers"
 
 [contracts.WalletV1r2]
 display-name = "WalletV1r2"
@@ -45,11 +63,17 @@ src = "data/wallets/w1r2/testdata/WalletV1r2.boc"
 types = "data/wallets/w1r2/types/wallet_v1r2.types.tolk"
 depends = []
 
+[contracts.WalletV1r2.wrappers.tolk]
+output-dir = "data/wallets/w1r2/wrappers"
+
 [contracts.WalletV1r3]
 display-name = "WalletV1r3"
 src = "data/wallets/w1r3/testdata/WalletV1r3.boc"
 types = "data/wallets/w1r3/types/wallet_v1r3.types.tolk"
 depends = []
+
+[contracts.WalletV1r3.wrappers.tolk]
+output-dir = "data/wallets/w1r3/wrappers"
 
 [contracts.WalletV2r1]
 display-name = "WalletV2r1"
@@ -57,11 +81,17 @@ src = "data/wallets/w2r1/testdata/WalletV2r1.boc"
 types = "data/wallets/w2r1/types/wallet_v2r1.types.tolk"
 depends = []
 
+[contracts.WalletV2r1.wrappers.tolk]
+output-dir = "data/wallets/w2r1/wrappers"
+
 [contracts.WalletV2r2]
 display-name = "WalletV2r2"
 src = "data/wallets/w2r2/testdata/WalletV2r2.boc"
 types = "data/wallets/w2r2/types/wallet_v2r2.types.tolk"
 depends = []
+
+[contracts.WalletV2r2.wrappers.tolk]
+output-dir = "data/wallets/w2r2/wrappers"
 
 [contracts.WalletV3r1]
 display-name = "WalletV3r1"
@@ -69,11 +99,17 @@ src = "data/wallets/w3r1/testdata/WalletV3r1.boc"
 types = "data/wallets/w3r1/types/wallet_v3r1.types.tolk"
 depends = []
 
+[contracts.WalletV3r1.wrappers.tolk]
+output-dir = "data/wallets/w3r1/wrappers"
+
 [contracts.WalletV3r2]
 display-name = "WalletV3r2"
 src = "data/wallets/w3r2/testdata/WalletV3r2.boc"
 types = "data/wallets/w3r2/types/wallet_v3r2.types.tolk"
 depends = []
+
+[contracts.WalletV3r2.wrappers.tolk]
+output-dir = "data/wallets/w3r2/wrappers"
 
 [contracts.WalletV4r1]
 display-name = "WalletV4r1"
@@ -81,11 +117,17 @@ src = "data/wallets/w4r1/testdata/WalletV4r1.boc"
 types = "data/wallets/w4r1/types/wallet_v4r1.types.tolk"
 depends = []
 
+[contracts.WalletV4r1.wrappers.tolk]
+output-dir = "data/wallets/w4r1/wrappers"
+
 [contracts.WalletV4r2]
 display-name = "WalletV4r2"
 src = "data/wallets/w4r2/testdata/WalletV4r2.boc"
 types = "data/wallets/w4r2/types/wallet_v4r2.types.tolk"
 depends = []
+
+[contracts.WalletV4r2.wrappers.tolk]
+output-dir = "data/wallets/w4r2/wrappers"
 
 [contracts.WalletV5r1]
 display-name = "WalletV5r1"
@@ -93,11 +135,17 @@ src = "data/wallets/w5r1/testdata/WalletV5r1.boc"
 types = "data/wallets/w5r1/types/wallet_v5r1.types.tolk"
 depends = []
 
+[contracts.WalletV5r1.wrappers.tolk]
+output-dir = "data/wallets/w5r1/wrappers"
+
 [contracts.WalletHighloadV2]
 display-name = "WalletHighloadV2"
 src = "data/wallets/highload_v2/testdata/WalletHighloadV2.boc"
 types = "data/wallets/highload_v2/types/wallet_highload_v2.types.tolk"
 depends = []
+
+[contracts.WalletHighloadV2.wrappers.tolk]
+output-dir = "data/wallets/highload_v2/wrappers"
 
 [contracts.WalletHighloadV1r1]
 display-name = "WalletHighloadV1r1"
@@ -105,11 +153,17 @@ src = "data/wallets/highload_v1r1/testdata/WalletHighloadV1r1.boc"
 types = "data/wallets/highload_v1r1/types/wallet_highload_v1r1.types.tolk"
 depends = []
 
+[contracts.WalletHighloadV1r1.wrappers.tolk]
+output-dir = "data/wallets/highload_v1r1/wrappers"
+
 [contracts.WalletHighloadV1r2]
 display-name = "WalletHighloadV1r2"
 src = "data/wallets/highload_v1r2/testdata/WalletHighloadV1r2.boc"
 types = "data/wallets/highload_v1r2/types/wallet_highload_v1r2.types.tolk"
 depends = []
+
+[contracts.WalletHighloadV1r2.wrappers.tolk]
+output-dir = "data/wallets/highload_v1r2/wrappers"
 
 [contracts.WalletHighloadV2r1]
 display-name = "WalletHighloadV2r1"
@@ -117,11 +171,17 @@ src = "data/wallets/highload_v2r1/testdata/WalletHighloadV2r1.boc"
 types = "data/wallets/highload_v2r1/types/wallet_highload_v2r1.types.tolk"
 depends = []
 
+[contracts.WalletHighloadV2r1.wrappers.tolk]
+output-dir = "data/wallets/highload_v2r1/wrappers"
+
 [contracts.WalletHighloadV2r2]
 display-name = "WalletHighloadV2r2"
 src = "data/wallets/highload_v2r2/testdata/WalletHighloadV2r2.boc"
 types = "data/wallets/highload_v2r2/types/wallet_highload_v2r2.types.tolk"
 depends = []
+
+[contracts.WalletHighloadV2r2.wrappers.tolk]
+output-dir = "data/wallets/highload_v2r2/wrappers"
 
 [contracts.WalletHighloadV3r1]
 display-name = "WalletHighloadV3r1"
@@ -129,11 +189,17 @@ src = "data/wallets/highload_v3r1/testdata/WalletHighloadV3r1.boc"
 types = "data/wallets/highload_v3r1/types/wallet_highload_v3r1.types.tolk"
 depends = []
 
+[contracts.WalletHighloadV3r1.wrappers.tolk]
+output-dir = "data/wallets/highload_v3r1/wrappers"
+
 [contracts.WalletPreprocessedV2]
 display-name = "WalletPreprocessedV2"
 src = "data/wallets/wallet_preprocessed_v2/testdata/WalletPreprocessedV2.boc"
 types = "data/wallets/wallet_preprocessed_v2/types/wallet_preprocessed_v2.types.tolk"
 depends = []
+
+[contracts.WalletPreprocessedV2.wrappers.tolk]
+output-dir = "data/wallets/wallet_preprocessed_v2/wrappers"
 
 [contracts.MultisigV2]
 display-name = "MultisigV2"
@@ -141,11 +207,17 @@ src = "data/wallets/multisig_v2/testdata/MultisigV2.boc"
 types = "data/wallets/multisig_v2/types/multisig_v2.types.tolk"
 depends = []
 
+[contracts.MultisigV2.wrappers.tolk]
+output-dir = "data/wallets/multisig_v2/wrappers"
+
 [contracts.MultisigOrderV2]
 display-name = "MultisigOrderV2"
 src = "data/wallets/multisig_v2/testdata/MultisigOrderV2.boc"
 types = "data/wallets/multisig_v2/types/multisig_order_v2.types.tolk"
 depends = []
+
+[contracts.MultisigOrderV2.wrappers.tolk]
+output-dir = "data/wallets/multisig_v2/wrappers"
 
 [contracts.JettonV1Master]
 display-name = "JettonV1Master"
@@ -153,11 +225,17 @@ src = "data/jettons/jetton_1/testdata/JettonV1Master.boc"
 types = "data/jettons/jetton_1/types/jetton_v1_master.types.tolk"
 depends = []
 
+[contracts.JettonV1Master.wrappers.tolk]
+output-dir = "data/jettons/jetton_1/wrappers"
+
 [contracts.JettonV100Master]
 display-name = "JettonV100Master"
 src = "data/jettons/jetton_1/testdata/JettonV100Master.boc"
 types = "data/jettons/jetton_1/types/jetton_v1_00_master.types.tolk"
 depends = []
+
+[contracts.JettonV100Master.wrappers.tolk]
+output-dir = "data/jettons/jetton_1/wrappers"
 
 [contracts.JettonV1Wallet]
 display-name = "JettonV1Wallet"
@@ -165,11 +243,17 @@ src = "data/jettons/jetton_1/testdata/JettonV1Wallet.boc"
 types = "data/jettons/jetton_1/types/jetton_v1_wallet.types.tolk"
 depends = []
 
+[contracts.JettonV1Wallet.wrappers.tolk]
+output-dir = "data/jettons/jetton_1/wrappers"
+
 [contracts.DiscoverableJettonMaster]
 display-name = "DiscoverableJettonMaster"
 src = "data/jettons/discoverable_jetton/testdata/DiscoverableJettonMaster.boc"
 types = "data/jettons/discoverable_jetton/types/discoverable_jetton_master.types.tolk"
 depends = []
+
+[contracts.DiscoverableJettonMaster.wrappers.tolk]
+output-dir = "data/jettons/discoverable_jetton/wrappers"
 
 [contracts.DiscoverableJettonWallet]
 display-name = "DiscoverableJettonWallet"
@@ -177,11 +261,17 @@ src = "data/jettons/discoverable_jetton/testdata/DiscoverableJettonWallet.boc"
 types = "data/jettons/discoverable_jetton/types/discoverable_jetton_wallet.types.tolk"
 depends = []
 
+[contracts.DiscoverableJettonWallet.wrappers.tolk]
+output-dir = "data/jettons/discoverable_jetton/wrappers"
+
 [contracts.JettonDiscovery]
 display-name = "JettonDiscovery"
 src = "data/jettons/discoverable_jetton/testdata/JettonDiscovery.boc"
 types = "data/jettons/discoverable_jetton/types/jetton_discovery.types.tolk"
 depends = []
+
+[contracts.JettonDiscovery.wrappers.tolk]
+output-dir = "data/jettons/discoverable_jetton/wrappers"
 
 [contracts.StablecoinMaster]
 display-name = "StablecoinMaster"
@@ -189,11 +279,17 @@ src = "data/jettons/stablecoin_1_04/testdata/StablecoinMaster.boc"
 types = "data/jettons/stablecoin_1_04/types/stablecoin_master.types.tolk"
 depends = []
 
+[contracts.StablecoinMaster.wrappers.tolk]
+output-dir = "data/jettons/stablecoin_1_04/wrappers"
+
 [contracts.StablecoinWallet]
 display-name = "StablecoinWallet"
 src = "data/jettons/stablecoin_1_04/testdata/StablecoinWallet.boc"
 types = "data/jettons/stablecoin_1_04/types/stablecoin_wallet.types.tolk"
 depends = []
+
+[contracts.StablecoinWallet.wrappers.tolk]
+output-dir = "data/jettons/stablecoin_1_04/wrappers"
 
 [contracts.JettonNotcoinMaster]
 display-name = "JettonNotcoinMaster"
@@ -201,11 +297,17 @@ src = "data/jettons/jetton_1_2_notcoin/testdata/JettonNotcoinMaster.boc"
 types = "data/jettons/jetton_1_2_notcoin/types/jetton_notcoin_master.types.tolk"
 depends = []
 
+[contracts.JettonNotcoinMaster.wrappers.tolk]
+output-dir = "data/jettons/jetton_1_2_notcoin/wrappers"
+
 [contracts.JettonNotcoinWallet]
 display-name = "JettonNotcoinWallet"
 src = "data/jettons/jetton_1_2_notcoin/testdata/JettonNotcoinWallet.boc"
 types = "data/jettons/jetton_1_2_notcoin/types/jetton_notcoin_wallet.types.tolk"
 depends = []
+
+[contracts.JettonNotcoinWallet.wrappers.tolk]
+output-dir = "data/jettons/jetton_1_2_notcoin/wrappers"
 
 [contracts.Jetton2Master]
 display-name = "Jetton2Master"
@@ -213,11 +315,17 @@ src = "data/jettons/jetton_2_0/testdata/Jetton2Master.boc"
 types = "data/jettons/jetton_2_0/types/jetton_2_master.types.tolk"
 depends = []
 
+[contracts.Jetton2Master.wrappers.tolk]
+output-dir = "data/jettons/jetton_2_0/wrappers"
+
 [contracts.Jetton2Wallet]
 display-name = "Jetton2Wallet"
 src = "data/jettons/jetton_2_0/testdata/Jetton2Wallet.boc"
 types = "data/jettons/jetton_2_0/types/jetton_2_wallet.types.tolk"
 depends = []
+
+[contracts.Jetton2Wallet.wrappers.tolk]
+output-dir = "data/jettons/jetton_2_0/wrappers"
 
 [contracts.JettonMinter]
 display-name = "JettonMinter"
@@ -225,11 +333,17 @@ src = "data/jettons/jetton_2_1/testdata/JettonMinter.boc"
 types = "data/jettons/jetton_2_1/types/jetton_minter.types.tolk"
 depends = []
 
+[contracts.JettonMinter.wrappers.tolk]
+output-dir = "data/jettons/jetton_2_1/wrappers"
+
 [contracts.JettonWallet]
 display-name = "JettonWallet"
 src = "data/jettons/jetton_2_1/testdata/JettonWallet.boc"
 types = "data/jettons/jetton_2_1/types/jetton_wallet.types.tolk"
 depends = []
+
+[contracts.JettonWallet.wrappers.tolk]
+output-dir = "data/jettons/jetton_2_1/wrappers"
 
 [contracts.MintlessJettonMaster]
 display-name = "MintlessJettonMaster"
@@ -237,11 +351,17 @@ src = "data/jettons/mintless_1_0/testdata/MintlessJettonMaster.boc"
 types = "data/jettons/mintless_1_0/types/mintless_master.types.tolk"
 depends = []
 
+[contracts.MintlessJettonMaster.wrappers.tolk]
+output-dir = "data/jettons/mintless_1_0/wrappers"
+
 [contracts.MintlessJettonWallet]
 display-name = "MintlessJettonWallet"
 src = "data/jettons/mintless_1_0/testdata/MintlessJettonWallet.boc"
 types = "data/jettons/mintless_1_0/types/mintless_wallet.types.tolk"
 depends = []
+
+[contracts.MintlessJettonWallet.wrappers.tolk]
+output-dir = "data/jettons/mintless_1_0/wrappers"
 
 [contracts.ScaledUiJettonMaster]
 display-name = "ScaledUiJettonMaster"
@@ -249,11 +369,17 @@ src = "data/jettons/scaled_ui/testdata/ScaledUiJettonMaster.boc"
 types = "data/jettons/scaled_ui/types/scaled_ui_jetton_master.types.tolk"
 depends = []
 
+[contracts.ScaledUiJettonMaster.wrappers.tolk]
+output-dir = "data/jettons/scaled_ui/wrappers"
+
 [contracts.NftV1Collection]
 display-name = "NftV1Collection"
 src = "data/nfts/nft_1/testdata/NftV1Collection.boc"
 types = "data/nfts/nft_1/types/nft_v1_collection.types.tolk"
 depends = []
+
+[contracts.NftV1Collection.wrappers.tolk]
+output-dir = "data/nfts/nft_1/wrappers"
 
 [contracts.NftV1Item]
 display-name = "NftV1Item"
@@ -261,11 +387,17 @@ src = "data/nfts/nft_1/testdata/NftV1Item.boc"
 types = "data/nfts/nft_1/types/nft_v1_item.types.tolk"
 depends = []
 
+[contracts.NftV1Item.wrappers.tolk]
+output-dir = "data/nfts/nft_1/wrappers"
+
 [contracts.NftV1EditableItem]
 display-name = "NftV1EditableItem"
 src = "data/nfts/nft_1/testdata/NftV1EditableItem.boc"
 types = "data/nfts/nft_1/types/nft_v1_editable_item.types.tolk"
 depends = []
+
+[contracts.NftV1EditableItem.wrappers.tolk]
+output-dir = "data/nfts/nft_1/wrappers"
 
 [contracts.NftV2Collection]
 display-name = "NftV2Collection"
@@ -273,11 +405,17 @@ src = "data/nfts/nft_2_0/testdata/NftV2Collection.boc"
 types = "data/nfts/nft_2_0/types/nft_v2_collection.types.tolk"
 depends = []
 
+[contracts.NftV2Collection.wrappers.tolk]
+output-dir = "data/nfts/nft_2_0/wrappers"
+
 [contracts.NftV2Item]
 display-name = "NftV2Item"
 src = "data/nfts/nft_2_0/testdata/NftV2Item.boc"
 types = "data/nfts/nft_2_0/types/nft_v2_item.types.tolk"
 depends = []
+
+[contracts.NftV2Item.wrappers.tolk]
+output-dir = "data/nfts/nft_2_0/wrappers"
 
 [contracts.NftV2EditableItem]
 display-name = "NftV2EditableItem"
@@ -285,11 +423,17 @@ src = "data/nfts/nft_2_0/testdata/NftV2EditableItem.boc"
 types = "data/nfts/nft_2_0/types/nft_v2_editable_item.types.tolk"
 depends = []
 
+[contracts.NftV2EditableItem.wrappers.tolk]
+output-dir = "data/nfts/nft_2_0/wrappers"
+
 [contracts.GetgemsNftCollectionV2]
 display-name = "GetgemsNftCollectionV2"
 src = "data/nfts/getgems_nft_2_0/testdata/GetgemsNftCollectionV2.boc"
 types = "data/nfts/getgems_nft_2_0/types/getgems_nft_v2_collection.types.tolk"
 depends = []
+
+[contracts.GetgemsNftCollectionV2.wrappers.tolk]
+output-dir = "data/nfts/getgems_nft_2_0/wrappers"
 
 [contracts.GetgemsNftItemV2]
 display-name = "GetgemsNftItemV2"
@@ -297,11 +441,17 @@ src = "data/nfts/getgems_nft_2_0/testdata/GetgemsNftItemV2.boc"
 types = "data/nfts/getgems_nft_2_0/types/getgems_nft_v2_item.types.tolk"
 depends = []
 
+[contracts.GetgemsNftItemV2.wrappers.tolk]
+output-dir = "data/nfts/getgems_nft_2_0/wrappers"
+
 [contracts.GetgemsNftEditableItemV2]
 display-name = "GetgemsNftEditableItemV2"
 src = "data/nfts/getgems_nft_2_0/testdata/GetgemsNftEditableItemV2.boc"
 types = "data/nfts/getgems_nft_2_0/types/getgems_nft_v2_editable_item.types.tolk"
 depends = []
+
+[contracts.GetgemsNftEditableItemV2.wrappers.tolk]
+output-dir = "data/nfts/getgems_nft_2_0/wrappers"
 
 [contracts.TelemintNftItem]
 display-name = "TelemintNftItem"
@@ -309,11 +459,17 @@ src = "data/telemint/testdata/TelemintNftItem.boc"
 types = "data/telemint/types/telemint_nft_item.types.tolk"
 depends = []
 
+[contracts.TelemintNftItem.wrappers.tolk]
+output-dir = "data/telemint/wrappers"
+
 [contracts.DnsRootResolver]
 display-name = "DnsRootResolver"
 src = "data/dns/testdata/DnsRootResolver.boc"
 types = "data/dns/types/dns_root_resolver.types.tolk"
 depends = []
+
+[contracts.DnsRootResolver.wrappers.tolk]
+output-dir = "data/dns/wrappers"
 
 [contracts.DnsCollection]
 display-name = "DnsCollection"
@@ -321,11 +477,17 @@ src = "data/dns/testdata/DnsCollection.boc"
 types = "data/dns/types/dns_collection.types.tolk"
 depends = []
 
+[contracts.DnsCollection.wrappers.tolk]
+output-dir = "data/dns/wrappers"
+
 [contracts.DnsDomainItem]
 display-name = "DnsDomainItem"
 src = "data/dns/testdata/DnsDomainItem.boc"
 types = "data/dns/types/dns_domain_item.types.tolk"
 depends = []
+
+[contracts.DnsDomainItem.wrappers.tolk]
+output-dir = "data/dns/wrappers"
 
 [contracts.SbtV1Item]
 display-name = "SbtV1Item"
@@ -333,11 +495,17 @@ src = "data/sbts/sbt_1/testdata/SbtV1Item.boc"
 types = "data/sbts/sbt_1/types/sbt_v1_item.types.tolk"
 depends = []
 
+[contracts.SbtV1Item.wrappers.tolk]
+output-dir = "data/sbts/sbt_1/wrappers"
+
 [contracts.SbtV1Single]
 display-name = "SbtV1Single"
 src = "data/sbts/sbt_1/testdata/SbtV1Single.boc"
 types = "data/sbts/sbt_1/types/sbt_v1_single.types.tolk"
 depends = []
+
+[contracts.SbtV1Single.wrappers.tolk]
+output-dir = "data/sbts/sbt_1/wrappers"
 
 [contracts.GetgemsDeployer]
 display-name = "Getgems Deployer"
@@ -345,11 +513,17 @@ src = "data/getgems/getgems_deployer/testdata/GetgemsDeployer.boc"
 types = "data/getgems/getgems_deployer/types/getgems_deployer.types.tolk"
 depends = []
 
+[contracts.GetgemsDeployer.wrappers.tolk]
+output-dir = "data/getgems/getgems_deployer/wrappers"
+
 [contracts.GetgemsNftAuctionV1]
 display-name = "Getgems NFT Auction V1"
 src = "data/getgems/getgems_nft_auction_v1/testdata/GetgemsNftAuctionV1.boc"
 types = "data/getgems/getgems_nft_auction_v1/types/getgems_nft_auction_v1.types.tolk"
 depends = []
+
+[contracts.GetgemsNftAuctionV1.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_auction_v1/wrappers"
 
 [contracts.GetgemsNftAuctionV2]
 display-name = "Getgems NFT Auction V2"
@@ -357,11 +531,17 @@ src = "data/getgems/getgems_nft_auction_v2/testdata/GetgemsNftAuctionV2.boc"
 types = "data/getgems/getgems_nft_auction_v2/types/getgems_nft_auction_v2.types.tolk"
 depends = []
 
+[contracts.GetgemsNftAuctionV2.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_auction_v2/wrappers"
+
 [contracts.GetgemsNftAuctionV3R2]
 display-name = "Getgems NFT Auction V3R2"
 src = "data/getgems/getgems_nft_auction_v3r2/testdata/GetgemsNftAuctionV3R2.boc"
 types = "data/getgems/getgems_nft_auction_v3r2/types/getgems_nft_auction_v3r2.types.tolk"
 depends = []
+
+[contracts.GetgemsNftAuctionV3R2.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_auction_v3r2/wrappers"
 
 [contracts.GetgemsNftAuctionV3R3]
 display-name = "Getgems NFT Auction V3R3"
@@ -369,11 +549,17 @@ src = "data/getgems/getgems_nft_auction_v3r3/testdata/GetgemsNftAuctionV3R3.boc"
 types = "data/getgems/getgems_nft_auction_v3r3/types/getgems_nft_auction_v3r3.types.tolk"
 depends = []
 
+[contracts.GetgemsNftAuctionV3R3.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_auction_v3r3/wrappers"
+
 [contracts.GetgemsNftAuctionV4R1]
 display-name = "Getgems NFT Auction V4R1"
 src = "data/getgems/getgems_nft_auction_v4r1/testdata/GetgemsNftAuctionV4R1.boc"
 types = "data/getgems/getgems_nft_auction_v4r1/types/getgems_nft_auction_v4r1.types.tolk"
 depends = []
+
+[contracts.GetgemsNftAuctionV4R1.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_auction_v4r1/wrappers"
 
 [contracts.GetgemsNftFixpriceSaleV1]
 display-name = "Getgems NFT Fixprice Sale V1"
@@ -381,11 +567,17 @@ src = "data/getgems/getgems_nft_fixprice_sale_v1/testdata/GetgemsNftFixpriceSale
 types = "data/getgems/getgems_nft_fixprice_sale_v1/types/getgems_nft_fixprice_sale_v1.types.tolk"
 depends = []
 
+[contracts.GetgemsNftFixpriceSaleV1.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_fixprice_sale_v1/wrappers"
+
 [contracts.GetgemsNftSaleLegacy]
 display-name = "Getgems NFT Sale Legacy"
 src = "data/getgems/getgems_nft_sale_legacy/testdata/GetgemsNftSaleLegacy.boc"
 types = "data/getgems/getgems_nft_sale_legacy/types/getgems_nft_sale_legacy.types.tolk"
 depends = []
+
+[contracts.GetgemsNftSaleLegacy.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_sale_legacy/wrappers"
 
 [contracts.GetgemsNftFixpriceSaleV2]
 display-name = "Getgems NFT Fixprice Sale V2"
@@ -393,11 +585,17 @@ src = "data/getgems/getgems_nft_fixprice_sale_v2/testdata/GetgemsNftFixpriceSale
 types = "data/getgems/getgems_nft_fixprice_sale_v2/types/getgems_nft_fixprice_sale_v2.types.tolk"
 depends = []
 
+[contracts.GetgemsNftFixpriceSaleV2.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_fixprice_sale_v2/wrappers"
+
 [contracts.GetgemsNftFixpriceSaleV3]
 display-name = "Getgems NFT Fixprice Sale V3"
 src = "data/getgems/getgems_nft_fixprice_sale_v3/testdata/GetgemsNftFixpriceSaleV3.boc"
 types = "data/getgems/getgems_nft_fixprice_sale_v3/types/getgems_nft_fixprice_sale_v3.types.tolk"
 depends = []
+
+[contracts.GetgemsNftFixpriceSaleV3.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_fixprice_sale_v3/wrappers"
 
 [contracts.GetgemsNftFixpriceSaleV3R2]
 display-name = "Getgems NFT Fixprice Sale V3R2"
@@ -405,11 +603,17 @@ src = "data/getgems/getgems_nft_fixprice_sale_v3r2/testdata/GetgemsNftFixpriceSa
 types = "data/getgems/getgems_nft_fixprice_sale_v3r2/types/getgems_nft_fixprice_sale_v3r2.types.tolk"
 depends = []
 
+[contracts.GetgemsNftFixpriceSaleV3R2.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_fixprice_sale_v3r2/wrappers"
+
 [contracts.GetgemsNftFixpriceSaleV3R3]
 display-name = "Getgems NFT Fixprice Sale V3R3"
 src = "data/getgems/getgems_nft_fixprice_sale_v3r3/testdata/GetgemsNftFixpriceSaleV3R3.boc"
 types = "data/getgems/getgems_nft_fixprice_sale_v3r3/types/getgems_nft_fixprice_sale_v3r3.types.tolk"
 depends = []
+
+[contracts.GetgemsNftFixpriceSaleV3R3.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_fixprice_sale_v3r3/wrappers"
 
 [contracts.GetgemsNftFixpriceSaleV4R1]
 display-name = "Getgems NFT Fixprice Sale V4R1"
@@ -417,11 +621,17 @@ src = "data/getgems/getgems_nft_fixprice_sale_v4r1/testdata/GetgemsNftFixpriceSa
 types = "data/getgems/getgems_nft_fixprice_sale_v4r1/types/getgems_nft_fixprice_sale_v4r1.types.tolk"
 depends = []
 
+[contracts.GetgemsNftFixpriceSaleV4R1.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_fixprice_sale_v4r1/wrappers"
+
 [contracts.GetgemsNftMarketplaceV1]
 display-name = "Getgems NFT Marketplace V1"
 src = "data/getgems/getgems_nft_marketplace_v1/testdata/GetgemsNftMarketplaceV1.boc"
 types = "data/getgems/getgems_nft_marketplace_v1/types/getgems_nft_marketplace_v1.types.tolk"
 depends = []
+
+[contracts.GetgemsNftMarketplaceV1.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_marketplace_v1/wrappers"
 
 [contracts.GetgemsNftMarketplaceV2]
 display-name = "Getgems NFT Marketplace V2"
@@ -429,11 +639,17 @@ src = "data/getgems/getgems_nft_marketplace_v2/testdata/GetgemsNftMarketplaceV2.
 types = "data/getgems/getgems_nft_marketplace_v2/types/getgems_nft_marketplace_v2.types.tolk"
 depends = []
 
+[contracts.GetgemsNftMarketplaceV2.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_marketplace_v2/wrappers"
+
 [contracts.GetgemsNftOfferV1]
 display-name = "Getgems NFT Offer V1"
 src = "data/getgems/getgems_nft_offer_v1/testdata/GetgemsNftOfferV1.boc"
 types = "data/getgems/getgems_nft_offer_v1/types/getgems_nft_offer_v1.types.tolk"
 depends = []
+
+[contracts.GetgemsNftOfferV1.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_offer_v1/wrappers"
 
 [contracts.GetgemsNftOfferV1R3]
 display-name = "Getgems NFT Offer V1R3"
@@ -441,11 +657,17 @@ src = "data/getgems/getgems_nft_offer_v1r3/testdata/GetgemsNftOfferV1R3.boc"
 types = "data/getgems/getgems_nft_offer_v1r3/types/getgems_nft_offer_v1r3.types.tolk"
 depends = []
 
+[contracts.GetgemsNftOfferV1R3.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_offer_v1r3/wrappers"
+
 [contracts.GetgemsNftRaffle]
 display-name = "Getgems NFT Raffle"
 src = "data/getgems/getgems_nft_raffle/testdata/GetgemsNftRaffle.boc"
 types = "data/getgems/getgems_nft_raffle/types/getgems_nft_raffle.types.tolk"
 depends = []
+
+[contracts.GetgemsNftRaffle.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_raffle/wrappers"
 
 [contracts.GetgemsNftSwap]
 display-name = "Getgems NFT Swap"
@@ -453,11 +675,17 @@ src = "data/getgems/getgems_nft_swap/testdata/GetgemsNftSwap.boc"
 types = "data/getgems/getgems_nft_swap/types/getgems_nft_swap.types.tolk"
 depends = []
 
+[contracts.GetgemsNftSwap.wrappers.tolk]
+output-dir = "data/getgems/getgems_nft_swap/wrappers"
+
 [contracts.StonfiRouterV2]
 display-name = "STON.fi Router V2"
 src = "data/stonfi/router_v2/testdata/StonfiRouterV2.boc"
 types = "data/stonfi/router_v2/types/stonfi_router_v2.types.tolk"
 depends = []
+
+[contracts.StonfiRouterV2.wrappers.tolk]
+output-dir = "data/stonfi/router_v2/wrappers"
 
 [contracts.StonfiRouterV1]
 display-name = "STON.fi Router V1"
@@ -465,11 +693,17 @@ src = "data/stonfi/v1/router/testdata/StonfiRouterV1.boc"
 types = "data/stonfi/v1/router/types/stonfi_router_v1.types.tolk"
 depends = []
 
+[contracts.StonfiRouterV1.wrappers.tolk]
+output-dir = "data/stonfi/v1/router/wrappers"
+
 [contracts.StonfiPoolV1]
 display-name = "STON.fi Pool V1"
 src = "data/stonfi/v1/pool/testdata/StonfiPoolV1.boc"
 types = "data/stonfi/v1/pool/types/stonfi_pool_v1.types.tolk"
 depends = []
+
+[contracts.StonfiPoolV1.wrappers.tolk]
+output-dir = "data/stonfi/v1/pool/wrappers"
 
 [contracts.StonfiLpAccountV1]
 display-name = "STON.fi LP Account V1"
@@ -477,11 +711,17 @@ src = "data/stonfi/v1/lp_account/testdata/StonfiLpAccountV1.boc"
 types = "data/stonfi/v1/lp_account/types/stonfi_lp_account_v1.types.tolk"
 depends = []
 
+[contracts.StonfiLpAccountV1.wrappers.tolk]
+output-dir = "data/stonfi/v1/lp_account/wrappers"
+
 [contracts.StonfiLpWalletV1]
 display-name = "STON.fi LP Wallet V1"
 src = "data/stonfi/v1/lp_wallet/testdata/StonfiLpWalletV1.boc"
 types = "data/stonfi/v1/lp_wallet/types/stonfi_lp_wallet_v1.types.tolk"
 depends = []
+
+[contracts.StonfiLpWalletV1.wrappers.tolk]
+output-dir = "data/stonfi/v1/lp_wallet/wrappers"
 
 [contracts.StonfiPoolV2ConstProduct]
 display-name = "STON.fi Pool V2 ConstantProduct"
@@ -489,11 +729,17 @@ src = "data/stonfi/pool_v2_const_product/testdata/StonfiPoolV2ConstProduct.boc"
 types = "data/stonfi/pool_v2_const_product/types/stonfi_pool_v2_const_product.types.tolk"
 depends = []
 
+[contracts.StonfiPoolV2ConstProduct.wrappers.tolk]
+output-dir = "data/stonfi/pool_v2_const_product/wrappers"
+
 [contracts.StonfiPoolV2Stableswap]
 display-name = "STON.fi Pool V2 StableSwap"
 src = "data/stonfi/pool_v2_stableswap/testdata/StonfiPoolV2Stableswap.boc"
 types = "data/stonfi/pool_v2_stableswap/types/stonfi_pool_v2_stableswap.types.tolk"
 depends = []
+
+[contracts.StonfiPoolV2Stableswap.wrappers.tolk]
+output-dir = "data/stonfi/pool_v2_stableswap/wrappers"
 
 [contracts.StonfiPoolV2WeightedStableswap]
 display-name = "STON.fi Pool V2 WeightedStableSwap"
@@ -501,11 +747,17 @@ src = "data/stonfi/pool_v2_weighted_stableswap/testdata/StonfiPoolV2WeightedStab
 types = "data/stonfi/pool_v2_weighted_stableswap/types/stonfi_pool_v2_weighted_stableswap.types.tolk"
 depends = []
 
+[contracts.StonfiPoolV2WeightedStableswap.wrappers.tolk]
+output-dir = "data/stonfi/pool_v2_weighted_stableswap/wrappers"
+
 [contracts.StonfiPoolV2WeightedConstProduct]
 display-name = "STON.fi Pool V2 WeightedConstProduct"
 src = "data/stonfi/pool_v2_weighted_const_product/testdata/StonfiPoolV2WeightedConstProduct.boc"
 types = "data/stonfi/pool_v2_weighted_const_product/types/stonfi_pool_v2_weighted_const_product.types.tolk"
 depends = []
+
+[contracts.StonfiPoolV2WeightedConstProduct.wrappers.tolk]
+output-dir = "data/stonfi/pool_v2_weighted_const_product/wrappers"
 
 [contracts.StonfiLpAccountV2]
 display-name = "STON.fi LP Account V2"
@@ -513,11 +765,17 @@ src = "data/stonfi/lp_account_v2/testdata/StonfiLpAccountV2.boc"
 types = "data/stonfi/lp_account_v2/types/stonfi_lp_account_v2.types.tolk"
 depends = []
 
+[contracts.StonfiLpAccountV2.wrappers.tolk]
+output-dir = "data/stonfi/lp_account_v2/wrappers"
+
 [contracts.StonfiLpWalletV2]
 display-name = "STON.fi LP Wallet V2"
 src = "data/stonfi/lp_wallet_v2/testdata/StonfiLpWalletV2.boc"
 types = "data/stonfi/lp_wallet_v2/types/stonfi_lp_wallet_v2.types.tolk"
 depends = []
+
+[contracts.StonfiLpWalletV2.wrappers.tolk]
+output-dir = "data/stonfi/lp_wallet_v2/wrappers"
 
 [contracts.StonfiVaultV2]
 display-name = "STON.fi Vault V2"
@@ -525,11 +783,17 @@ src = "data/stonfi/vault_v2/testdata/StonfiVaultV2.boc"
 types = "data/stonfi/vault_v2/types/stonfi_vault_v2.types.tolk"
 depends = []
 
+[contracts.StonfiVaultV2.wrappers.tolk]
+output-dir = "data/stonfi/vault_v2/wrappers"
+
 [contracts.StonfiEscrowPosition]
 display-name = "STON.fi Escrow Position"
 src = "data/stonfi/escrow_position/testdata/StonfiEscrowPosition.boc"
 types = "data/stonfi/escrow_position/types/stonfi_escrow_position.types.tolk"
 depends = []
+
+[contracts.StonfiEscrowPosition.wrappers.tolk]
+output-dir = "data/stonfi/escrow_position/wrappers"
 
 [contracts.StonfiEscrowFactory]
 display-name = "STON.fi Escrow Factory"
@@ -537,11 +801,17 @@ src = "data/stonfi/escrow_factory/testdata/StonfiEscrowFactory.boc"
 types = "data/stonfi/escrow_factory/types/stonfi_escrow_factory.types.tolk"
 depends = []
 
+[contracts.StonfiEscrowFactory.wrappers.tolk]
+output-dir = "data/stonfi/escrow_factory/wrappers"
+
 [contracts.StonfiEscrowVault]
 display-name = "STON.fi Escrow Vault"
 src = "data/stonfi/escrow_vault/testdata/StonfiEscrowVault.boc"
 types = "data/stonfi/escrow_vault/types/stonfi_escrow_vault.types.tolk"
 depends = []
+
+[contracts.StonfiEscrowVault.wrappers.tolk]
+output-dir = "data/stonfi/escrow_vault/wrappers"
 
 [contracts.StonksPumpVirtualMinter]
 display-name = "StonksPump Virtual Minter"
@@ -549,11 +819,17 @@ src = "data/stonkspump/virtual_minter/testdata/StonksPumpVirtualMinterStonfi.boc
 types = "data/stonkspump/virtual_minter/types/stonkspump_virtual_minter.types.tolk"
 depends = []
 
+[contracts.StonksPumpVirtualMinter.wrappers.tolk]
+output-dir = "data/stonkspump/virtual_minter/wrappers"
+
 [contracts.StonksPumpVirtualFactory]
 display-name = "StonksPump Virtual Factory"
 src = "data/stonkspump/virtual_factory/testdata/StonksPumpVirtualFactoryStonfi.boc"
 types = "data/stonkspump/virtual_factory/types/stonkspump_virtual_factory.types.tolk"
 depends = []
+
+[contracts.StonksPumpVirtualFactory.wrappers.tolk]
+output-dir = "data/stonkspump/virtual_factory/wrappers"
 
 [contracts.FfVault]
 display-name = "FF Vault"
@@ -561,11 +837,17 @@ src = "data/ff_vault/vault/testdata/FfVault.boc"
 types = "data/ff_vault/vault/types/ff_vault.types.tolk"
 depends = []
 
+[contracts.FfVault.wrappers.tolk]
+output-dir = "data/ff_vault/vault/wrappers"
+
 [contracts.VerifierSourcesRegistry]
 display-name = "Verifier Sources Registry"
 src = "data/verifier/sources_registry/testdata/VerifierSourcesRegistry.boc"
 types = "data/verifier/sources_registry/types/verifier_sources_registry.types.tolk"
 depends = []
+
+[contracts.VerifierSourcesRegistry.wrappers.tolk]
+output-dir = "data/verifier/sources_registry/wrappers"
 
 [contracts.GramboFactory]
 display-name = "Grambo Factory"
@@ -573,11 +855,17 @@ src = "data/grambo/factory/testdata/GramboFactory.boc"
 types = "data/grambo/factory/types/grambo_factory.types.tolk"
 depends = []
 
+[contracts.GramboFactory.wrappers.tolk]
+output-dir = "data/grambo/factory/wrappers"
+
 [contracts.GramboJettonMaster]
 display-name = "Grambo Jetton Master"
 src = "data/grambo/jetton_master/testdata/GramboJettonMaster.boc"
 types = "data/grambo/jetton_master/types/grambo_jetton_master.types.tolk"
 depends = []
+
+[contracts.GramboJettonMaster.wrappers.tolk]
+output-dir = "data/grambo/jetton_master/wrappers"
 
 [contracts.GramboJettonWallet]
 display-name = "Grambo Jetton Wallet"
@@ -585,11 +873,17 @@ src = "data/grambo/jetton_wallet/testdata/GramboJettonWallet.boc"
 types = "data/grambo/jetton_wallet/types/grambo_jetton_wallet.types.tolk"
 depends = []
 
+[contracts.GramboJettonWallet.wrappers.tolk]
+output-dir = "data/grambo/jetton_wallet/wrappers"
+
 [contracts.CocoonRoot]
 display-name = "Cocoon Root"
 src = "data/cocoon/root/testdata/CocoonRoot.boc"
 types = "data/cocoon/root/types/cocoon_root.types.tolk"
 depends = []
+
+[contracts.CocoonRoot.wrappers.tolk]
+output-dir = "data/cocoon/root/wrappers"
 
 [contracts.CocoonProxy]
 display-name = "Cocoon Proxy"
@@ -597,11 +891,17 @@ src = "data/cocoon/proxy/testdata/CocoonProxy.boc"
 types = "data/cocoon/proxy/types/cocoon_proxy.types.tolk"
 depends = []
 
+[contracts.CocoonProxy.wrappers.tolk]
+output-dir = "data/cocoon/proxy/wrappers"
+
 [contracts.CocoonClient]
 display-name = "Cocoon Client"
 src = "data/cocoon/client/testdata/CocoonClient.boc"
 types = "data/cocoon/client/types/cocoon_client.types.tolk"
 depends = []
+
+[contracts.CocoonClient.wrappers.tolk]
+output-dir = "data/cocoon/client/wrappers"
 
 [contracts.CocoonWorker]
 display-name = "Cocoon Worker"
@@ -609,11 +909,17 @@ src = "data/cocoon/worker/testdata/CocoonWorker.boc"
 types = "data/cocoon/worker/types/cocoon_worker.types.tolk"
 depends = []
 
+[contracts.CocoonWorker.wrappers.tolk]
+output-dir = "data/cocoon/worker/wrappers"
+
 [contracts.CocoonWallet]
 display-name = "Cocoon Wallet"
 src = "data/cocoon/wallet/testdata/CocoonWallet.boc"
 types = "data/cocoon/wallet/types/cocoon_wallet.types.tolk"
 depends = []
+
+[contracts.CocoonWallet.wrappers.tolk]
+output-dir = "data/cocoon/wallet/wrappers"
 
 [contracts.FfVaultPosition]
 display-name = "FF Vault Position"
@@ -621,11 +927,17 @@ src = "data/ff_vault/position/testdata/FfVaultPosition.boc"
 types = "data/ff_vault/position/types/ff_vault_position.types.tolk"
 depends = []
 
+[contracts.FfVaultPosition.wrappers.tolk]
+output-dir = "data/ff_vault/position/wrappers"
+
 [contracts.VerifierSourceItem]
 display-name = "Verifier Source Item"
 src = "data/verifier/source_item/testdata/VerifierSourceItem.boc"
 types = "data/verifier/source_item/types/verifier_source_item.types.tolk"
 depends = []
+
+[contracts.VerifierSourceItem.wrappers.tolk]
+output-dir = "data/verifier/source_item/wrappers"
 
 [contracts.VerifierRegistry]
 display-name = "Verifier Registry"
@@ -633,11 +945,17 @@ src = "data/verifier/verifier_registry/testdata/VerifierRegistry.boc"
 types = "data/verifier/verifier_registry/types/verifier_registry.types.tolk"
 depends = []
 
+[contracts.VerifierRegistry.wrappers.tolk]
+output-dir = "data/verifier/verifier_registry/wrappers"
+
 [contracts.OmnistonFeeVault]
 display-name = "Omniston Fee-Vault Minter"
 src = "data/omniston/testdata/OmnistonFeeVault.boc"
 types = "data/omniston/types/omniston_fee_vault.types.tolk"
 depends = []
+
+[contracts.OmnistonFeeVault.wrappers.tolk]
+output-dir = "data/omniston/wrappers"
 
 [contracts.PtonMinterV2]
 display-name = "pTON Minter V2"
@@ -645,11 +963,17 @@ src = "data/pton/minter_v2/testdata/PtonMinterV2.boc"
 types = "data/pton/minter_v2/types/pton_minter_v2.types.tolk"
 depends = []
 
+[contracts.PtonMinterV2.wrappers.tolk]
+output-dir = "data/pton/minter_v2/wrappers"
+
 [contracts.PtonWalletV2]
 display-name = "pTON Wallet V2"
 src = "data/pton/wallet_v2/testdata/PtonWalletV2.boc"
 types = "data/pton/wallet_v2/types/pton_wallet_v2.types.tolk"
 depends = []
+
+[contracts.PtonWalletV2.wrappers.tolk]
+output-dir = "data/pton/wallet_v2/wrappers"
 
 [contracts.WtonMinter]
 display-name = "Wrapped TON Minter"
@@ -657,11 +981,17 @@ src = "data/megatonfi/testdata/WtonMinter.boc"
 types = "data/megatonfi/types/wton_minter.types.tolk"
 depends = []
 
+[contracts.WtonMinter.wrappers.tolk]
+output-dir = "data/megatonfi/wrappers"
+
 [contracts.WtonWallet]
 display-name = "Wrapped TON Wallet"
 src = "data/megatonfi/testdata/WtonWallet.boc"
 types = "data/megatonfi/types/wton_wallet.types.tolk"
 depends = []
+
+[contracts.WtonWallet.wrappers.tolk]
+output-dir = "data/megatonfi/wrappers"
 
 [contracts.ToncoRouter]
 display-name = "TONCO Router"
@@ -669,11 +999,17 @@ src = "data/tonco/router/testdata/ToncoRouter.boc"
 types = "data/tonco/router/types/tonco_router.types.tolk"
 depends = []
 
+[contracts.ToncoRouter.wrappers.tolk]
+output-dir = "data/tonco/router/wrappers"
+
 [contracts.ToncoPool]
 display-name = "TONCO Pool"
 src = "data/tonco/pool/testdata/ToncoPool.boc"
 types = "data/tonco/pool/types/tonco_pool.types.tolk"
 depends = []
+
+[contracts.ToncoPool.wrappers.tolk]
+output-dir = "data/tonco/pool/wrappers"
 
 [contracts.ToncoAccount]
 display-name = "TONCO Account"
@@ -681,11 +1017,17 @@ src = "data/tonco/account/testdata/ToncoAccount.boc"
 types = "data/tonco/account/types/tonco_account.types.tolk"
 depends = []
 
+[contracts.ToncoAccount.wrappers.tolk]
+output-dir = "data/tonco/account/wrappers"
+
 [contracts.ToncoPoolFactory]
 display-name = "TONCO PoolFactory"
 src = "data/tonco/pool_factory/testdata/ToncoPoolFactory.boc"
 types = "data/tonco/pool_factory/types/tonco_pool_factory.types.tolk"
 depends = []
+
+[contracts.ToncoPoolFactory.wrappers.tolk]
+output-dir = "data/tonco/pool_factory/wrappers"
 
 [contracts.ToncoPositionNftV3]
 display-name = "TONCO Position NFT V3"
@@ -693,11 +1035,17 @@ src = "data/tonco/position_nft_v3/testdata/ToncoPositionNftV3.boc"
 types = "data/tonco/position_nft_v3/types/tonco_position_nft_v3.types.tolk"
 depends = []
 
+[contracts.ToncoPositionNftV3.wrappers.tolk]
+output-dir = "data/tonco/position_nft_v3/wrappers"
+
 [contracts.DedustFactoryV2]
 display-name = "DeDust Factory V2"
 src = "data/dedust/factory/testdata/DedustFactoryV2.boc"
 types = "data/dedust/factory/types/dedust_factory_v2.types.tolk"
 depends = []
+
+[contracts.DedustFactoryV2.wrappers.tolk]
+output-dir = "data/dedust/factory/wrappers"
 
 [contracts.DedustVaultNativeV2]
 display-name = "DeDust Native Vault V2"
@@ -705,11 +1053,17 @@ src = "data/dedust/vault_native/testdata/DedustVaultNativeV2.boc"
 types = "data/dedust/vault_native/types/dedust_vault_native_v2.types.tolk"
 depends = []
 
+[contracts.DedustVaultNativeV2.wrappers.tolk]
+output-dir = "data/dedust/vault_native/wrappers"
+
 [contracts.DedustVaultJettonV2]
 display-name = "DeDust Jetton Vault V2"
 src = "data/dedust/vault_jetton/testdata/DedustVaultJettonV2.boc"
 types = "data/dedust/vault_jetton/types/dedust_vault_jetton_v2.types.tolk"
 depends = []
+
+[contracts.DedustVaultJettonV2.wrappers.tolk]
+output-dir = "data/dedust/vault_jetton/wrappers"
 
 [contracts.DedustPoolV2]
 display-name = "DeDust Pool V2"
@@ -717,11 +1071,17 @@ src = "data/dedust/pool_v2/testdata/DedustPoolV2.boc"
 types = "data/dedust/pool_v2/types/dedust_pool_v2.types.tolk"
 depends = []
 
+[contracts.DedustPoolV2.wrappers.tolk]
+output-dir = "data/dedust/pool_v2/wrappers"
+
 [contracts.DedustLiquidityDepositV2]
 display-name = "DeDust Liquidity Deposit V2"
 src = "data/dedust/liquidity_deposit/testdata/DedustLiquidityDepositV2.boc"
 types = "data/dedust/liquidity_deposit/types/dedust_liquidity_deposit_v2.types.tolk"
 depends = []
+
+[contracts.DedustLiquidityDepositV2.wrappers.tolk]
+output-dir = "data/dedust/liquidity_deposit/wrappers"
 
 [contracts.DedustV2Cpmm]
 display-name = "DeDust V2 CPMM"
@@ -729,11 +1089,17 @@ src = "data/dedust/cpmm_v2/testdata/DedustV2Cpmm.boc"
 types = "data/dedust/cpmm_v2/types/dedust_v2_cpmm.types.tolk"
 depends = []
 
+[contracts.DedustV2Cpmm.wrappers.tolk]
+output-dir = "data/dedust/cpmm_v2/wrappers"
+
 [contracts.DedustUranusFactoryV3]
 display-name = "DeDust Uranus Factory V3"
 src = "data/dedust/uranus/factory/testdata/DedustUranusFactoryV3.boc"
 types = "data/dedust/uranus/factory/types/dedust_uranus_factory_v3.types.tolk"
 depends = []
+
+[contracts.DedustUranusFactoryV3.wrappers.tolk]
+output-dir = "data/dedust/uranus/factory/wrappers"
 
 [contracts.DedustUranusMemeV3]
 display-name = "DeDust Uranus Meme V3"
@@ -741,11 +1107,17 @@ src = "data/dedust/uranus/meme/testdata/DedustUranusMemeV3.boc"
 types = "data/dedust/uranus/meme/types/dedust_uranus_meme_v3.types.tolk"
 depends = []
 
+[contracts.DedustUranusMemeV3.wrappers.tolk]
+output-dir = "data/dedust/uranus/meme/wrappers"
+
 [contracts.DedustUranusMemeWalletV3]
 display-name = "DeDust Uranus Meme Wallet V3"
 src = "data/dedust/uranus/meme_wallet/testdata/DedustUranusMemeWalletV3.boc"
 types = "data/dedust/uranus/meme_wallet/types/dedust_uranus_meme_wallet_v3.types.tolk"
 depends = []
+
+[contracts.DedustUranusMemeWalletV3.wrappers.tolk]
+output-dir = "data/dedust/uranus/meme_wallet/wrappers"
 
 [contracts.DedustFactoryV1]
 display-name = "DeDust Factory V1"
@@ -753,11 +1125,17 @@ src = "data/dedust/v1/factory/testdata/DedustFactoryV1.boc"
 types = "data/dedust/v1/factory/types/dedust_factory_v1.types.tolk"
 depends = []
 
+[contracts.DedustFactoryV1.wrappers.tolk]
+output-dir = "data/dedust/v1/factory/wrappers"
+
 [contracts.DedustPoolV1]
 display-name = "DeDust Pool V1"
 src = "data/dedust/v1/pool/testdata/DedustPoolV1.boc"
 types = "data/dedust/v1/pool/types/dedust_pool_v1.types.tolk"
 depends = []
+
+[contracts.DedustPoolV1.wrappers.tolk]
+output-dir = "data/dedust/v1/pool/wrappers"
 
 [contracts.DedustVaultNativeV1]
 display-name = "DeDust Native Vault V1"
@@ -765,11 +1143,17 @@ src = "data/dedust/v1/vault_native/testdata/DedustVaultNativeV1.boc"
 types = "data/dedust/v1/vault_native/types/dedust_vault_native_v1.types.tolk"
 depends = []
 
+[contracts.DedustVaultNativeV1.wrappers.tolk]
+output-dir = "data/dedust/v1/vault_native/wrappers"
+
 [contracts.DedustVaultJettonV1]
 display-name = "DeDust Jetton Vault V1"
 src = "data/dedust/v1/vault_jetton/testdata/DedustVaultJettonV1.boc"
 types = "data/dedust/v1/vault_jetton/types/dedust_vault_jetton_v1.types.tolk"
 depends = []
+
+[contracts.DedustVaultJettonV1.wrappers.tolk]
+output-dir = "data/dedust/v1/vault_jetton/wrappers"
 
 [contracts.DedustLiquidityDepositV1]
 display-name = "DeDust Liquidity Deposit V1"
@@ -777,11 +1161,17 @@ src = "data/dedust/v1/liquidity_deposit/testdata/DedustLiquidityDepositV1.boc"
 types = "data/dedust/v1/liquidity_deposit/types/dedust_liquidity_deposit_v1.types.tolk"
 depends = []
 
+[contracts.DedustLiquidityDepositV1.wrappers.tolk]
+output-dir = "data/dedust/v1/liquidity_deposit/wrappers"
+
 [contracts.CoffeeFactory]
 display-name = "Coffee Swap Factory"
 src = "data/coffee/factory/testdata/CoffeeFactory.boc"
 types = "data/coffee/factory/types/coffee_factory.types.tolk"
 depends = []
+
+[contracts.CoffeeFactory.wrappers.tolk]
+output-dir = "data/coffee/factory/wrappers"
 
 [contracts.CoffeeInit]
 display-name = "Coffee Swap Init"
@@ -789,11 +1179,17 @@ src = "data/coffee/init/testdata/CoffeeInit.boc"
 types = "data/coffee/init/types/coffee_init.types.tolk"
 depends = []
 
+[contracts.CoffeeInit.wrappers.tolk]
+output-dir = "data/coffee/init/wrappers"
+
 [contracts.CoffeeVaultNative]
 display-name = "Coffee Swap Native Vault"
 src = "data/coffee/vault_native/testdata/CoffeeVaultNative.boc"
 types = "data/coffee/vault_native/types/coffee_vault_native.types.tolk"
 depends = []
+
+[contracts.CoffeeVaultNative.wrappers.tolk]
+output-dir = "data/coffee/vault_native/wrappers"
 
 [contracts.CoffeeVaultJetton]
 display-name = "Coffee Swap Jetton Vault"
@@ -801,11 +1197,17 @@ src = "data/coffee/vault_jetton/testdata/CoffeeVaultJetton.boc"
 types = "data/coffee/vault_jetton/types/coffee_vault_jetton.types.tolk"
 depends = []
 
+[contracts.CoffeeVaultJetton.wrappers.tolk]
+output-dir = "data/coffee/vault_jetton/wrappers"
+
 [contracts.CoffeeVaultExtra]
 display-name = "Coffee Swap Extra Vault"
 src = "data/coffee/vault_extra/testdata/CoffeeVaultExtra.boc"
 types = "data/coffee/vault_extra/types/coffee_vault_extra.types.tolk"
 depends = []
+
+[contracts.CoffeeVaultExtra.wrappers.tolk]
+output-dir = "data/coffee/vault_extra/wrappers"
 
 [contracts.CoffeePoolConstantProduct]
 display-name = "Coffee Swap Pool Constant Product"
@@ -813,11 +1215,17 @@ src = "data/coffee/pool_constant_product/testdata/CoffeePoolConstantProduct.boc"
 types = "data/coffee/pool_constant_product/types/coffee_pool_constant_product.types.tolk"
 depends = []
 
+[contracts.CoffeePoolConstantProduct.wrappers.tolk]
+output-dir = "data/coffee/pool_constant_product/wrappers"
+
 [contracts.CoffeePoolCurveFiStable]
 display-name = "Coffee Swap Pool Curve.fi Stable"
 src = "data/coffee/pool_curve_fi_stable/testdata/CoffeePoolCurveFiStable.boc"
 types = "data/coffee/pool_curve_fi_stable/types/coffee_pool_curve_fi_stable.types.tolk"
 depends = []
+
+[contracts.CoffeePoolCurveFiStable.wrappers.tolk]
+output-dir = "data/coffee/pool_curve_fi_stable/wrappers"
 
 [contracts.CoffeePoolCreator]
 display-name = "Coffee Swap Pool Creator"
@@ -825,11 +1233,17 @@ src = "data/coffee/pool_creator/testdata/CoffeePoolCreator.boc"
 types = "data/coffee/pool_creator/types/coffee_pool_creator.types.tolk"
 depends = []
 
+[contracts.CoffeePoolCreator.wrappers.tolk]
+output-dir = "data/coffee/pool_creator/wrappers"
+
 [contracts.CoffeeLiquidityDepository]
 display-name = "Coffee Swap Liquidity Depository"
 src = "data/coffee/liquidity_depository/testdata/CoffeeLiquidityDepository.boc"
 types = "data/coffee/liquidity_depository/types/coffee_liquidity_depository.types.tolk"
 depends = []
+
+[contracts.CoffeeLiquidityDepository.wrappers.tolk]
+output-dir = "data/coffee/liquidity_depository/wrappers"
 
 [contracts.JettonWalletCoffeeLp]
 display-name = "Coffee Swap LP Jetton Wallet"
@@ -837,11 +1251,17 @@ src = "data/coffee/lp_wallet/testdata/JettonWalletCoffeeLp.boc"
 types = "data/coffee/lp_wallet/types/jetton_wallet_coffee_lp.types.tolk"
 depends = []
 
+[contracts.JettonWalletCoffeeLp.wrappers.tolk]
+output-dir = "data/coffee/lp_wallet/wrappers"
+
 [contracts.CoffeeStakingMaster]
 display-name = "Coffee Swap Staking Master"
 src = "data/coffee/staking_master/testdata/CoffeeStakingMaster.boc"
 types = "data/coffee/staking_master/types/coffee_staking_master.types.tolk"
 depends = []
+
+[contracts.CoffeeStakingMaster.wrappers.tolk]
+output-dir = "data/coffee/staking_master/wrappers"
 
 [contracts.CoffeeStakingVault]
 display-name = "Coffee Swap Staking Vault"
@@ -849,11 +1269,17 @@ src = "data/coffee/staking_vault/testdata/CoffeeStakingVault.boc"
 types = "data/coffee/staking_vault/types/coffee_staking_vault.types.tolk"
 depends = []
 
+[contracts.CoffeeStakingVault.wrappers.tolk]
+output-dir = "data/coffee/staking_vault/wrappers"
+
 [contracts.CoffeeStakingItem]
 display-name = "Coffee Swap Staking Item"
 src = "data/coffee/staking_item/testdata/CoffeeStakingItem.boc"
 types = "data/coffee/staking_item/types/coffee_staking_item.types.tolk"
 depends = []
+
+[contracts.CoffeeStakingItem.wrappers.tolk]
+output-dir = "data/coffee/staking_item/wrappers"
 
 [contracts.CoffeeCrossDex]
 display-name = "Coffee CrossDex"
@@ -861,11 +1287,17 @@ src = "data/coffee/cross_dex/testdata/CoffeeCrossDex.boc"
 types = "data/coffee/cross_dex/types/coffee_cross_dex.types.tolk"
 depends = []
 
+[contracts.CoffeeCrossDex.wrappers.tolk]
+output-dir = "data/coffee/cross_dex/wrappers"
+
 [contracts.CoffeeCrossDexLegacy]
 display-name = "Coffee CrossDex Legacy"
 src = "data/coffee/cross_dex_legacy/testdata/CoffeeCrossDexLegacy.boc"
 types = "data/coffee/cross_dex_legacy/types/coffee_cross_dex_legacy.types.tolk"
 depends = []
+
+[contracts.CoffeeCrossDexLegacy.wrappers.tolk]
+output-dir = "data/coffee/cross_dex_legacy/wrappers"
 
 [contracts.CoffeeCrossDexBidask]
 display-name = "Coffee CrossDex Bidask"
@@ -873,11 +1305,17 @@ src = "data/coffee/cross_dex_bidask/testdata/CoffeeCrossDexBidask.boc"
 types = "data/coffee/cross_dex_bidask/types/coffee_cross_dex_bidask.types.tolk"
 depends = []
 
+[contracts.CoffeeCrossDexBidask.wrappers.tolk]
+output-dir = "data/coffee/cross_dex_bidask/wrappers"
+
 [contracts.CoffeeMevProtector]
 display-name = "Coffee MEV Protector"
 src = "data/coffee/mev_protector/testdata/CoffeeMevProtector.boc"
 types = "data/coffee/mev_protector/types/coffee_mev_protector.types.tolk"
 depends = []
+
+[contracts.CoffeeMevProtector.wrappers.tolk]
+output-dir = "data/coffee/mev_protector/wrappers"
 
 [contracts.BidaskPoolFactory]
 display-name = "Bidask DLMM Pool Factory"
@@ -885,11 +1323,17 @@ src = "data/bidask/pool_factory/testdata/BidaskPoolFactory.boc"
 types = "data/bidask/pool_factory/types/bidask_pool_factory.types.tolk"
 depends = []
 
+[contracts.BidaskPoolFactory.wrappers.tolk]
+output-dir = "data/bidask/pool_factory/wrappers"
+
 [contracts.BidaskPool]
 display-name = "Bidask DLMM Pool"
 src = "data/bidask/pool/testdata/BidaskPool.boc"
 types = "data/bidask/pool/types/bidask_pool.types.tolk"
 depends = []
+
+[contracts.BidaskPool.wrappers.tolk]
+output-dir = "data/bidask/pool/wrappers"
 
 [contracts.BidaskRange]
 display-name = "Bidask DLMM Range"
@@ -897,11 +1341,17 @@ src = "data/bidask/range/testdata/BidaskRange.boc"
 types = "data/bidask/range/types/bidask_range.types.tolk"
 depends = []
 
+[contracts.BidaskRange.wrappers.tolk]
+output-dir = "data/bidask/range/wrappers"
+
 [contracts.BidaskLpMultitoken]
 display-name = "Bidask DLMM LP Multitoken"
 src = "data/bidask/lp_multitoken/testdata/BidaskLpMultitoken.boc"
 types = "data/bidask/lp_multitoken/types/bidask_lp_multitoken.types.tolk"
 depends = []
+
+[contracts.BidaskLpMultitoken.wrappers.tolk]
+output-dir = "data/bidask/lp_multitoken/wrappers"
 
 [contracts.BidaskInternalLiquidityVault]
 display-name = "Bidask DLMM Internal Liquidity Vault"
@@ -909,11 +1359,17 @@ src = "data/bidask/internal_liquidity_vault/testdata/BidaskInternalLiquidityVaul
 types = "data/bidask/internal_liquidity_vault/types/bidask_internal_liquidity_vault.types.tolk"
 depends = []
 
+[contracts.BidaskInternalLiquidityVault.wrappers.tolk]
+output-dir = "data/bidask/internal_liquidity_vault/wrappers"
+
 [contracts.BidaskDammPool]
 display-name = "Bidask DAMM Pool"
 src = "data/bidask/damm_pool/testdata/BidaskDammPool.boc"
 types = "data/bidask/damm_pool/types/bidask_damm_pool.types.tolk"
 depends = []
+
+[contracts.BidaskDammPool.wrappers.tolk]
+output-dir = "data/bidask/damm_pool/wrappers"
 
 [contracts.BidaskDammLpWallet]
 display-name = "Bidask DAMM LP Wallet"
@@ -921,11 +1377,17 @@ src = "data/bidask/damm_lp_wallet/testdata/BidaskDammLpWallet.boc"
 types = "data/bidask/damm_lp_wallet/types/bidask_damm_lp_wallet.types.tolk"
 depends = []
 
+[contracts.BidaskDammLpWallet.wrappers.tolk]
+output-dir = "data/bidask/damm_lp_wallet/wrappers"
+
 [contracts.StormVault]
 display-name = "Storm Trade Jetton Vault"
 src = "data/storm/vault/testdata/StormVault.boc"
 types = "data/storm/vault/types/storm_vault.types.tolk"
 depends = []
+
+[contracts.StormVault.wrappers.tolk]
+output-dir = "data/storm/vault/wrappers"
 
 [contracts.StormVaultNative]
 display-name = "Storm Trade Native Vault"
@@ -933,11 +1395,17 @@ src = "data/storm/vault_native/testdata/StormVaultNative.boc"
 types = "data/storm/vault_native/types/storm_vault_native.types.tolk"
 depends = []
 
+[contracts.StormVaultNative.wrappers.tolk]
+output-dir = "data/storm/vault_native/wrappers"
+
 [contracts.StormVamm]
 display-name = "Storm Trade vAMM"
 src = "data/storm/vamm/testdata/StormVamm.boc"
 types = "data/storm/vamm/types/storm_vamm.types.tolk"
 depends = []
+
+[contracts.StormVamm.wrappers.tolk]
+output-dir = "data/storm/vamm/wrappers"
 
 [contracts.StormVammCoinm]
 display-name = "Storm Trade Coin-Margined vAMM"
@@ -945,11 +1413,17 @@ src = "data/storm/vamm_coinm/testdata/StormVammCoinm.boc"
 types = "data/storm/vamm_coinm/types/storm_vamm_coinm.types.tolk"
 depends = []
 
+[contracts.StormVammCoinm.wrappers.tolk]
+output-dir = "data/storm/vamm_coinm/wrappers"
+
 [contracts.SmartAccountFactory]
 display-name = "Storm Trade Smart Account Factory"
 src = "data/storm/smart_account_factory/testdata/SmartAccountFactory.boc"
 types = "data/storm/smart_account_factory/types/smart_account_factory.types.tolk"
 depends = []
+
+[contracts.SmartAccountFactory.wrappers.tolk]
+output-dir = "data/storm/smart_account_factory/wrappers"
 
 [contracts.SmartAccount]
 display-name = "Storm Trade Smart Account"
@@ -957,11 +1431,17 @@ src = "data/storm/smart_account/testdata/SmartAccount.boc"
 types = "data/storm/smart_account/types/smart_account.types.tolk"
 depends = []
 
+[contracts.SmartAccount.wrappers.tolk]
+output-dir = "data/storm/smart_account/wrappers"
+
 [contracts.SmartAccountBlank]
 display-name = "Storm Trade Smart Account Blank"
 src = "data/storm/smart_account_blank/testdata/SmartAccountBlank.boc"
 types = "data/storm/smart_account_blank/types/smart_account_blank.types.tolk"
 depends = []
+
+[contracts.SmartAccountBlank.wrappers.tolk]
+output-dir = "data/storm/smart_account_blank/wrappers"
 
 [contracts.StormPositionManager]
 display-name = "Storm Trade Position Manager"
@@ -969,11 +1449,17 @@ src = "data/storm/position_manager/testdata/storm_position_manager_library.boc"
 types = "data/storm/position_manager/types/storm_position_manager.types.tolk"
 depends = []
 
+[contracts.StormPositionManager.wrappers.tolk]
+output-dir = "data/storm/position_manager/wrappers"
+
 [contracts.StormPositionManagerLegacy]
 display-name = "Storm Trade Position Manager — Legacy Empty Notifications"
 src = "data/storm/position_manager_legacy/testdata/StormPositionManagerLegacy.boc"
 types = "data/storm/position_manager_legacy/types/storm_position_manager_legacy.types.tolk"
 depends = []
+
+[contracts.StormPositionManagerLegacy.wrappers.tolk]
+output-dir = "data/storm/position_manager_legacy/wrappers"
 
 [contracts.StormReferralCollection]
 display-name = "Storm Trade Referral Collection"
@@ -981,11 +1467,17 @@ src = "data/storm/referral_collection/testdata/StormReferralCollection.boc"
 types = "data/storm/referral_collection/types/storm_referral_collection.types.tolk"
 depends = []
 
+[contracts.StormReferralCollection.wrappers.tolk]
+output-dir = "data/storm/referral_collection/wrappers"
+
 [contracts.StormReferral]
 display-name = "Storm Trade Referral Item"
 src = "data/storm/referral/testdata/StormReferral.boc"
 types = "data/storm/referral/types/storm_referral.types.tolk"
 depends = []
+
+[contracts.StormReferral.wrappers.tolk]
+output-dir = "data/storm/referral/wrappers"
 
 [contracts.StormExecutorCollection]
 display-name = "Storm Trade Executor Collection"
@@ -993,11 +1485,17 @@ src = "data/storm/executor_collection/testdata/StormExecutorCollection.boc"
 types = "data/storm/executor_collection/types/storm_executor_collection.types.tolk"
 depends = []
 
+[contracts.StormExecutorCollection.wrappers.tolk]
+output-dir = "data/storm/executor_collection/wrappers"
+
 [contracts.StormExecutor]
 display-name = "Storm Trade Executor Item"
 src = "data/storm/executor/testdata/StormExecutor.boc"
 types = "data/storm/executor/types/storm_executor.types.tolk"
 depends = []
+
+[contracts.StormExecutor.wrappers.tolk]
+output-dir = "data/storm/executor/wrappers"
 
 [contracts.StormLpMinter]
 display-name = "Storm Trade LP Jetton Minter"
@@ -1005,11 +1503,17 @@ src = "data/storm/lp_minter/testdata/StormLpMinter.boc"
 types = "data/storm/lp_minter/types/storm_lp_minter.types.tolk"
 depends = []
 
+[contracts.StormLpMinter.wrappers.tolk]
+output-dir = "data/storm/lp_minter/wrappers"
+
 [contracts.StormLpWallet]
 display-name = "Storm Trade LP Jetton Wallet"
 src = "data/storm/lp_wallet/testdata/storm_lp_wallet_code.boc"
 types = "data/storm/lp_wallet/types/storm_lp_wallet.types.tolk"
 depends = []
+
+[contracts.StormLpWallet.wrappers.tolk]
+output-dir = "data/storm/lp_wallet/wrappers"
 
 [contracts.StormPrelaunch]
 display-name = "Storm Trade Prelaunch Vault"
@@ -1017,11 +1521,17 @@ src = "data/storm/prelaunch/testdata/StormPrelaunch.boc"
 types = "data/storm/prelaunch/types/storm_prelaunch.types.tolk"
 depends = []
 
+[contracts.StormPrelaunch.wrappers.tolk]
+output-dir = "data/storm/prelaunch/wrappers"
+
 [contracts.StorageProvider]
 display-name = "TON Storage Provider"
 src = "data/storages/provider/testdata/StorageProvider.boc"
 types = "data/storages/provider/types/storage_provider.types.tolk"
 depends = []
+
+[contracts.StorageProvider.wrappers.tolk]
+output-dir = "data/storages/provider/wrappers"
 
 [contracts.StorageContract]
 display-name = "TON Storage Contract"
@@ -1029,11 +1539,17 @@ src = "data/storages/storage_contract/testdata/StorageContract.boc"
 types = "data/storages/storage_contract/types/storage_contract.types.tolk"
 depends = []
 
+[contracts.StorageContract.wrappers.tolk]
+output-dir = "data/storages/storage_contract/wrappers"
+
 [contracts.StorageAggregateContract]
 display-name = "TON Storage Aggregate Contract"
 src = "data/storages/aggregate_contract/testdata/StorageAggregateContract.boc"
 types = "data/storages/aggregate_contract/types/storage_aggregate_contract.types.tolk"
 depends = []
+
+[contracts.StorageAggregateContract.wrappers.tolk]
+output-dir = "data/storages/aggregate_contract/wrappers"
 
 [contracts.BemoFinancial]
 display-name = "Bemo v2 Financial"
@@ -1041,11 +1557,17 @@ src = "data/bemo/financial/testdata/BemoFinancial.boc"
 types = "data/bemo/financial/types/bemo_financial.types.tolk"
 depends = []
 
+[contracts.BemoFinancial.wrappers.tolk]
+output-dir = "data/bemo/financial/wrappers"
+
 [contracts.BemoUnstakeRequest]
 display-name = "Bemo v2 Unstake Request"
 src = "data/bemo/unstake_request/testdata/BemoUnstakeRequest.boc"
 types = "data/bemo/unstake_request/types/bemo_unstake_request.types.tolk"
 depends = []
+
+[contracts.BemoUnstakeRequest.wrappers.tolk]
+output-dir = "data/bemo/unstake_request/wrappers"
 
 [contracts.HipoTreasury]
 display-name = "Hipo Finance Treasury"
@@ -1053,11 +1575,17 @@ src = "data/hipo/treasury/testdata/HipoTreasury.boc"
 types = "data/hipo/treasury/types/hipo_treasury.types.tolk"
 depends = []
 
+[contracts.HipoTreasury.wrappers.tolk]
+output-dir = "data/hipo/treasury/wrappers"
+
 [contracts.HipoParent]
 display-name = "Hipo Finance hGRAM Parent"
 src = "data/hipo/parent/testdata/HipoParent.boc"
 types = "data/hipo/parent/types/hipo_parent.types.tolk"
 depends = []
+
+[contracts.HipoParent.wrappers.tolk]
+output-dir = "data/hipo/parent/wrappers"
 
 [contracts.HipoWallet]
 display-name = "Hipo Finance hGRAM Wallet"
@@ -1065,11 +1593,17 @@ src = "data/hipo/wallet/testdata/HipoWallet.boc"
 types = "data/hipo/wallet/types/hipo_wallet.types.tolk"
 depends = []
 
+[contracts.HipoWallet.wrappers.tolk]
+output-dir = "data/hipo/wallet/wrappers"
+
 [contracts.HipoCollection]
 display-name = "Hipo Finance Bill Collection"
 src = "data/hipo/collection/testdata/HipoCollection.boc"
 types = "data/hipo/collection/types/hipo_collection.types.tolk"
 depends = []
+
+[contracts.HipoCollection.wrappers.tolk]
+output-dir = "data/hipo/collection/wrappers"
 
 [contracts.HipoBill]
 display-name = "Hipo Finance Bill Item"
@@ -1077,11 +1611,17 @@ src = "data/hipo/bill/testdata/HipoBill.boc"
 types = "data/hipo/bill/types/hipo_bill.types.tolk"
 depends = []
 
+[contracts.HipoBill.wrappers.tolk]
+output-dir = "data/hipo/bill/wrappers"
+
 [contracts.HipoLoan]
 display-name = "Hipo Finance Loan"
 src = "data/hipo/loan/testdata/HipoLoan.boc"
 types = "data/hipo/loan/types/hipo_loan.types.tolk"
 depends = []
+
+[contracts.HipoLoan.wrappers.tolk]
+output-dir = "data/hipo/loan/wrappers"
 
 [contracts.HipoLibrarian]
 display-name = "Hipo Finance Librarian"
@@ -1089,11 +1629,17 @@ src = "data/hipo/librarian/testdata/HipoLibrarian.boc"
 types = "data/hipo/librarian/types/hipo_librarian.types.tolk"
 depends = []
 
+[contracts.HipoLibrarian.wrappers.tolk]
+output-dir = "data/hipo/librarian/wrappers"
+
 [contracts.TonstakersPool]
 display-name = "Tonstakers Staking Pool"
 src = "data/tonstakers/pool/testdata/TonstakersPool.boc"
 types = "data/tonstakers/pool/types/tonstakers_pool.types.tolk"
 depends = []
+
+[contracts.TonstakersPool.wrappers.tolk]
+output-dir = "data/tonstakers/pool/wrappers"
 
 [contracts.TonstakersValidatorController]
 display-name = "Tonstakers Validator Controller"
@@ -1101,11 +1647,17 @@ src = "data/tonstakers/controller/testdata/TonstakersValidatorController.boc"
 types = "data/tonstakers/controller/types/tonstakers_validator_controller.types.tolk"
 depends = []
 
+[contracts.TonstakersValidatorController.wrappers.tolk]
+output-dir = "data/tonstakers/controller/wrappers"
+
 [contracts.TsTonMinter]
 display-name = "Tonstakers tsTON Minter"
 src = "data/tonstakers/ts_ton_minter/testdata/TsTonMinter.boc"
 types = "data/tonstakers/ts_ton_minter/types/ts_ton_minter.types.tolk"
 depends = []
+
+[contracts.TsTonMinter.wrappers.tolk]
+output-dir = "data/tonstakers/ts_ton_minter/wrappers"
 
 [contracts.TsTonWallet]
 display-name = "Tonstakers tsTON Wallet"
@@ -1113,11 +1665,17 @@ src = "data/tonstakers/ts_ton_wallet/testdata/TsTonWallet.boc"
 types = "data/tonstakers/ts_ton_wallet/types/ts_ton_wallet.types.tolk"
 depends = []
 
+[contracts.TsTonWallet.wrappers.tolk]
+output-dir = "data/tonstakers/ts_ton_wallet/wrappers"
+
 [contracts.TonstakersPayoutCollection]
 display-name = "Tonstakers Payout NFT Collection"
 src = "data/tonstakers/payout_collection/testdata/TonstakersPayoutCollection.boc"
 types = "data/tonstakers/payout_collection/types/tonstakers_payout_collection.types.tolk"
 depends = []
+
+[contracts.TonstakersPayoutCollection.wrappers.tolk]
+output-dir = "data/tonstakers/payout_collection/wrappers"
 
 [contracts.TonstakersPayoutItem]
 display-name = "Tonstakers Payout NFT Item"
@@ -1125,11 +1683,17 @@ src = "data/tonstakers/payout_item/testdata/TonstakersPayoutItem.boc"
 types = "data/tonstakers/payout_item/types/tonstakers_payout_item.types.tolk"
 depends = []
 
+[contracts.TonstakersPayoutItem.wrappers.tolk]
+output-dir = "data/tonstakers/payout_item/wrappers"
+
 [contracts.StakeePool]
 display-name = "Stakee Staking Pool"
 src = "data/stakee/pool/testdata/StakeePool.boc"
 types = "data/stakee/pool/types/stakee_pool.types.tolk"
 depends = []
+
+[contracts.StakeePool.wrappers.tolk]
+output-dir = "data/stakee/pool/wrappers"
 
 [contracts.StakeeValidatorController]
 display-name = "Stakee Validator Controller"
@@ -1137,11 +1701,17 @@ src = "data/stakee/controller/testdata/StakeeValidatorController.boc"
 types = "data/stakee/controller/types/stakee_validator_controller.types.tolk"
 depends = []
 
+[contracts.StakeeValidatorController.wrappers.tolk]
+output-dir = "data/stakee/controller/wrappers"
+
 [contracts.StakeedMinter]
 display-name = "Stakee STAKEED Minter"
 src = "data/stakee/stakeed_minter/testdata/StakeedMinter.boc"
 types = "data/stakee/stakeed_minter/types/stakeed_minter.types.tolk"
 depends = []
+
+[contracts.StakeedMinter.wrappers.tolk]
+output-dir = "data/stakee/stakeed_minter/wrappers"
 
 [contracts.StakeedWallet]
 display-name = "Stakee STAKEED Wallet"
@@ -1149,11 +1719,17 @@ src = "data/stakee/stakeed_wallet/testdata/StakeedWallet.boc"
 types = "data/stakee/stakeed_wallet/types/stakeed_wallet.types.tolk"
 depends = []
 
+[contracts.StakeedWallet.wrappers.tolk]
+output-dir = "data/stakee/stakeed_wallet/wrappers"
+
 [contracts.StakeePayoutCollection]
 display-name = "Stakee Payout NFT Collection"
 src = "data/stakee/payout_collection/testdata/StakeePayoutCollection.boc"
 types = "data/stakee/payout_collection/types/stakee_payout_collection.types.tolk"
 depends = []
+
+[contracts.StakeePayoutCollection.wrappers.tolk]
+output-dir = "data/stakee/payout_collection/wrappers"
 
 [contracts.StakeePayoutItem]
 display-name = "Stakee Payout NFT Item"
@@ -1161,11 +1737,17 @@ src = "data/stakee/payout_item/testdata/StakeePayoutItem.boc"
 types = "data/stakee/payout_item/types/stakee_payout_item.types.tolk"
 depends = []
 
+[contracts.StakeePayoutItem.wrappers.tolk]
+output-dir = "data/stakee/payout_item/wrappers"
+
 [contracts.EvaaMasterPyth]
 display-name = "EVAA Master Pyth"
 src = "data/evaa/master_pyth/testdata/EvaaMasterPyth.boc"
 types = "data/evaa/master_pyth/types/evaa_master_pyth.types.tolk"
 depends = []
+
+[contracts.EvaaMasterPyth.wrappers.tolk]
+output-dir = "data/evaa/master_pyth/wrappers"
 
 [contracts.EvaaMasterClassic]
 display-name = "EVAA Master Classic"
@@ -1173,11 +1755,17 @@ src = "data/evaa/master_classic/testdata/EvaaMasterClassic.boc"
 types = "data/evaa/master_classic/types/evaa_master_classic.types.tolk"
 depends = []
 
+[contracts.EvaaMasterClassic.wrappers.tolk]
+output-dir = "data/evaa/master_classic/wrappers"
+
 [contracts.EvaaUser]
 display-name = "EVAA User"
 src = "data/evaa/user/testdata/EvaaUser.boc"
 types = "data/evaa/user/types/evaa_user.types.tolk"
 depends = []
+
+[contracts.EvaaUser.wrappers.tolk]
+output-dir = "data/evaa/user/wrappers"
 
 [contracts.EvaaBlank]
 display-name = "EVAA Blank"
@@ -1185,11 +1773,17 @@ src = "data/evaa/blank/testdata/EvaaBlank.boc"
 types = "data/evaa/blank/types/evaa_blank.types.tolk"
 depends = []
 
+[contracts.EvaaBlank.wrappers.tolk]
+output-dir = "data/evaa/blank/wrappers"
+
 [contracts.NominatorPool]
 display-name = "TON Validators Nominator Pool"
 src = "data/nominator_pool/pool/testdata/NominatorPool.boc"
 types = "data/nominator_pool/pool/types/nominator_pool.types.tolk"
 depends = []
+
+[contracts.NominatorPool.wrappers.tolk]
+output-dir = "data/nominator_pool/pool/wrappers"
 
 [contracts.SingleNominatorV10]
 display-name = "Single Nominator Pool v1.0"
@@ -1197,11 +1791,17 @@ src = "data/single_nominator/v1_0/testdata/SingleNominatorV10.boc"
 types = "data/single_nominator/v1_0/types/single_nominator_v1_0.types.tolk"
 depends = []
 
+[contracts.SingleNominatorV10.wrappers.tolk]
+output-dir = "data/single_nominator/v1_0/wrappers"
+
 [contracts.SingleNominatorV11]
 display-name = "Single Nominator Pool v1.1"
 src = "data/single_nominator/v1_1/testdata/SingleNominatorV11.boc"
 types = "data/single_nominator/v1_1/types/single_nominator_v1_1.types.tolk"
 depends = []
+
+[contracts.SingleNominatorV11.wrappers.tolk]
+output-dir = "data/single_nominator/v1_1/wrappers"
 
 [contracts.WhalesPool]
 display-name = "Ton Whales Nominators Pool"
@@ -1209,11 +1809,17 @@ src = "data/whales/pool/testdata/WhalesPool.boc"
 types = "data/whales/pool/types/whales_pool.types.tolk"
 depends = []
 
+[contracts.WhalesPool.wrappers.tolk]
+output-dir = "data/whales/pool/wrappers"
+
 [contracts.WhalesProxy]
 display-name = "Ton Whales Nominators Proxy"
 src = "data/whales/proxy/testdata/WhalesProxy.boc"
 types = "data/whales/proxy/types/whales_proxy.types.tolk"
 depends = []
+
+[contracts.WhalesProxy.wrappers.tolk]
+output-dir = "data/whales/proxy/wrappers"
 
 [contracts.AirdropInterlockerV1]
 display-name = "Airdrop Interlocker v1"
@@ -1221,11 +1827,17 @@ src = "data/airdrop/interlocker_v1/testdata/AirdropInterlockerV1.boc"
 types = "data/airdrop/interlocker_v1/types/airdrop_interlocker_v1.types.tolk"
 depends = []
 
+[contracts.AirdropInterlockerV1.wrappers.tolk]
+output-dir = "data/airdrop/interlocker_v1/wrappers"
+
 [contracts.AirdropInterlockerV2]
 display-name = "Airdrop Interlocker v2"
 src = "data/airdrop/interlocker_v2/testdata/AirdropInterlockerV2.boc"
 types = "data/airdrop/interlocker_v2/types/airdrop_interlocker_v2.types.tolk"
 depends = []
+
+[contracts.AirdropInterlockerV2.wrappers.tolk]
+output-dir = "data/airdrop/interlocker_v2/wrappers"
 
 [contracts.Cron]
 display-name = "TON Cron"
@@ -1233,11 +1845,17 @@ src = "data/cron/testdata/Cron.boc"
 types = "data/cron/types/cron.types.tolk"
 depends = []
 
+[contracts.Cron.wrappers.tolk]
+output-dir = "data/cron/wrappers"
+
 [contracts.AsyncPaymentChannel]
 display-name = "TON Asynchronous Payment Channel"
 src = "data/payment_channels/async/testdata/AsyncPaymentChannel.boc"
 types = "data/payment_channels/async/types/payment_channel.types.tolk"
 depends = []
+
+[contracts.AsyncPaymentChannel.wrappers.tolk]
+output-dir = "data/payment_channels/async/wrappers"
 
 [contracts.GramMiner]
 display-name = "GRAM Miner"
@@ -1245,11 +1863,17 @@ src = "data/gram/testdata/GramMiner.boc"
 types = "data/gram/types/gram_miner.types.tolk"
 depends = []
 
+[contracts.GramMiner.wrappers.tolk]
+output-dir = "data/gram/wrappers"
+
 [contracts.SubscriptionV2]
 display-name = "Tonkeeper Subscription V2"
 src = "data/subscriptions/testdata/SubscriptionV2.boc"
 types = "data/subscriptions/types/subscription_v2.types.tolk"
 depends = []
+
+[contracts.SubscriptionV2.wrappers.tolk]
+output-dir = "data/subscriptions/wrappers"
 
 [contracts.SubscriptionV1]
 display-name = "Tonkeeper Subscription V1"
@@ -1257,11 +1881,17 @@ src = "data/subscriptions/testdata/SubscriptionV1.boc"
 types = "data/subscriptions/types/subscription_v1.types.tolk"
 depends = []
 
+[contracts.SubscriptionV1.wrappers.tolk]
+output-dir = "data/subscriptions/wrappers"
+
 [contracts.Tonkeeper2fa]
 display-name = "Tonkeeper 2FA Extension"
 src = "data/tonkeeper_2fa/testdata/Tonkeeper2fa.boc"
 types = "data/tonkeeper_2fa/types/tonkeeper_2fa.types.tolk"
 depends = []
+
+[contracts.Tonkeeper2fa.wrappers.tolk]
+output-dir = "data/tonkeeper_2fa/wrappers"
 
 [contracts.MyTonWallet2fa]
 display-name = "MyTonWallet 2FA"
@@ -1269,11 +1899,17 @@ src = "data/tonkeeper_2fa/mytonwallet_2fa/testdata/MyTonWallet2fa.boc"
 types = "data/tonkeeper_2fa/mytonwallet_2fa/types/mytonwallet_2fa.types.tolk"
 depends = []
 
+[contracts.MyTonWallet2fa.wrappers.tolk]
+output-dir = "data/tonkeeper_2fa/mytonwallet_2fa/wrappers"
+
 [contracts.Elector]
 display-name = "TON Elector"
 src = "data/system/elector/testdata/Elector.boc"
 types = "data/system/elector/types/elector.types.tolk"
 depends = []
+
+[contracts.Elector.wrappers.tolk]
+output-dir = "data/system/elector/wrappers"
 
 [contracts.Config]
 display-name = "TON Config"
@@ -1281,11 +1917,17 @@ src = "data/system/config/testdata/Config.boc"
 types = "data/system/config/types/config.types.tolk"
 depends = []
 
+[contracts.Config.wrappers.tolk]
+output-dir = "data/system/config/wrappers"
+
 [contracts.AquaUsdMasterVault]
 display-name = "Aqua USD Master Vault"
 src = "data/aqua/testdata/AquaUsdMasterVault.boc"
 types = "data/aqua/types/aqua_usd_master_vault.types.tolk"
 depends = []
+
+[contracts.AquaUsdMasterVault.wrappers.tolk]
+output-dir = "data/aqua/wrappers"
 
 [contracts.DaolamaVault]
 display-name = "DAOLama TON Vault"
@@ -1293,11 +1935,17 @@ src = "data/daolama/testdata/daolama_vault_current.boc"
 types = "data/daolama/types/daolama_vault.types.tolk"
 depends = []
 
+[contracts.DaolamaVault.wrappers.tolk]
+output-dir = "data/daolama/wrappers"
+
 [contracts.FragmentUsernameCollection]
 display-name = "Fragment Username Collection"
 src = "data/fragment/testdata/FragmentUsernameCollection.boc"
 types = "data/fragment/types/fragment_username_collection.types.tolk"
 depends = []
+
+[contracts.FragmentUsernameCollection.wrappers.tolk]
+output-dir = "data/fragment/wrappers"
 
 [contracts.FragmentNumbersCollection]
 display-name = "Fragment Numbers Collection"
@@ -1305,11 +1953,17 @@ src = "data/fragment/testdata/FragmentNumbersCollection.boc"
 types = "data/fragment/types/fragment_numbers_collection.types.tolk"
 depends = []
 
+[contracts.FragmentNumbersCollection.wrappers.tolk]
+output-dir = "data/fragment/wrappers"
+
 [contracts.FragmentUsernameItem]
 display-name = "Fragment Username Item"
 src = "data/fragment/testdata/FragmentUsernameItem.boc"
 types = "data/fragment/types/fragment_username_item.types.tolk"
 depends = []
+
+[contracts.FragmentUsernameItem.wrappers.tolk]
+output-dir = "data/fragment/wrappers"
 
 [contracts.FragmentNumbersItem]
 display-name = "Fragment Numbers Item"
@@ -1317,11 +1971,17 @@ src = "data/fragment/testdata/FragmentNumbersItem.boc"
 types = "data/fragment/types/fragment_numbers_item.types.tolk"
 depends = []
 
+[contracts.FragmentNumbersItem.wrappers.tolk]
+output-dir = "data/fragment/wrappers"
+
 [contracts.FragmentMarketappProxyKnown]
 display-name = "Fragment MarketApp Proxy Known"
 src = "data/fragment/marketapp_proxy/testdata/FragmentMarketappProxyKnown.boc"
 types = "data/fragment/marketapp_proxy/types/fragment_marketapp_proxy_known.types.tolk"
 depends = []
+
+[contracts.FragmentMarketappProxyKnown.wrappers.tolk]
+output-dir = "data/fragment/marketapp_proxy/wrappers"
 
 [contracts.FragmentMarketappProxySimple]
 display-name = "Fragment MarketApp Proxy Simple"
@@ -1329,11 +1989,17 @@ src = "data/fragment/marketapp_proxy/testdata/FragmentMarketappProxySimple.boc"
 types = "data/fragment/marketapp_proxy/types/fragment_marketapp_proxy_simple.types.tolk"
 depends = []
 
+[contracts.FragmentMarketappProxySimple.wrappers.tolk]
+output-dir = "data/fragment/marketapp_proxy/wrappers"
+
 [contracts.FragmentMarketappProxyJetton]
 display-name = "Fragment MarketApp Proxy Jetton"
 src = "data/fragment/marketapp_proxy/testdata/FragmentMarketappProxyJetton.boc"
 types = "data/fragment/marketapp_proxy/types/fragment_marketapp_proxy_jetton.types.tolk"
 depends = []
+
+[contracts.FragmentMarketappProxyJetton.wrappers.tolk]
+output-dir = "data/fragment/marketapp_proxy/wrappers"
 
 [contracts.MarketAppNftRentalV2R2Revision1]
 display-name = "MarketApp NFT Rental V2R2 Revision 1"
@@ -1341,11 +2007,17 @@ src = "data/marketapp/nft_rental_v2r2_revision1/testdata/MarketAppNftRentalV2R2R
 types = "data/marketapp/nft_rental_v2r2_revision1/types/marketapp_nft_rental_v2r2_revision1.types.tolk"
 depends = []
 
+[contracts.MarketAppNftRentalV2R2Revision1.wrappers.tolk]
+output-dir = "data/marketapp/nft_rental_v2r2_revision1/wrappers"
+
 [contracts.MarketAppNftRentalV2R2Revision2]
 display-name = "MarketApp NFT Rental V2R2 Revision 2"
 src = "data/marketapp/nft_rental_v2r2_revision2/testdata/MarketAppNftRentalV2R2Revision2.boc"
 types = "data/marketapp/nft_rental_v2r2_revision2/types/marketapp_nft_rental_v2r2_revision2.types.tolk"
 depends = []
+
+[contracts.MarketAppNftRentalV2R2Revision2.wrappers.tolk]
+output-dir = "data/marketapp/nft_rental_v2r2_revision2/wrappers"
 
 [contracts.PythOracle]
 display-name = "Pyth Oracle"
@@ -1353,11 +2025,17 @@ src = "data/pyth_oracle/testdata/PythOracle.boc"
 types = "data/pyth_oracle/types/pyth_oracle.types.tolk"
 depends = []
 
+[contracts.PythOracle.wrappers.tolk]
+output-dir = "data/pyth_oracle/wrappers"
+
 [contracts.XtrMaster]
 display-name = "XTR Master"
 src = "data/xtr/master/testdata/XtrMaster.boc"
 types = "data/xtr/master/types/xtr_master.types.tolk"
 depends = []
+
+[contracts.XtrMaster.wrappers.tolk]
+output-dir = "data/xtr/master/wrappers"
 
 [contracts.TonpayStoreV11]
 display-name = "TonPay Store v11"
@@ -1365,11 +2043,17 @@ src = "data/tonpay/store_v11/testdata/TonpayStoreV11.boc"
 types = "data/tonpay/store_v11/types/tonpay_store_v11.types.tolk"
 depends = []
 
+[contracts.TonpayStoreV11.wrappers.tolk]
+output-dir = "data/tonpay/store_v11/wrappers"
+
 [contracts.TonpayInvoiceV9]
 display-name = "TonPay Invoice v9"
 src = "data/tonpay/invoice_v9/testdata/TonpayInvoiceV9.boc"
 types = "data/tonpay/invoice_v9/types/tonpay_invoice_v9.types.tolk"
 depends = []
+
+[contracts.TonpayInvoiceV9.wrappers.tolk]
+output-dir = "data/tonpay/invoice_v9/wrappers"
 
 [contracts.MoonBooster]
 display-name = "Moon.cx Booster"
@@ -1377,11 +2061,17 @@ src = "data/moon/booster/testdata/MoonBooster.boc"
 types = "data/moon/booster/types/moon_booster.types.tolk"
 depends = []
 
+[contracts.MoonBooster.wrappers.tolk]
+output-dir = "data/moon/booster/wrappers"
+
 [contracts.MoonPool]
 display-name = "Moon.cx Pool"
 src = "data/moon/pool/testdata/MoonPool.boc"
 types = "data/moon/pool/types/moon_pool.types.tolk"
 depends = []
+
+[contracts.MoonPool.wrappers.tolk]
+output-dir = "data/moon/pool/wrappers"
 
 [contracts.MoonClmmRange]
 display-name = "Moon.cx CLMM Range"
@@ -1389,11 +2079,17 @@ src = "data/moon/clmm_range/testdata/MoonClmmRange.boc"
 types = "data/moon/clmm_range/types/moon_clmm_range.types.tolk"
 depends = []
 
+[contracts.MoonClmmRange.wrappers.tolk]
+output-dir = "data/moon/clmm_range/wrappers"
+
 [contracts.MoonOrderFactory]
 display-name = "Moon Order Factory"
 src = "data/moon/order_factory/testdata/MoonOrderFactory.boc"
 types = "data/moon/order_factory/types/moon_order_factory.types.tolk"
 depends = []
+
+[contracts.MoonOrderFactory.wrappers.tolk]
+output-dir = "data/moon/order_factory/wrappers"
 
 [contracts.MoonOrderOld]
 display-name = "Moon Order Old"
@@ -1401,11 +2097,17 @@ src = "data/moon/order/old/testdata/MoonOrderOld.boc"
 types = "data/moon/order/old/types/moon_order_old.types.tolk"
 depends = []
 
+[contracts.MoonOrderOld.wrappers.tolk]
+output-dir = "data/moon/order/old/wrappers"
+
 [contracts.MoonOrderNew]
 display-name = "Moon Order New"
 src = "data/moon/order/new/testdata/MoonOrderNew.boc"
 types = "data/moon/order/new/types/moon_order_new.types.tolk"
 depends = []
+
+[contracts.MoonOrderNew.wrappers.tolk]
+output-dir = "data/moon/order/new/wrappers"
 
 [contracts.MegatonRouter]
 display-name = "Megaton Router"
@@ -1413,11 +2115,17 @@ src = "data/megatonfi/router/testdata/MegatonRouter.boc"
 types = "data/megatonfi/router/types/megaton_router.types.tolk"
 depends = []
 
+[contracts.MegatonRouter.wrappers.tolk]
+output-dir = "data/megatonfi/router/wrappers"
+
 [contracts.MegatonExchange]
 display-name = "Megaton Finance Exchange"
 src = "data/megatonfi/exchange/testdata/MegatonExchange.boc"
 types = "data/megatonfi/exchange/types/megaton_exchange.types.tolk"
 depends = []
+
+[contracts.MegatonExchange.wrappers.tolk]
+output-dir = "data/megatonfi/exchange/wrappers"
 
 [contracts.GetgemsOffchainOfferV3]
 display-name = "Getgems Offchain Offer V3"
@@ -1425,11 +2133,17 @@ src = "data/getgems/getgems_offchain_offer_v3/testdata/GetgemsOffchainOfferV3.bo
 types = "data/getgems/getgems_offchain_offer_v3/types/getgems_offchain_offer_v3.types.tolk"
 depends = []
 
+[contracts.GetgemsOffchainOfferV3.wrappers.tolk]
+output-dir = "data/getgems/getgems_offchain_offer_v3/wrappers"
+
 [contracts.CoffeeMevProtectorLegacy]
 display-name = "Coffee Swap MEV Protector Legacy"
 src = "data/coffee/mev_protector/testdata/CoffeeMevProtectorLegacy.boc"
 types = "data/coffee/mev_protector/types/coffee_mev_protector_legacy.types.tolk"
 depends = []
+
+[contracts.CoffeeMevProtectorLegacy.wrappers.tolk]
+output-dir = "data/coffee/mev_protector/wrappers"
 
 [contracts.StonksPumpCustomJettonWallet]
 display-name = "StonksPump Custom Jetton Wallet"
@@ -1437,11 +2151,17 @@ src = "data/stonkspump/custom_jetton_wallet/testdata/StonksPumpCustomJettonWalle
 types = "data/stonkspump/custom_jetton_wallet/types/stonkspump_custom_jetton_wallet.types.tolk"
 depends = []
 
+[contracts.StonksPumpCustomJettonWallet.wrappers.tolk]
+output-dir = "data/stonkspump/custom_jetton_wallet/wrappers"
+
 [contracts.SignedCrossDexExecutor]
 display-name = "Signed Cross-DEX Executor"
 src = "data/signed_cross_dex/executor/testdata/SignedCrossDexExecutor.boc"
 types = "data/signed_cross_dex/executor/types/signed_cross_dex_executor.types.tolk"
 depends = []
+
+[contracts.SignedCrossDexExecutor.wrappers.tolk]
+output-dir = "data/signed_cross_dex/executor/wrappers"
 
 [contracts.FrtGramAdapterCoordinator]
 display-name = "FRT/GRAM Adapter Coordinator"
@@ -1449,11 +2169,17 @@ src = "data/frt_gram_adapter/testdata/FrtGramAdapterCoordinator.boc"
 types = "data/frt_gram_adapter/types/frt_gram_coordinator.types.tolk"
 depends = []
 
+[contracts.FrtGramAdapterCoordinator.wrappers.tolk]
+output-dir = "data/frt_gram_adapter/wrappers"
+
 [contracts.FrtGramAdapterDispatcher]
 display-name = "FRT/GRAM Adapter Dispatcher"
 src = "data/frt_gram_adapter/testdata/FrtGramAdapterDispatcher.boc"
 types = "data/frt_gram_adapter/types/frt_gram_dispatcher.types.tolk"
 depends = []
+
+[contracts.FrtGramAdapterDispatcher.wrappers.tolk]
+output-dir = "data/frt_gram_adapter/wrappers"
 
 [contracts.FrtGramAdapterOrchestrator]
 display-name = "FRT/GRAM Adapter Orchestrator"
@@ -1461,11 +2187,17 @@ src = "data/frt_gram_adapter/testdata/FrtGramAdapterOrchestrator.boc"
 types = "data/frt_gram_adapter/types/frt_gram_orchestrator.types.tolk"
 depends = []
 
+[contracts.FrtGramAdapterOrchestrator.wrappers.tolk]
+output-dir = "data/frt_gram_adapter/wrappers"
+
 [contracts.FrtGramAdapterWorker]
 display-name = "FRT/GRAM Adapter Worker"
 src = "data/frt_gram_adapter/testdata/FrtGramAdapterWorker.boc"
 types = "data/frt_gram_adapter/types/frt_gram_worker.types.tolk"
 depends = []
+
+[contracts.FrtGramAdapterWorker.wrappers.tolk]
+output-dir = "data/frt_gram_adapter/wrappers"
 
 [contracts.FrtGramAdapterExecutor]
 display-name = "FRT/GRAM Adapter Executor"
@@ -1473,11 +2205,17 @@ src = "data/frt_gram_adapter/testdata/FrtGramAdapterExecutor.boc"
 types = "data/frt_gram_adapter/types/frt_gram_executor.types.tolk"
 depends = []
 
+[contracts.FrtGramAdapterExecutor.wrappers.tolk]
+output-dir = "data/frt_gram_adapter/wrappers"
+
 [contracts.JVaultPool]
 display-name = "JVault Staking Pool"
 src = "data/jvault/pool/testdata/JVaultPool.boc"
 types = "data/jvault/pool/types/jvault_pool.types.tolk"
 depends = []
+
+[contracts.JVaultPool.wrappers.tolk]
+output-dir = "data/jvault/pool/wrappers"
 
 [contracts.JVaultPoolFactory]
 display-name = "JVault Pool Factory"
@@ -1485,11 +2223,17 @@ src = "data/jvault/pool_factory/testdata/JVaultPoolFactory.boc"
 types = "data/jvault/pool_factory/types/jvault_pool_factory.types.tolk"
 depends = []
 
+[contracts.JVaultPoolFactory.wrappers.tolk]
+output-dir = "data/jvault/pool_factory/wrappers"
+
 [contracts.JVaultStakingWallet]
 display-name = "JVault Staking Wallet"
 src = "data/jvault/staking_wallet/testdata/JVaultStakingWallet.boc"
 types = "data/jvault/staking_wallet/types/jvault_staking_wallet.types.tolk"
 depends = []
+
+[contracts.JVaultStakingWallet.wrappers.tolk]
+output-dir = "data/jvault/staking_wallet/wrappers"
 
 [contracts.TsusdeVault]
 display-name = "tsUSDe Vault"
@@ -1497,11 +2241,17 @@ src = "data/tsusde/vault/testdata/TsusdeVault.boc"
 types = "data/tsusde/vault/types/tsusde_vault.types.tolk"
 depends = []
 
+[contracts.TsusdeVault.wrappers.tolk]
+output-dir = "data/tsusde/vault/wrappers"
+
 [contracts.TsusdeWallet]
 display-name = "tsUSDe Wallet"
 src = "data/tsusde/wallet/testdata/TsusdeWallet.boc"
 types = "data/tsusde/wallet/types/tsusde_wallet.types.tolk"
 depends = []
+
+[contracts.TsusdeWallet.wrappers.tolk]
+output-dir = "data/tsusde/wallet/wrappers"
 
 [contracts.StonfiFarmCollection]
 display-name = "STON.fi Farm Collection"
@@ -1509,11 +2259,17 @@ src = "data/stonfi/farm_collection/testdata/StonfiFarmCollection.boc"
 types = "data/stonfi/farm_collection/types/stonfi_farm_collection.types.tolk"
 depends = []
 
+[contracts.StonfiFarmCollection.wrappers.tolk]
+output-dir = "data/stonfi/farm_collection/wrappers"
+
 [contracts.StonfiFarmNft]
 display-name = "STON.fi Farm NFT"
 src = "data/stonfi/farm_nft/testdata/StonfiFarmNft.boc"
 types = "data/stonfi/farm_nft/types/stonfi_farm_nft.types.tolk"
 depends = []
+
+[contracts.StonfiFarmNft.wrappers.tolk]
+output-dir = "data/stonfi/farm_nft/wrappers"
 
 [contracts.TacJetton]
 display-name = "TAC Jetton Master"
@@ -1521,11 +2277,17 @@ src = "data/tac/jetton/testdata/TacJetton.boc"
 types = "data/tac/jetton/types/tac_jetton.types.tolk"
 depends = []
 
+[contracts.TacJetton.wrappers.tolk]
+output-dir = "data/tac/jetton/wrappers"
+
 [contracts.TgUsdLiquidStaking]
 display-name = "tgUSD Liquid Staking"
 src = "data/tgusd/testdata/TgUsdLiquidStaking.boc"
 types = "data/tgusd/liquid_staking/types/tgusd_liquid_staking.types.tolk"
 depends = []
+
+[contracts.TgUsdLiquidStaking.wrappers.tolk]
+output-dir = "data/tgusd/liquid_staking/wrappers"
 
 [contracts.WhalesLiquidStaking]
 display-name = "Ton Whales Liquid Staking Pool"
@@ -1533,11 +2295,17 @@ src = "data/whales/liquid_staking/testdata/WhalesLiquidStaking.boc"
 types = "data/whales/liquid_staking/types/whales_liquid_staking.types.tolk"
 depends = []
 
+[contracts.WhalesLiquidStaking.wrappers.tolk]
+output-dir = "data/whales/liquid_staking/wrappers"
+
 [contracts.DedustX1000WalletV1]
 display-name = "DeDust x1000 Wallet V1"
 src = "data/dedust/x1000_wallet_v1/testdata/DedustX1000WalletV1.boc"
 types = "data/dedust/x1000_wallet_v1/types/dedust_x1000_wallet_v1.types.tolk"
 depends = []
+
+[contracts.DedustX1000WalletV1.wrappers.tolk]
+output-dir = "data/dedust/x1000_wallet_v1/wrappers"
 
 [contracts.DedustX1000WalletV2]
 display-name = "DeDust x1000 Wallet V2"
@@ -1545,11 +2313,17 @@ src = "data/dedust/x1000_wallet_v2/testdata/DedustX1000WalletV2.boc"
 types = "data/dedust/x1000_wallet_v2/types/dedust_x1000_wallet_v2.types.tolk"
 depends = []
 
+[contracts.DedustX1000WalletV2.wrappers.tolk]
+output-dir = "data/dedust/x1000_wallet_v2/wrappers"
+
 [contracts.DedustUranusMemeV2]
 display-name = "DeDust Uranus Meme V2"
 src = "data/dedust/uranus/meme_v2/testdata/DedustUranusMemeV2.boc"
 types = "data/dedust/uranus/meme_v2/types/dedust_uranus_meme_v2.types.tolk"
 depends = []
+
+[contracts.DedustUranusMemeV2.wrappers.tolk]
+output-dir = "data/dedust/uranus/meme_v2/wrappers"
 
 [contracts.GasPumpMasterV0]
 display-name = "GasPump Master V0"
@@ -1557,11 +2331,17 @@ src = "data/gaspump/master/testdata/GasPumpMasterV0.boc"
 types = "data/gaspump/master/types/gaspump_master_v0.types.tolk"
 depends = []
 
+[contracts.GasPumpMasterV0.wrappers.tolk]
+output-dir = "data/gaspump/master/wrappers"
+
 [contracts.GasPumpMasterV1]
 display-name = "GasPump Master V1"
 src = "data/gaspump/master/testdata/GasPumpMasterV1.boc"
 types = "data/gaspump/master/types/gaspump_master_v1.types.tolk"
 depends = []
+
+[contracts.GasPumpMasterV1.wrappers.tolk]
+output-dir = "data/gaspump/master/wrappers"
 
 [contracts.GasPumpMasterV2]
 display-name = "GasPump Master V2"
@@ -1569,11 +2349,17 @@ src = "data/gaspump/master/testdata/GasPumpMasterV2.boc"
 types = "data/gaspump/master/types/gaspump_master_v2_v3.types.tolk"
 depends = []
 
+[contracts.GasPumpMasterV2.wrappers.tolk]
+output-dir = "data/gaspump/master/wrappers"
+
 [contracts.GasPumpMasterV4]
 display-name = "GasPump Master V4"
 src = "data/gaspump/master/testdata/GasPumpMasterV4.boc"
 types = "data/gaspump/master/types/gaspump_master_v4.types.tolk"
 depends = []
+
+[contracts.GasPumpMasterV4.wrappers.tolk]
+output-dir = "data/gaspump/master/wrappers"
 
 [contracts.GasPumpMasterV5]
 display-name = "GasPump Master V5"
@@ -1581,11 +2367,17 @@ src = "data/gaspump/master/testdata/GasPumpMasterV5.boc"
 types = "data/gaspump/master/types/gaspump_master_v5.types.tolk"
 depends = []
 
+[contracts.GasPumpMasterV5.wrappers.tolk]
+output-dir = "data/gaspump/master/wrappers"
+
 [contracts.TelegramGiftNftItem]
 display-name = "Telegram Gift NFT Item"
 src = "data/telemint/telegram_gift_nft_item/testdata/TelegramGiftNftItem.boc"
 types = "data/telemint/telegram_gift_nft_item/types/telegram_gift_nft_item.types.tolk"
 depends = []
+
+[contracts.TelegramGiftNftItem.wrappers.tolk]
+output-dir = "data/telemint/telegram_gift_nft_item/wrappers"
 
 [contracts.TonFunBclWalletV1]
 display-name = "TonFun BCL Wallet V1"
@@ -1593,17 +2385,26 @@ src = "data/tonfun/wallet/testdata/TonFunBclWalletV1.boc"
 types = "data/tonfun/wallet/types/tonfun_bcl_wallet_v1.types.tolk"
 depends = []
 
+[contracts.TonFunBclWalletV1.wrappers.tolk]
+output-dir = "data/tonfun/wallet/wrappers"
+
 [contracts.TonFunBclWalletV2]
 display-name = "TonFun BCL Wallet V2"
 src = "data/tonfun/wallet/testdata/TonFunBclWalletV2.boc"
 types = "data/tonfun/wallet/types/tonfun_bcl_wallet_v2.types.tolk"
 depends = []
 
+[contracts.TonFunBclWalletV2.wrappers.tolk]
+output-dir = "data/tonfun/wallet/wrappers"
+
 [contracts.JettonVesting]
 display-name = "Jetton Vesting"
 src = "data/jetton_vesting/testdata/JettonVesting.boc"
 types = "data/jetton_vesting/types/jetton_vesting.types.tolk"
 depends = []
+
+[contracts.JettonVesting.wrappers.tolk]
+output-dir = "data/jetton_vesting/wrappers"
 
 [scripts]
 jetton-vesting-mainnet-test = "acton test data/jetton_vesting/tests/jetton_vesting_mainnet.test.tolk --fork-net mainnet --fork-block-number 62631017 --show-bodies"

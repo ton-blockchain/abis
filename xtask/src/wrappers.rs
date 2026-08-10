@@ -42,11 +42,26 @@ struct Manifest {
     contracts: BTreeMap<String, ManifestContract>,
 }
 
-/// Manifest fields used to derive one tracked wrapper path.
+/// Manifest fields used to resolve one tracked wrapper path.
 #[derive(Debug, Deserialize)]
 struct ManifestContract {
-    /// Tolk ABI interface used by Acton wrapper generation.
-    types: PathBuf,
+    /// Contract-specific wrapper settings introduced by Acton.
+    wrappers: Option<ManifestWrappers>,
+}
+
+/// Wrapper settings from one `[contracts.<name>.wrappers]` table.
+#[derive(Debug, Deserialize)]
+struct ManifestWrappers {
+    /// Tolk wrapper settings.
+    tolk: Option<ManifestTolkWrapper>,
+}
+
+/// Tolk wrapper settings from Acton.toml.
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "kebab-case")]
+struct ManifestTolkWrapper {
+    /// Directory where Acton writes this contract's generated wrapper.
+    output_dir: Option<PathBuf>,
 }
 
 /// One wrapper expected from a contract registered in Acton.toml.
@@ -145,7 +160,7 @@ pub(crate) fn run(args: WrappersArgs) -> Result<()> {
     Ok(())
 }
 
-/// Parse Acton.toml and derive exactly one conventional wrapper path per contract.
+/// Parse Acton.toml and resolve exactly one configured wrapper path per contract.
 fn load_tasks(root: &Path, manifest_path: &Path) -> Result<Vec<WrapperTask>> {
     let contents = fs::read_to_string(manifest_path)
         .with_context(|| format!("failed to read {}", manifest_path.display()))?;
@@ -162,8 +177,15 @@ fn load_tasks(root: &Path, manifest_path: &Path) -> Result<Vec<WrapperTask>> {
     let mut paths = BTreeMap::new();
     let mut tasks = Vec::with_capacity(manifest.contracts.len());
     for (id, contract) in manifest.contracts {
-        let types_path = resolve(root, &contract.types);
-        let path = wrapper_path(&types_path, &id)?;
+        let output_dir = contract
+            .wrappers
+            .as_ref()
+            .and_then(|wrappers| wrappers.tolk.as_ref())
+            .and_then(|tolk| tolk.output_dir.as_ref())
+            .with_context(|| {
+                format!("contract {id} must define [contracts.{id}.wrappers.tolk] output-dir")
+            })?;
+        let path = wrapper_path(root, output_dir, &id)?;
         if let Some(existing) = paths.insert(path.clone(), id.clone()) {
             bail!(
                 "contracts {existing} and {id} resolve to the same wrapper: {}",
@@ -175,21 +197,12 @@ fn load_tasks(root: &Path, manifest_path: &Path) -> Result<Vec<WrapperTask>> {
     Ok(tasks)
 }
 
-/// Derive `<contract-dir>/wrappers/<contract-id>.gen.tolk` from a types path.
-fn wrapper_path(types_path: &Path, id: &str) -> Result<PathBuf> {
-    let types_dir = types_path
-        .parent()
-        .with_context(|| format!("types path has no parent: {}", types_path.display()))?;
-    if types_dir.file_name() != Some(OsStr::new("types")) {
-        bail!(
-            "types path must be inside a types directory: {}",
-            types_path.display()
-        );
+/// Resolve `<output-dir>/<contract-id>.gen.tolk` from Acton's per-contract config.
+fn wrapper_path(root: &Path, output_dir: &Path, id: &str) -> Result<PathBuf> {
+    if output_dir.as_os_str().is_empty() {
+        bail!("wrapper output-dir for {id} must not be empty");
     }
-    let contract_dir = types_dir
-        .parent()
-        .with_context(|| format!("types directory has no parent: {}", types_dir.display()))?;
-    Ok(contract_dir.join("wrappers").join(format!("{id}.gen.tolk")))
+    Ok(resolve(root, output_dir).join(format!("{id}.gen.tolk")))
 }
 
 /// Reject wrapper files that have no corresponding contract in Acton.toml.
@@ -486,9 +499,10 @@ mod tests {
     use super::*;
 
     #[test]
-    fn derives_wrapper_path_from_types_path_and_contract_id() {
+    fn resolves_wrapper_path_from_contract_output_dir() {
         let path = wrapper_path(
-            Path::new("/repo/data/example/master/types/example.types.tolk"),
+            Path::new("/repo"),
+            Path::new("data/example/master/wrappers"),
             "ExampleMaster",
         )
         .unwrap();
@@ -499,8 +513,8 @@ mod tests {
     }
 
     #[test]
-    fn rejects_types_outside_a_types_directory() {
-        assert!(wrapper_path(Path::new("/repo/data/example/example.tolk"), "Example").is_err());
+    fn rejects_empty_wrapper_output_dir() {
+        assert!(wrapper_path(Path::new("/repo"), Path::new(""), "Example").is_err());
     }
 
     #[test]
