@@ -1,0 +1,20 @@
+[project]
+name = "catizen"
+category = "Telegram game contracts"
+description = "Catizen contracts used by the Telegram game application."
+
+[[links]]
+kind = "docs"
+title = "Catizen technology and TON contracts"
+url = "https://docs.catizen.ai/technology"
+
+[contracts.CatizenInGameTask]
+display_name = "Catizen In-Game Task"
+types = "types/catizen_in_game_task.types.tolk"
+hashes = ["4c5c7db2619ba345f987c0be2387bf0e9904caa3fe04d2f22db730cfcb6c077e"]
+known_addresses = ["EQChB2eMoFG4ThuEsZ6ehlBPKJXOjNxlR5B7qKZNGIv256Da"]
+
+[contracts.CatizenInGameTask.instances.mainnet]
+address = "EQChB2eMoFG4ThuEsZ6ehlBPKJXOjNxlR5B7qKZNGIv256Da"
+network = "mainnet"
+block_seqno = 83536965
