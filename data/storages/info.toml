@@ -1,7 +1,7 @@
 [project]
 name = "storages"
 category = "TON Storage contracts"
-description = "Official TON Storage provider and per-file storage agreement contracts"
+description = "Official TON Storage provider, per-file agreement, and aggregate storage contracts"
 
 [sources]
 ton_storage_overview = "https://docs.ton.org/blockchain-basics/primitives/web3/ton-storage"
@@ -48,4 +48,14 @@ network = "mainnet"
 
 [contracts.StorageContract.instances.historical_message_sample]
 address = "EQAM3RWVQ18gX-b5iVxh1IT-g2qfaa12vZyYd8JDXTj1JznW"
+network = "mainnet"
+
+[contracts.StorageAggregateContract]
+display_name = "TON Storage Aggregate Contract"
+types = "aggregate_contract/types/storage_aggregate_contract.types.tolk"
+hashes = ["385a5f0ddb841c17dd518a327c322d7d098e91c795eb9a152fe9be5cd20e40c9"]
+known_addresses = ["EQBZw_N1aZaI6ZCc0IJ_NZ-dzfnAbC-qZpU8iMj2ULFGwJ3F"]
+
+[contracts.StorageAggregateContract.instances.mainnet]
+address = "EQBZw_N1aZaI6ZCc0IJ_NZ-dzfnAbC-qZpU8iMj2ULFGwJ3F"
 network = "mainnet"
