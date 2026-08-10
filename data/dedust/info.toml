@@ -14,6 +14,7 @@ dedust_uranus_beta_docs = "https://hub-beta.dedust.io/docs/uranus/overview"
 dedust_uranus_beta_factory_reference = "https://hub-beta.dedust.io/docs/uranus/reference/meme-factory"
 dedust_uranus_beta_meme_reference = "https://hub-beta.dedust.io/docs/uranus/reference/meme"
 dedust_uranus_beta_meme_wallet_reference = "https://hub-beta.dedust.io/docs/uranus/reference/meme-wallet"
+x1000_docs = "https://help.x1000.finance/trading/x1000-trading-wallet.md"
 
 [[links]]
 kind = "docs"
@@ -44,6 +45,11 @@ url = "https://hub-beta.dedust.io/docs/uranus/overview"
 kind = "api"
 title = "DeDust pools API"
 url = "https://api.dedust.io/v2/pools"
+
+[[links]]
+kind = "docs"
+title = "x1000 documentation"
+url = "https://help.x1000.finance/trading/x1000-trading-wallet.md"
 
 [contracts.DedustFactoryV1]
 display_name = "DeDust Factory V1"
@@ -214,6 +220,22 @@ address = "EQDP5uHBEMdxjA_zACkOUZIinRsKFkT-UvFfBRdMpfghVsD_"
 network = "mainnet"
 block_seqno = 52337416
 code_hash = "43d44716d326a832ced56a6b60a02cb67630e04f5785fe89f8784a110cf36151"
+
+[contracts.DedustX1000WalletV2]
+display_name = "DeDust x1000 Wallet V2"
+types = "x1000_wallet_v2/types/dedust_x1000_wallet_v2.types.tolk"
+hashes = ["4609b587ae70c1a4e65550377492cd8e13b4bcc8770d3e49b65aca90c26c56f2"]
+known_addresses = [
+  "EQAFixgyPnv8ejzC5jjobQmbAZxpe1Sbh_rKlk7FsnZPUFZn",
+  "EQAIgzBjjqwHz2R8czjwCtAZK7Tjj01Bjdb0rR2I3heazgbV",
+  "EQAYOXGTc_RqXbIVJUtm-MARZrJL0neX8K4sJlh154DyDNsF",
+]
+
+[contracts.DedustX1000WalletV2.instances.mainnet]
+address = "EQAFixgyPnv8ejzC5jjobQmbAZxpe1Sbh_rKlk7FsnZPUFZn"
+network = "mainnet"
+block_seqno = 83536138
+code_hash = "4609b587ae70c1a4e65550377492cd8e13b4bcc8770d3e49b65aca90c26c56f2"
 
 [contracts.DedustUranusFactoryV3]
 display_name = "DeDust Uranus Factory V3"
