@@ -516,6 +516,15 @@ depends = []
 [contracts.GetgemsDeployer.wrappers.tolk]
 output-dir = "data/getgems/getgems_deployer/wrappers"
 
+[contracts.GetgemsLuckyBuyAttempt]
+display-name = "Getgems Lucky Buy Attempt"
+src = "data/getgems/getgems_lucky_buy_attempt/testdata/GetgemsLuckyBuyAttempt.boc"
+types = "data/getgems/getgems_lucky_buy_attempt/types/getgems_lucky_buy_attempt.types.tolk"
+depends = []
+
+[contracts.GetgemsLuckyBuyAttempt.wrappers.tolk]
+output-dir = "data/getgems/getgems_lucky_buy_attempt/wrappers"
+
 [contracts.GetgemsNftAuctionV1]
 display-name = "Getgems NFT Auction V1"
 src = "data/getgems/getgems_nft_auction_v1/testdata/GetgemsNftAuctionV1.boc"
@@ -2001,6 +2010,15 @@ depends = []
 [contracts.FragmentMarketappProxyJetton.wrappers.tolk]
 output-dir = "data/fragment/marketapp_proxy/wrappers"
 
+[contracts.FragmentCheckoutPaymentProxy]
+display-name = "Fragment Checkout Payment Proxy"
+src = "data/fragment/checkout_payment_proxy/testdata/FragmentCheckoutPaymentProxy.boc"
+types = "data/fragment/checkout_payment_proxy/types/fragment_checkout_payment_proxy.types.tolk"
+depends = []
+
+[contracts.FragmentCheckoutPaymentProxy.wrappers.tolk]
+output-dir = "data/fragment/checkout_payment_proxy/wrappers"
+
 [contracts.MarketAppNftRentalV2R2Revision1]
 display-name = "MarketApp NFT Rental V2R2 Revision 1"
 src = "data/marketapp/nft_rental_v2r2_revision1/testdata/MarketAppNftRentalV2R2Revision1.boc"
@@ -2207,6 +2225,33 @@ depends = []
 
 [contracts.FrtGramAdapterExecutor.wrappers.tolk]
 output-dir = "data/frt_gram_adapter/wrappers"
+
+[contracts.FrtGramSwapRelay]
+display-name = "FRT/GRAM Swap Relay"
+src = "data/frt_gram_adapter/testdata/FrtGramSwapRelay.boc"
+types = "data/frt_gram_adapter/types/frt_gram_swap_relay.types.tolk"
+depends = []
+
+[contracts.FrtGramSwapRelay.wrappers.tolk]
+output-dir = "data/frt_gram_adapter/wrappers"
+
+[contracts.FrtGramSwapExecutor]
+display-name = "FRT/GRAM Swap Executor"
+src = "data/frt_gram_adapter/testdata/FrtGramSwapExecutor.boc"
+types = "data/frt_gram_adapter/types/frt_gram_swap_executor.types.tolk"
+depends = []
+
+[contracts.FrtGramSwapExecutor.wrappers.tolk]
+output-dir = "data/frt_gram_adapter/wrappers"
+
+[contracts.CatizenInGameTask]
+display-name = "Catizen In-Game Task"
+src = "data/catizen/testdata/CatizenInGameTask.boc"
+types = "data/catizen/types/catizen_in_game_task.types.tolk"
+depends = []
+
+[contracts.CatizenInGameTask.wrappers.tolk]
+output-dir = "data/catizen/wrappers"
 
 [contracts.JVaultPool]
 display-name = "JVault Staking Pool"
@@ -2415,6 +2460,11 @@ frt-gram-dispatcher-message-bodies-test = "acton test data/frt_gram_adapter/test
 frt-gram-orchestrator-message-bodies-test = "acton test data/frt_gram_adapter/tests/frt_gram_orchestrator_message_bodies.test.tolk --show-bodies"
 frt-gram-worker-message-bodies-test = "acton test data/frt_gram_adapter/tests/frt_gram_worker_message_bodies.test.tolk --show-bodies"
 frt-gram-executor-message-bodies-test = "acton test data/frt_gram_adapter/tests/frt_gram_executor_message_bodies.test.tolk --show-bodies"
+frt-gram-swap-relay-message-bodies-test = "acton test data/frt_gram_adapter/tests/frt_gram_swap_relay_message_bodies.test.tolk --show-bodies"
+frt-gram-swap-executor-message-bodies-test = "acton test data/frt_gram_adapter/tests/frt_gram_swap_executor_message_bodies.test.tolk --show-bodies"
+frt-gram-swap-relay-mainnet-test = "acton test data/frt_gram_adapter/tests/frt_gram_swap_relay_mainnet.test.tolk --fork-net mainnet --fork-block-number 83536784 --show-bodies"
+frt-gram-swap-executor-mainnet-test = "acton test data/frt_gram_adapter/tests/frt_gram_swap_executor_mainnet.test.tolk --fork-net mainnet --fork-block-number 83536784 --show-bodies"
+catizen-in-game-task-test = "acton test data/catizen/tests --fork-net mainnet --fork-block-number 83536965 --show-bodies"
 signed-cross-dex-executor-mainnet-test = "acton test data/signed_cross_dex/executor/tests/signed_cross_dex_executor_mainnet.test.tolk --fork-net mainnet --fork-block-number 83514993 --show-bodies"
 signed-cross-dex-executor-message-bodies-test = "acton test data/signed_cross_dex/executor/tests/signed_cross_dex_executor_message_bodies.test.tolk --show-bodies"
 invoices-message-bodies-test = "acton test data/invoices/tests/invoices_message_bodies.test.tolk --show-bodies"
@@ -2626,6 +2676,7 @@ wallet-v4r1-mainnet-test = "acton test data/wallets/w4r1/tests/wallet_v4r1.test.
 wallet-v4r2-mainnet-test = "acton test data/wallets/w4r2/tests/wallet_v4r2.test.tolk --fork-net mainnet --fork-block-number 70789035 --show-bodies"
 wallet-v5r1-mainnet-test = "acton test data/wallets/w5r1/tests/wallet_v5r1.test.tolk --fork-net mainnet --fork-block-number 70781329 --show-bodies"
 wallet-v5r1-regressions-test = "acton test data/wallets/w5r1/tests/wallet_v5r1_regressions.test.tolk --show-bodies"
+wallet-v5r1-outgoing-message-bodies-test = "acton test data/wallets/w5r1/tests/wallet_v5r1_outgoing_message_bodies.test.tolk --show-bodies"
 wallet-highload-v1r1-test = "acton test data/wallets/highload_v1r1/tests/wallet_highload_v1r1.test.tolk --show-bodies"
 wallet-highload-v1r2-test = "acton test data/wallets/highload_v1r2/tests/wallet_highload_v1r2.test.tolk --show-bodies"
 wallet-highload-v2-mainnet-test = "acton test data/wallets/highload_v2/tests/wallet_highload_v2.test.tolk --fork-net mainnet --fork-block-number 70789035 --show-bodies"
@@ -2648,7 +2699,8 @@ getgems-nft-2-mainnet-test = "acton test data/nfts/getgems_nft_2_0/tests --fork-
 telemint-mainnet-test = "acton test data/telemint/tests --fork-net mainnet --fork-block-number 71005889 --show-bodies"
 dns-mainnet-test = "acton test data/dns/tests --fork-net mainnet --fork-block-number 71167154 --show-bodies"
 sbt-1-mainnet-test = "acton test data/sbts/sbt_1/tests --fork-net mainnet --fork-block-number 70789035 --show-bodies"
-getgems-mainnet-test = "acton test data/getgems --exclude 'data/getgems/getgems_offchain_offer_v3/**' --fork-net mainnet --show-bodies"
+getgems-mainnet-test = "acton test data/getgems --exclude 'data/getgems/getgems_offchain_offer_v3/**' --exclude 'data/getgems/getgems_lucky_buy_attempt/**' --fork-net mainnet --show-bodies"
+getgems-lucky-buy-attempt-test = "acton test data/getgems/getgems_lucky_buy_attempt/tests --fork-net mainnet --fork-block-number 83536514 --show-bodies"
 coffee-test = "acton test data/coffee --exclude 'data/coffee/cross_dex_legacy/**' --exclude 'data/coffee/cross_dex_bidask/**' --exclude 'data/coffee/mev_protector/tests/coffee_mev_protector_legacy_*.tolk' --fork-net mainnet --fork-block-number 71349505 --show-bodies"
 coffee-cross-dex-legacy-mainnet-test = "acton test data/coffee/cross_dex_legacy/tests/coffee_cross_dex_legacy_mainnet.test.tolk --fork-net mainnet --fork-block-number 48441113 --show-bodies"
 coffee-cross-dex-bidask-mainnet-test = "acton test data/coffee/cross_dex_bidask/tests/coffee_cross_dex_bidask_mainnet.test.tolk --fork-net mainnet --fork-block-number 50935347 --show-bodies"
@@ -2656,6 +2708,7 @@ coffee-cross-dex-legacy-message-bodies-test = "acton test data/coffee/cross_dex_
 coffee-cross-dex-bidask-message-bodies-test = "acton test data/coffee/cross_dex_bidask/tests/coffee_cross_dex_bidask_message_bodies.test.tolk --show-bodies"
 dedust-uranus-test = "acton test data/dedust/uranus --exclude 'data/dedust/uranus/meme_v2/tests/dedust_uranus_meme_v2_mainnet.test.tolk' --show-bodies"
 fragment-marketapp-proxy-test = "acton test data/fragment/marketapp_proxy --show-bodies"
+fragment-checkout-payment-proxy-test = "acton test data/fragment/checkout_payment_proxy/tests --fork-net mainnet --fork-block-number 83536223 --show-bodies"
 storm-executor-message-bodies-test = "acton test data/storm/executor/tests/storm_executor_message_bodies.test.tolk --show-bodies"
 storm-executor-collection-message-bodies-test = "acton test data/storm/executor_collection/tests/storm_executor_collection_message_bodies.test.tolk --show-bodies"
 storm-lp-minter-message-bodies-test = "acton test data/storm/lp_minter/tests/storm_lp_minter_message_bodies.test.tolk --show-bodies"
@@ -2759,6 +2812,7 @@ acton run dedust-vault-native-v2-storage-test
 acton run stonfi-mainnet-test
 acton run coffee-test
 acton run fragment-marketapp-proxy-test
+acton run fragment-checkout-payment-proxy-test
 acton run aqua-usd-master-vault-storage-test
 acton run bidask-damm-lp-wallet-message-bodies-test
 acton run bidask-internal-liquidity-vault-storage-test
@@ -2918,6 +2972,7 @@ acton run wallet-v3r1-mainnet-test
 acton run wallet-v4r1-mainnet-test
 acton run wallet-v5r1-mainnet-test
 acton run wallet-v5r1-regressions-test
+acton run wallet-v5r1-outgoing-message-bodies-test
 acton run wallet-highload-v2r1-mainnet-test
 acton run wallet-highload-v3r1-mainnet-test
 acton run wallet-multisig-v2-mainnet-test
@@ -3054,6 +3109,12 @@ acton run frt-gram-dispatcher-message-bodies-test
 acton run frt-gram-orchestrator-message-bodies-test
 acton run frt-gram-worker-message-bodies-test
 acton run frt-gram-executor-message-bodies-test
+acton run frt-gram-swap-relay-message-bodies-test
+acton run frt-gram-swap-executor-message-bodies-test
+acton run frt-gram-swap-relay-mainnet-test
+acton run frt-gram-swap-executor-mainnet-test
+acton run catizen-in-game-task-test
+acton run getgems-lucky-buy-attempt-test
 acton run storage-aggregate-contract-mainnet-test
 acton run storage-aggregate-contract-message-bodies-test
 acton run marketapp-rent-v2r2-revision2-test

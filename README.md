@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **278 contract entries**, **327 unique contract code hashes**, and **326 unique known contract addresses**.
+Current catalog size: **283 contract entries**, **332 unique contract code hashes**, and **331 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1281 unique opcode prefixes** and **592 unique get-method names**.
+Across the generated public catalog, the repository declares **1299 unique opcode prefixes** and **600 unique get-method names**.
 
 Each curated project group normally includes:
 
