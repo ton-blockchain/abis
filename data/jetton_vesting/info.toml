@@ -1,0 +1,18 @@
+[project]
+name = "Jetton Vesting"
+category = "Token vesting"
+description = "Jetton vesting contract that releases vested balances through standard Jetton wallet transfers"
+
+[contracts.JettonVesting]
+display_name = "Jetton Vesting"
+types = "types/jetton_vesting.types.tolk"
+hashes = [
+  "b360d6da4bb86554459ca38c3ec6f26e932370743eacf1219cad54ee006b5ca6",
+]
+known_addresses = [
+  "EQAFpr-4AamlDrWSYyLuHf0Ndv3EKMXpYSrT42YZYfGXpSA_",
+]
+
+[contracts.JettonVesting.instances.representative_mainnet]
+address = "EQAFpr-4AamlDrWSYyLuHf0Ndv3EKMXpYSrT42YZYfGXpSA_"
+network = "mainnet"
