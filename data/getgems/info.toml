@@ -184,6 +184,22 @@ kind = "source"
 title = "Marketplace V2 source"
 url = "https://github.com/getgems-io/nft-contracts/blob/main/packages/contracts/sources/nft-marketplace-v2.fc"
 
+[contracts.GetgemsLuckyBuyAttempt]
+display_name = "Getgems Lucky Buy Attempt"
+types = "getgems_lucky_buy_attempt/types/getgems_lucky_buy_attempt.types.tolk"
+hashes = ["9785ed5ee1f07c1dedb5850eb6824d706f14769fec9a8a8a8462c3af1e10bd1d"]
+known_addresses = ["EQBlQMPG12ktUZkXBudHs5TtFPySBkSk9VJcJjq_bWB2qVb-"]
+
+[contracts.GetgemsLuckyBuyAttempt.instances.mainnet]
+address = "EQBlQMPG12ktUZkXBudHs5TtFPySBkSk9VJcJjq_bWB2qVb-"
+network = "mainnet"
+block_seqno = 83536514
+
+[[contracts.GetgemsLuckyBuyAttempt.links]]
+kind = "docs"
+title = "What is Lucky Buy?"
+url = "https://getgems.helpscoutdocs.com/article/185-what-is-lucky-buy"
+
 [contracts.GetgemsNftOfferV1]
 display_name = "Getgems NFT Offer V1"
 types = "getgems_nft_offer_v1/types/getgems_nft_offer_v1.types.tolk"
