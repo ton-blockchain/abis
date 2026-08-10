@@ -1329,6 +1329,18 @@ src = "data/fragment/marketapp_proxy/testdata/FragmentMarketappProxyJetton.boc"
 types = "data/fragment/marketapp_proxy/types/fragment_marketapp_proxy_jetton.types.tolk"
 depends = []
 
+[contracts.MarketAppNftRentalV2R2Revision1]
+display-name = "MarketApp NFT Rental V2R2 Revision 1"
+src = "data/marketapp/nft_rental_v2r2_revision1/testdata/MarketAppNftRentalV2R2Revision1.boc"
+types = "data/marketapp/nft_rental_v2r2_revision1/types/marketapp_nft_rental_v2r2_revision1.types.tolk"
+depends = []
+
+[contracts.MarketAppNftRentalV2R2Revision2]
+display-name = "MarketApp NFT Rental V2R2 Revision 2"
+src = "data/marketapp/nft_rental_v2r2_revision2/testdata/MarketAppNftRentalV2R2Revision2.boc"
+types = "data/marketapp/nft_rental_v2r2_revision2/types/marketapp_nft_rental_v2r2_revision2.types.tolk"
+depends = []
+
 [contracts.PythOracle]
 display-name = "Pyth Oracle"
 src = "data/pyth_oracle/testdata/PythOracle.boc"
@@ -1519,6 +1531,12 @@ depends = []
 display-name = "DeDust x1000 Wallet V1"
 src = "data/dedust/x1000_wallet_v1/testdata/DedustX1000WalletV1.boc"
 types = "data/dedust/x1000_wallet_v1/types/dedust_x1000_wallet_v1.types.tolk"
+depends = []
+
+[contracts.DedustX1000WalletV2]
+display-name = "DeDust x1000 Wallet V2"
+src = "data/dedust/x1000_wallet_v2/testdata/DedustX1000WalletV2.boc"
+types = "data/dedust/x1000_wallet_v2/types/dedust_x1000_wallet_v2.types.tolk"
 depends = []
 
 [contracts.DedustUranusMemeV2]
@@ -1885,6 +1903,10 @@ tgusd-liquid-staking-message-bodies-test = "acton test data/tgusd/liquid_staking
 whales-liquid-staking-mainnet-test = "acton test data/whales/liquid_staking/tests/whales_liquid_staking_mainnet.test.tolk --fork-net mainnet --fork-block-number 41143667 --show-bodies"
 whales-liquid-staking-message-bodies-test = "acton test data/whales/liquid_staking/tests/whales_liquid_staking_message_bodies.test.tolk --show-bodies"
 dedust-x1000-wallet-v1-mainnet-test = "acton test data/dedust/x1000_wallet_v1/tests/dedust_x1000_wallet_v1_mainnet.test.tolk --fork-net mainnet --fork-block-number 52337416 --show-bodies"
+dedust-x1000-wallet-v2-mainnet-test = "acton test data/dedust/x1000_wallet_v2/tests/dedust_x1000_wallet_v2_mainnet.test.tolk --fork-net mainnet --fork-block-number 83536138 --show-bodies"
+dedust-x1000-wallet-v2-message-bodies-test = "acton test data/dedust/x1000_wallet_v2/tests/dedust_x1000_wallet_v2_message_bodies.test.tolk --show-bodies"
+marketapp-rent-v2r2-revision1-test = "acton test data/marketapp/nft_rental_v2r2_revision1/tests --fork-net mainnet --fork-block-number 83585844 --show-bodies"
+marketapp-rent-v2r2-revision2-test = "acton test data/marketapp/nft_rental_v2r2_revision2/tests --fork-net mainnet --fork-block-number 83585844 --show-bodies"
 dedust-uranus-meme-v2-mainnet-test = "acton test data/dedust/uranus/meme_v2/tests/dedust_uranus_meme_v2_mainnet.test.tolk --fork-net mainnet --fork-block-number 58340099 --show-bodies"
 dedust-v2-cpmm-revision-3997a5-mainnet-test = "acton test data/dedust/cpmm_v2/tests/dedust_v2_cpmm_revision_3997a5.test.tolk --fork-net mainnet --fork-block-number 83579636 --show-bodies"
 bidask-damm-pool-d7cecc-mainnet-test = "acton test data/bidask/damm_pool/tests/bidask_damm_pool_d7cecc_mainnet.test.tolk --fork-net mainnet --fork-block-number 55222276 --show-bodies"
@@ -1972,6 +1994,7 @@ acton run tac-jetton-mainnet-test
 acton run tgusd-liquid-staking-mainnet-test
 acton run whales-liquid-staking-mainnet-test
 acton run dedust-x1000-wallet-v1-mainnet-test
+acton run dedust-x1000-wallet-v2-mainnet-test
 """
 
 run-test-shard-2 = """
@@ -2051,6 +2074,7 @@ acton run gaspump-master-v2-v3-mainnet-test
 acton run telegram-gift-nft-item-mainnet-test
 acton run tonfun-bcl-wallet-v1-mainnet-test
 acton run dedust-v2-cpmm-revision-3997a5-mainnet-test
+acton run marketapp-rent-v2r2-revision1-test
 """
 
 run-test-shard-3 = """
@@ -2145,6 +2169,7 @@ acton run jvault-pool-factory-message-bodies-test
 acton run jvault-staking-wallet-message-bodies-test
 acton run tgusd-liquid-staking-message-bodies-test
 acton run whales-liquid-staking-message-bodies-test
+acton run dedust-x1000-wallet-v2-message-bodies-test
 """
 
 run-test-shard-4 = """
@@ -2212,6 +2237,7 @@ acton run frt-gram-dispatcher-message-bodies-test
 acton run frt-gram-orchestrator-message-bodies-test
 acton run frt-gram-worker-message-bodies-test
 acton run frt-gram-executor-message-bodies-test
+acton run marketapp-rent-v2r2-revision2-test
 """
 
 run-all-tests = """

@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **273 contract entries**, **322 unique contract code hashes**, and **315 unique known contract addresses**.
+Current catalog size: **276 contract entries**, **325 unique contract code hashes**, and **324 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1253 unique opcode prefixes** and **575 unique get-method names**.
+Across the generated public catalog, the repository declares **1267 unique opcode prefixes** and **588 unique get-method names**.
 
 Each curated project group normally includes:
 
@@ -37,7 +37,7 @@ Each curated project group normally includes:
 | --- | --- | --- |
 | STON.fi | DEX core v1 router, pool, LP account, LP wallet, plus v2 router revisions, pool variants, LP account, LP wallet, vault, farming collection/NFT, and the Escrow Position, Factory, and Vault family. | `StonfiRouterV1`, `StonfiPoolV1`, `StonfiLpAccountV1`, `StonfiLpWalletV1`, `StonfiRouterV2`, `StonfiPoolV2ConstProduct`, `StonfiPoolV2Stableswap`, `StonfiPoolV2WeightedStableswap`, `StonfiPoolV2WeightedConstProduct`, `StonfiLpAccountV2`, `StonfiLpWalletV2`, `StonfiVaultV2`, `StonfiFarmCollection`, `StonfiFarmNft`, `StonfiEscrowPosition`, `StonfiEscrowFactory`, `StonfiEscrowVault` |
 | Omniston | Standalone STON.fi Omniston Fee-Vault Minter for DeDust/Tonco referral-fee vault derivation, fee deposits, and payout routing. | `OmnistonFeeVault` |
-| DeDust | Protocol v1 and v2 core contracts, both verified CPMM v2 pool revisions, x1000 wallet storage, and Uranus launchpad revisions. | `DedustFactoryV1`, `DedustVaultNativeV1`, `DedustVaultJettonV1`, `DedustPoolV1`, `DedustLiquidityDepositV1`, `DedustFactoryV2`, `DedustVaultNativeV2`, `DedustVaultJettonV2`, `DedustPoolV2`, `DedustLiquidityDepositV2`, `DedustV2Cpmm`, `DedustX1000WalletV1`, `DedustUranusFactoryV3`, `DedustUranusMemeV2`, `DedustUranusMemeV3`, `DedustUranusMemeWalletV3` |
+| DeDust | Protocol v1 and v2 core contracts, both verified CPMM v2 pool revisions, two x1000 wallet revisions, and Uranus launchpad revisions. | `DedustFactoryV1`, `DedustVaultNativeV1`, `DedustVaultJettonV1`, `DedustPoolV1`, `DedustLiquidityDepositV1`, `DedustFactoryV2`, `DedustVaultNativeV2`, `DedustVaultJettonV2`, `DedustPoolV2`, `DedustLiquidityDepositV2`, `DedustV2Cpmm`, `DedustX1000WalletV1`, `DedustX1000WalletV2`, `DedustUranusFactoryV3`, `DedustUranusMemeV2`, `DedustUranusMemeV3`, `DedustUranusMemeWalletV3` |
 | Coffee Swap | DEX factory/init, vaults, pool variants, pool creator, liquidity depository, current and historical LP wallets, staking, CrossDex profiles, and current/legacy MEV Protectors. | `CoffeeFactory`, `CoffeeInit`, `CoffeeVaultNative`, `CoffeeVaultJetton`, `CoffeeVaultExtra`, `CoffeePoolConstantProduct`, `CoffeePoolCurveFiStable`, `CoffeePoolCreator`, `CoffeeLiquidityDepository`, `JettonWalletCoffeeLp`, `CoffeeStakingMaster`, `CoffeeStakingVault`, `CoffeeStakingItem`, `CoffeeCrossDex`, `CoffeeCrossDexLegacy`, `CoffeeCrossDexBidask`, `CoffeeMevProtector`, `CoffeeMevProtectorLegacy` |
 | TONCO | Router, pool, account, pool factory, and position NFT. | `Router`, `Pool`, `Account`, `PoolFactory`, `PositionNFT` |
 | Bidask | DLMM/DAMM pool factory, pool, range, LP multitoken, internal liquidity vault, DAMM pool, and DAMM LP wallet. | `BidaskPoolFactory`, `BidaskPool`, `BidaskRange`, `BidaskLpMultitoken`, `BidaskInternalLiquidityVault`, `BidaskDammPool`, `BidaskDammLpWallet` |
@@ -85,6 +85,7 @@ Each curated project group normally includes:
 | Getgems | Deployer, marketplace, sale, auction, on-chain and off-chain offer, raffle, and swap contracts. | `GetgemsDeployer`, `GetgemsNftAuctionV1`, `GetgemsNftAuctionV2`, `GetgemsNftAuctionV3R2`, `GetgemsNftAuctionV3R3`, `GetgemsNftAuctionV4R1`, `GetgemsNftFixpriceSaleV1`, `GetgemsNftSaleLegacy`, `GetgemsNftFixpriceSaleV2`, `GetgemsNftFixpriceSaleV3`, `GetgemsNftFixpriceSaleV3R2`, `GetgemsNftFixpriceSaleV3R3`, `GetgemsNftFixpriceSaleV4R1`, `GetgemsNftMarketplaceV1`, `GetgemsNftMarketplaceV2`, `GetgemsNftOfferV1`, `GetgemsNftOfferV1R3`, `GetgemsOffchainOfferV3`, `GetgemsNftRaffle`, `GetgemsNftSwap` |
 | TeleMint | Telegram TeleMint NFT item contract and both deployed Telegram Gift NFT auction revisions. | `TelemintNftItem`, `TelegramGiftNftItem` |
 | Fragment | Telegram username and anonymous-number collection/item contracts, plus MarketApp/Fragment buy-routing proxy variants for Telegram collectible purchases. | `FragmentUsernameCollection`, `FragmentNumbersCollection`, `FragmentUsernameItem`, `FragmentNumbersItem`, `FragmentMarketappProxyKnown`, `FragmentMarketappProxySimple`, `FragmentMarketappProxyJetton` |
+| MarketApp | Both deployed MarketApp Rent v2r2 revisions for NFT listing, rental, extension, completion, cancellation, and direct-sale flows. | `MarketAppNftRentalV2R2Revision1`, `MarketAppNftRentalV2R2Revision2` |
 | Airdrop Interlocker | Airdrop claim interlocker contracts. | `AirdropInterlockerV1`, `AirdropInterlockerV2` |
 
 ### Payments, Automation, And Wallet Tooling
