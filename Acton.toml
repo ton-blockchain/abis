@@ -138,6 +138,15 @@ depends = []
 [contracts.WalletV5r1.wrappers.tolk]
 output-dir = "data/wallets/w5r1/wrappers"
 
+[contracts.WalletTg]
+display-name = "Telegram Wallet"
+src = "data/wallets/wallet_tg/testdata/WalletTrampoline.boc"
+types = "data/wallets/wallet_tg/types/WalletTg/WalletTg.tolk"
+depends = []
+
+[contracts.WalletTg.wrappers.tolk]
+output-dir = "data/wallets/wallet_tg/wrappers"
+
 [contracts.WalletHighloadV2]
 display-name = "WalletHighloadV2"
 src = "data/wallets/highload_v2/testdata/WalletHighloadV2.boc"

@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **285 contract entries**, **332 unique contract code hashes**, and **331 unique known contract addresses**.
+Current catalog size: **286 contract entries**, **333 unique contract code hashes**, and **331 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1299 unique opcode prefixes** and **600 unique get-method names**.
+Across the generated public catalog, the repository declares **1305 unique opcode prefixes** and **601 unique get-method names**.
 
 Each curated project group normally includes:
 
@@ -23,7 +23,7 @@ Each curated project group normally includes:
 | TON System | Official masterchain Elector and Config contracts for validator elections, stake recovery, network configuration, validator-set installation, and config proposal voting. | `Elector`, `Config` |
 | Acton Testing | Built-in testing treasury contract used by Acton and TON Sandbox test environments. | `TreasuryContract` |
 | TON Verifier | On-chain source registry, verifier registry, and per-source verification records. | `VerifierSourcesRegistry`, `VerifierRegistry`, `VerifierSourceItem` |
-| Wallets | Standard wallet generations, highload wallets, vesting/lockup wallets, preprocessed wallet, and multisig v2. | `WalletV1r1`, `WalletV1r2`, `WalletV1r3`, `WalletV2r1`, `WalletV2r2`, `WalletV3r1`, `WalletV3r2`, `WalletV4r1`, `WalletV4r2`, `WalletV5r1`, `WalletHighloadV1r1`, `WalletHighloadV1r2`, `WalletHighloadV2`, `WalletHighloadV2r1`, `WalletHighloadV2r2`, `WalletHighloadV3r1`, `WalletPreprocessedV2`, `WalletVesting`, `LockupUniversal`, `LockupVesting`, `MultisigV2`, `MultisigOrderV2` |
+| Wallets | Standard wallet generations, highload wallets, Telegram Wallet, vesting/lockup wallets, preprocessed wallet, and multisig v2. | `WalletV1r1`, `WalletV1r2`, `WalletV1r3`, `WalletV2r1`, `WalletV2r2`, `WalletV3r1`, `WalletV3r2`, `WalletV4r1`, `WalletV4r2`, `WalletV5r1`, `WalletTg`, `WalletHighloadV1r1`, `WalletHighloadV1r2`, `WalletHighloadV2`, `WalletHighloadV2r1`, `WalletHighloadV2r2`, `WalletHighloadV3r1`, `WalletPreprocessedV2`, `WalletVesting`, `LockupUniversal`, `LockupVesting`, `MultisigV2`, `MultisigOrderV2` |
 | Jettons | TEP-74, TEP-89, stablecoin, Notcoin, mintless, Jetton 2.0, and Scaled UI jetton interfaces. | `JettonV1Master`, `JettonV100Master`, `JettonV1Wallet`, `DiscoverableJettonMaster`, `DiscoverableJettonWallet`, `JettonDiscovery`, `StablecoinMaster`, `StablecoinWallet`, `JettonNotcoinMaster`, `JettonNotcoinWallet`, `Jetton2Master`, `Jetton2Wallet`, `MintlessJettonMaster`, `MintlessJettonWallet`, `ScaledUiJettonMaster` |
 | Jetton Vesting | Owner-controlled vesting contract that releases vested Jettons through standard wallet transfers. | `JettonVesting` |
 | pTON | pTON v2.1 minter and wallet contracts for tokenized GRAM. | `PtonMinterV2`, `PtonWalletV2` |

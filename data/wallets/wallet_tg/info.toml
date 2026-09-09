@@ -1,0 +1,23 @@
+[project]
+name = "wallets"
+category = "standard TON wallets"
+
+[sources]
+telegram_wallet_rev00 = "https://github.com/ton-blockchain/tg-wallet-contract/tree/10a0d2b9e87bd0a5e9135c2431e3eb15c6a0485c"
+telegram_wallet_contract = "https://github.com/ton-blockchain/tg-wallet-contract/blob/10a0d2b9e87bd0a5e9135c2431e3eb15c6a0485c/contracts/WalletTg/WalletTg.tolk"
+telegram_wallet_trampoline = "https://github.com/ton-blockchain/tg-wallet-contract/blob/10a0d2b9e87bd0a5e9135c2431e3eb15c6a0485c/contracts/WalletTrampoline.fif"
+
+[contracts.WalletTg]
+display_name = "Telegram Wallet"
+types = "types/WalletTg/WalletTg.tolk"
+hashes = ["9149ae51c1e4689710cebf7830297b16acfbadb363a920a537893e7ffeeca768"]
+
+[[contracts.WalletTg.links]]
+kind = "source"
+title = "Telegram Wallet rev00 source"
+url = "https://github.com/ton-blockchain/tg-wallet-contract/tree/10a0d2b9e87bd0a5e9135c2431e3eb15c6a0485c"
+
+[[contracts.WalletTg.links]]
+kind = "source"
+title = "Telegram Wallet trampoline source"
+url = "https://github.com/ton-blockchain/tg-wallet-contract/blob/10a0d2b9e87bd0a5e9135c2431e3eb15c6a0485c/contracts/WalletTrampoline.fif"
