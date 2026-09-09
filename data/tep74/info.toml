@@ -11,14 +11,14 @@ kind = "spec"
 title = "TEP-74 Jetton standard"
 url = "https://github.com/ton-blockchain/TEPs/blob/master/text/0074-jettons-standard.md"
 
-[contracts.GenericJettonMaster]
-display_name = "Generic Jetton Master"
-types = "master.tolk"
+[contracts.JettonMaster]
+display_name = "Jetton Master"
+types = "types/jetton_master.types.tolk"
 hashes = []
 known_addresses = []
 
-[contracts.GenericJettonWallet]
-display_name = "Generic Jetton Wallet"
-types = "wallet.tolk"
+[contracts.JettonWallet]
+display_name = "Jetton Wallet"
+types = "types/jetton_wallet.types.tolk"
 hashes = []
 known_addresses = []
