@@ -8,17 +8,21 @@ contract GenericJettonMaster {
 
 /// Refund emitted after a burn when a response destination is provided
 struct (0xd53276db) JettonExcesses {
+    /// Identifier copied from the burn request to correlate the refund
     queryId: uint64
 }
 
-/// Getter result, not a schema for the persistent data cell
+/// Five stack values returned by get_jetton_data, independent of the storage layout
 struct JettonData {
+    /// Issued supply in elementary Jetton units, without decimal scaling
     totalSupply: int
+    /// Whether minting is enabled, returned as TVM true (-1) or false (0)
     mintable: bool
-    /// May be addr_none for a master without an administrator
+    /// Administrator encoded in a stack slice, including addr_none when absent
     adminAddress: any_address
-    /// Metadata encoded according to TEP-64
+    /// TEP-64 content cell containing an off-chain URI or on-chain metadata dictionary
     jettonContent: cell
+    /// Wallet code used by the master to derive and deploy its Jetton wallets
     jettonWalletCode: cell
 }
 
@@ -27,11 +31,10 @@ get fun get_jetton_data(): JettonData {
     throw 0;
 }
 
-/// Returns the Jetton wallet address for the given owner
+/// Returns the derived Jetton wallet address for ownerAddress, even before deployment
 get fun get_wallet_address(ownerAddress: address): address {
     throw 0;
 }
 
-// Explicitly suppress errors inferred from interface-only getter stubs.
-// TEP-74 does not specify implementation exit codes.
+/// No implementation-specific exit codes are part of this standard interface
 enum StandardErrors {}
