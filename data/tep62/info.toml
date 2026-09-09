@@ -1,0 +1,24 @@
+[project]
+name = "tep62"
+category = "Standard interfaces"
+description = "Implementation-independent NFT interfaces from TEP-62"
+
+[sources]
+tep_62 = "https://github.com/ton-blockchain/TEPs/blob/master/text/0062-nft-standard.md"
+
+[[links]]
+kind = "spec"
+title = "TEP-62 NFT standard"
+url = "https://github.com/ton-blockchain/TEPs/blob/master/text/0062-nft-standard.md"
+
+[contracts.NftItem]
+display_name = "NFT Item"
+types = "types/nft_item.types.tolk"
+hashes = []
+known_addresses = []
+
+[contracts.NftCollection]
+display_name = "NFT Collection"
+types = "types/nft_collection.types.tolk"
+hashes = []
+known_addresses = []
