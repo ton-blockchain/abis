@@ -1,0 +1,24 @@
+[project]
+name = "tep74"
+category = "Standard interfaces"
+description = "Implementation-independent Jetton interfaces from TEP-74"
+
+[sources]
+tep_74 = "https://github.com/ton-blockchain/TEPs/blob/master/text/0074-jettons-standard.md"
+
+[[links]]
+kind = "spec"
+title = "TEP-74 Jetton standard"
+url = "https://github.com/ton-blockchain/TEPs/blob/master/text/0074-jettons-standard.md"
+
+[contracts.JettonMaster]
+display_name = "Jetton Master"
+types = "types/jetton_master.types.tolk"
+hashes = []
+known_addresses = []
+
+[contracts.JettonWallet]
+display_name = "Jetton Wallet"
+types = "types/jetton_wallet.types.tolk"
+hashes = []
+known_addresses = []
