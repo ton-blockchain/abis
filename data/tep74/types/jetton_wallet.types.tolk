@@ -23,6 +23,22 @@ struct (0x0f8a7ea5) JettonTransfer {
     forwardPayload: JettonForwardPayload
 }
 
+/// Jettons credited by another wallet or the master
+struct (0x178d4519) JettonInternalTransfer {
+    /// Query id copied from the transfer or mint request
+    queryId: uint64
+    /// Jetton amount to credit, in base units
+    amount: coins
+    /// Previous owner address, or addr_none for a mint without a sender
+    from: address?
+    /// Refund address, or addr_none when no refund is requested
+    responseAddress: address?
+    /// Nanograms forwarded to the owner notification
+    forwardTonAmount: coins
+    /// Payload forwarded to the recipient owner
+    forwardPayload: JettonForwardPayload
+}
+
 /// Owner request to burn Jettons
 struct (0x595f07bc) JettonBurn {
     /// Query id copied into the burn notification and refund
@@ -47,6 +63,18 @@ struct (0x7362d09c) JettonTransferNotification {
     forwardPayload: JettonForwardPayload
 }
 
+/// Burn notification sent by a Jetton wallet to its master
+struct (0x7bdd97de) JettonBurnNotification {
+    /// Query id copied from the burn request
+    queryId: uint64
+    /// Burned Jetton amount, in base units
+    amount: coins
+    /// Owner of the wallet that burned the Jettons
+    sender: address
+    /// Refund address, or addr_none when no refund is requested
+    responseDestination: address?
+}
+
 /// Refund to the response destination after processing a transfer
 struct (0xd53276db) JettonExcesses {
     /// Query id copied from the transfer request
@@ -56,10 +84,13 @@ struct (0xd53276db) JettonExcesses {
 /// Internal message bodies accepted by the standard Jetton Wallet interface
 type JettonWalletIncomingMessage =
     | JettonTransfer
+    | JettonInternalTransfer
     | JettonBurn
 
 /// Internal message bodies emitted by the standard Jetton Wallet interface
 type JettonWalletOutgoingMessage =
+    | JettonInternalTransfer
+    | JettonBurnNotification
     | JettonTransferNotification
     | JettonExcesses
 

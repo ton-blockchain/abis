@@ -11,3 +11,7 @@ Versioned release policy is described in [RELEASING.md](RELEASING.md).
 
 - Standard TEP-74 Jetton Master and Wallet interfaces without implementation-specific storage, errors or code hashes
 - Telegram Wallet rev00 ABI, immutable trampoline fixture, and source provenance
+
+### Fixed
+
+- Include internal transfers and burn notifications in the standard Jetton interfaces
