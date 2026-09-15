@@ -1,7 +1,7 @@
 [package]
 name = "abis"
 description = "ABI schema catalog"
-version = "0.1.0"
+version = "0.1.1"
 
 [toolchain]
 acton = "1.1.0"
