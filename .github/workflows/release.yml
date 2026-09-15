@@ -56,7 +56,7 @@ jobs:
           {
             echo "ABI catalog with $contracts contracts, built from $GITHUB_SHA with \`$acton_version\`."
             echo
-            echo "SHA-256: \`$checksum\`"
+            echo "sha-256: \`$checksum\`"
           } > ../notes.md
 
       - name: Publish release
