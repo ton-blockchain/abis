@@ -43,18 +43,18 @@ jobs:
       - name: Setup Acton
         uses: ton-blockchain/setup-acton@2d38fd579e1bf8753a3e0cff9ad695612b98a676 # v1.0.0
 
-      # Releases publish the compact output that consumers pin by checksum;
-      # --pretty output is for reading and never matches a published checksum.
       - name: Build ABI catalog
         run: cargo --locked xtask bundle --out dist/abi-catalog.json
 
       - name: Write checksum and release notes
         working-directory: dist
+        # language=Bash
         run: |
           sha256sum abi-catalog.json > abi-catalog.json.sha256
           contracts=$(jq '.contracts | length' abi-catalog.json)
+          acton_version="$(acton --version)"
           {
-            echo "ABI catalog with $contracts contracts, built from $GITHUB_SHA with $(acton --version)."
+            echo "ABI catalog with $contracts contracts, built from $GITHUB_SHA with \`$acton_version\`."
             echo
             echo "SHA-256: \`$(cut -d' ' -f1 abi-catalog.json.sha256)\`"
           } > notes.md
@@ -63,6 +63,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.ref_name }}
+        # language=Bash
         run: >
           gh release create "$TAG"
           dist/abi-catalog.json dist/abi-catalog.json.sha256
