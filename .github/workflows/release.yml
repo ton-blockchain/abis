@@ -1,0 +1,78 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions: { }
+
+env:
+  # A released Acton, never trunk: every compiled ABI records its Tolk compiler
+  # version, so the Acton used here is part of the published catalog's content.
+  ACTON_VERSION: "1.1.0"
+  CARGO_TERM_COLOR: always
+
+jobs:
+  release:
+    name: Publish ABI catalog
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+
+      - name: Check tag against package version and changelog
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version=$(sed -n '/^\[package\]/,/^\[/s/^version = "\(.*\)"$/\1/p' Acton.toml)
+          if [ "$TAG" != "v$version" ]; then
+            echo "::error::Tag $TAG does not match Acton.toml package version $version"
+            exit 1
+          fi
+          if ! grep -q "^## \[$version\]" CHANGELOG.md; then
+            echo "::error::CHANGELOG.md has no section for $version"
+            exit 1
+          fi
+
+      - name: Setup Acton
+        uses: ton-blockchain/setup-acton@2d38fd579e1bf8753a3e0cff9ad695612b98a676 # v1.0.0
+        with:
+          version: ${{ env.ACTON_VERSION }}
+
+      # Releases publish the compact output that consumers pin by checksum;
+      # --pretty output is for reading and never matches a published checksum.
+      - name: Build ABI catalog
+        run: cargo --locked xtask bundle --out dist/abi-catalog.json
+
+      - name: Write checksum and release notes
+        working-directory: dist
+        run: |
+          sha256sum abi-catalog.json > abi-catalog.json.sha256
+          contracts=$(jq '.contracts | length' abi-catalog.json)
+          {
+            echo "ABI catalog with $contracts contracts, built from $GITHUB_SHA with $(acton --version)."
+            echo
+            echo "SHA-256: \`$(cut -d' ' -f1 abi-catalog.json.sha256)\`"
+          } > notes.md
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: >
+          gh release create "$TAG"
+          dist/abi-catalog.json dist/abi-catalog.json.sha256
+          --repo "$GITHUB_REPOSITORY" --verify-tag
+          --title "$TAG" --notes-file dist/notes.md
