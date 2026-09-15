@@ -3,16 +3,13 @@ name: Release
 on:
   push:
     tags:
-      - "v*"
+      - "v[0-9]+.[0-9]+.[0-9]+"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 permissions: { }
-
-env:
-  CARGO_TERM_COLOR: always
 
 jobs:
   release:
@@ -60,15 +57,16 @@ jobs:
             echo "ABI catalog with $contracts contracts, built from $GITHUB_SHA with \`$acton_version\`."
             echo
             echo "SHA-256: \`$checksum\`"
-          } > notes.md
+          } > ../notes.md
 
       - name: Publish release
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ github.ref_name }}
         # language=Bash
-        run: >
-          gh release create "$TAG"
-          dist/abi-catalog.json dist/abi-catalog.json.sha256
-          --repo "$GITHUB_REPOSITORY" --verify-tag
-          --title "$TAG" --notes-file dist/notes.md
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "$GITHUB_REF_NAME" \
+            --verify-tag \
+            --notes-file notes.md \
+            dist/*
