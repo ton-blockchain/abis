@@ -35,9 +35,8 @@ after to decide whether it is more.
    git push origin vX.Y.Z
    ```
 
-The [release workflow](.github/workflows/release.yml) rejects a tag that does
-not match `Acton.toml`, builds the catalog with the Acton release pinned in
-`[toolchain].acton`, and publishes:
+The [release workflow](.github/workflows/release.yml) rejects a tag that does not match `Acton.toml`, builds the catalog with the Acton
+release pinned in `[toolchain].acton`, and publishes:
 
 - `abi-catalog.json` — the compact catalog, exactly as `cargo xtask bundle`
   writes it;
