@@ -3,6 +3,9 @@ name = "abis"
 description = "ABI schema catalog"
 version = "0.1.0"
 
+[toolchain]
+acton = "1.1.0"
+
 [contracts.Locker]
 display-name = "Locker"
 src = "data/locker/testdata/Locker.boc"

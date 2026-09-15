@@ -37,7 +37,7 @@ after to decide whether it is more.
 
 The [release workflow](.github/workflows/release.yml) rejects a tag that does
 not match `Acton.toml` or has no `CHANGELOG.md` section, builds the catalog with
-the Acton release pinned in `ACTON_VERSION`, and publishes:
+the Acton release pinned in `[toolchain].acton`, and publishes:
 
 - `abi-catalog.json` — the compact catalog, exactly as `cargo xtask bundle`
   writes it;

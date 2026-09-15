@@ -12,9 +12,6 @@ concurrency:
 permissions: { }
 
 env:
-  # A released Acton, never trunk: every compiled ABI records its Tolk compiler
-  # version, so the Acton used here is part of the published catalog's content.
-  ACTON_VERSION: "1.1.0"
   CARGO_TERM_COLOR: always
 
 jobs:
@@ -48,8 +45,6 @@ jobs:
 
       - name: Setup Acton
         uses: ton-blockchain/setup-acton@2d38fd579e1bf8753a3e0cff9ad695612b98a676 # v1.0.0
-        with:
-          version: ${{ env.ACTON_VERSION }}
 
       # Releases publish the compact output that consumers pin by checksum;
       # --pretty output is for reading and never matches a published checksum.
