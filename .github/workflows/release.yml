@@ -3,19 +3,13 @@ name: Release
 on:
   push:
     tags:
-      - "v*"
+      - "v[0-9]+.[0-9]+.[0-9]+"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 permissions: { }
-
-env:
-  # A released Acton, never trunk: every compiled ABI records its Tolk compiler
-  # version, so the Acton used here is part of the published catalog's content.
-  ACTON_VERSION: "1.1.0"
-  CARGO_TERM_COLOR: always
 
 jobs:
   release:
@@ -24,7 +18,7 @@ jobs:
     timeout-minutes: 30
 
     permissions:
-      contents: write
+      contents: write # required to create the GitHub Release for the published tag
 
     steps:
       - name: Checkout
@@ -32,47 +26,47 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Check tag against package version and changelog
-        env:
-          TAG: ${{ github.ref_name }}
+      - name: Check package version
+        # language=Bash
         run: |
-          version=$(sed -n '/^\[package\]/,/^\[/s/^version = "\(.*\)"$/\1/p' Acton.toml)
-          if [ "$TAG" != "v$version" ]; then
-            echo "::error::Tag $TAG does not match Acton.toml package version $version"
-            exit 1
-          fi
-          if ! grep -q "^## \[$version\]" CHANGELOG.md; then
-            echo "::error::CHANGELOG.md has no section for $version"
+          package_version="$(yq -r '.package.version' Acton.toml)"
+          tag_version="${GITHUB_REF_NAME#v}"
+
+          if [ "$tag_version" != "$package_version" ]; then
+            echo "::error title=Version mismatch::Acton.toml(package.version) '${package_version}' does not match tag '${tag_version}'"
             exit 1
           fi
 
       - name: Setup Acton
         uses: ton-blockchain/setup-acton@2d38fd579e1bf8753a3e0cff9ad695612b98a676 # v1.0.0
-        with:
-          version: ${{ env.ACTON_VERSION }}
 
-      # Releases publish the compact output that consumers pin by checksum;
-      # --pretty output is for reading and never matches a published checksum.
       - name: Build ABI catalog
         run: cargo --locked xtask bundle --out dist/abi-catalog.json
 
       - name: Write checksum and release notes
         working-directory: dist
+        # language=Bash
         run: |
           sha256sum abi-catalog.json > abi-catalog.json.sha256
+          checksum="$(cut -d' ' -f1 abi-catalog.json.sha256)"
+
           contracts=$(jq '.contracts | length' abi-catalog.json)
+          acton_version="$(acton --version)"
+
           {
-            echo "ABI catalog with $contracts contracts, built from $GITHUB_SHA with $(acton --version)."
+            echo "ABI catalog with $contracts contracts, built from $GITHUB_SHA with \`$acton_version\`."
             echo
-            echo "SHA-256: \`$(cut -d' ' -f1 abi-catalog.json.sha256)\`"
-          } > notes.md
+            echo "sha-256: \`$checksum\`"
+          } > ../notes.md
 
       - name: Publish release
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ github.ref_name }}
-        run: >
-          gh release create "$TAG"
-          dist/abi-catalog.json dist/abi-catalog.json.sha256
-          --repo "$GITHUB_REPOSITORY" --verify-tag
-          --title "$TAG" --notes-file dist/notes.md
+        # language=Bash
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "$GITHUB_REF_NAME" \
+            --verify-tag \
+            --notes-file notes.md \
+            dist/*
