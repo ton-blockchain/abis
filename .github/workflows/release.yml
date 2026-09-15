@@ -51,12 +51,15 @@ jobs:
         # language=Bash
         run: |
           sha256sum abi-catalog.json > abi-catalog.json.sha256
+          checksum="$(cut -d' ' -f1 abi-catalog.json.sha256)"
+
           contracts=$(jq '.contracts | length' abi-catalog.json)
           acton_version="$(acton --version)"
+
           {
             echo "ABI catalog with $contracts contracts, built from $GITHUB_SHA with \`$acton_version\`."
             echo
-            echo "SHA-256: \`$(cut -d' ' -f1 abi-catalog.json.sha256)\`"
+            echo "SHA-256: \`$checksum\`"
           } > notes.md
 
       - name: Publish release
