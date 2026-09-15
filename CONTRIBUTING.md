@@ -30,6 +30,9 @@ cargo xtask bundle --pretty
 ABI compilation runs in parallel by default. Use `--jobs N` to set an explicit
 limit.
 
+`--pretty` output is for reading. Releases publish the compact output of
+`cargo xtask bundle`; see [RELEASING.md](RELEASING.md).
+
 ## Generate JSON Schemas
 
 Generate the tracked schemas for input `info.toml` files and the public ABI
