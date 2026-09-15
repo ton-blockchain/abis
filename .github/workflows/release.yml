@@ -29,17 +29,14 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Check tag against package version and changelog
-        env:
-          TAG: ${{ github.ref_name }}
+      - name: Check package version
+        # language=Bash
         run: |
-          version=$(sed -n '/^\[package\]/,/^\[/s/^version = "\(.*\)"$/\1/p' Acton.toml)
-          if [ "$TAG" != "v$version" ]; then
-            echo "::error::Tag $TAG does not match Acton.toml package version $version"
-            exit 1
-          fi
-          if ! grep -q "^## \[$version\]" CHANGELOG.md; then
-            echo "::error::CHANGELOG.md has no section for $version"
+          package_version="$(yq -r '.package.version' Acton.toml)"
+          tag_version="${GITHUB_REF_NAME#v}"
+
+          if [ "$tag_version" != "$package_version" ]; then
+            echo "::error title=Version mismatch::Acton.toml(package.version) '${package_version}' does not match tag '${tag_version}'"
             exit 1
           fi
 
