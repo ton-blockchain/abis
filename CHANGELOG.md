@@ -7,6 +7,8 @@ Versioned release policy is described in [RELEASING.md](RELEASING.md).
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-09-15
+
 ### Added
 
 - Standard TEP-74 Jetton Master and Wallet interfaces without implementation-specific storage, errors or code hashes
