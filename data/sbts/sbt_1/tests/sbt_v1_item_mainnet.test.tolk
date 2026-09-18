@@ -42,7 +42,7 @@ get fun `test sbt v1 item mainnet get static data succeeds`() {
     val txs = item.sendSbtV1ItemGetStaticData(
         sender.address,
         1,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<SbtV1ItemGetStaticData>({
@@ -62,7 +62,7 @@ get fun `test sbt v1 item mainnet request owner succeeds`() {
         sender.address,
         createEmptyCell(),
         false,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<SbtV1ItemRequestOwner>({
@@ -85,7 +85,7 @@ get fun `test sbt v1 item rejects transfer`() {
         null,
         0,
         sbtV1InlineEmptyForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<SbtV1ItemTransfer>({
@@ -106,7 +106,7 @@ get fun `test sbt v1 item rejects unauthorized prove ownership`() {
         sender.address,
         createEmptyCell(),
         false,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<SbtV1ItemProveOwnership>({

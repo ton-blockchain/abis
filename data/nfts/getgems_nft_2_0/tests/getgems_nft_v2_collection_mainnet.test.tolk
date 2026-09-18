@@ -43,7 +43,7 @@ get fun `test getgems nft collection v2 mainnet royalty request succeeds`() {
     val txs = collection.sendGetgemsNftCollectionV2GetRoyaltyParams(
         sender.address,
         1,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<GetgemsNftCollectionV2GetRoyaltyParams>({
@@ -62,7 +62,7 @@ get fun `test getgems nft collection v2 rejects unauthorized second owner change
         sender.address,
         2,
         sender.address,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<GetgemsNftCollectionV2ChangeSecondOwner>({

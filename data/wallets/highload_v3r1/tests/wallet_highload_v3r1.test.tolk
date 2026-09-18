@@ -101,7 +101,7 @@ get fun `test highload wallet v3r1 mainnet accepts plain internal transfer`() {
     val txs = wallet.sendAny(
         sender.address,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx({
@@ -119,7 +119,7 @@ get fun `test highload wallet v3r1 mainnet ignores internal transfer from non-se
         sender.address,
         1,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<HighloadV3InternalTransfer>({

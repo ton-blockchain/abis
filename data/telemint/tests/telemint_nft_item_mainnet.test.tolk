@@ -43,7 +43,7 @@ get fun `test telemint nft item mainnet get static data succeeds`() {
     val txs = item.sendTelemintNftItemGetStaticData(
         sender.address,
         1,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<TelemintNftItemGetStaticData>({
@@ -66,7 +66,7 @@ get fun `test telemint nft item rejects unauthorized transfer`() {
         null,
         0,
         telemintInlineEmptyForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<TelemintNftItemTransfer>({

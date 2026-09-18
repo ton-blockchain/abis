@@ -65,7 +65,7 @@ get fun `test locker mainnet getters and storage`() {
     val locker = mainnetLocker();
     val storage = loadLockerStorageFromFork(locker);
     val lockerData = locker.getLockerData();
-    val unlockedNow = locker.getUnlockedAmount(blockchain.now(), ton("1"));
+    val unlockedNow = locker.getUnlockedAmount(blockchain.now(), grams("1"));
 
     expect(scripts.isContractDeployed(locker.address)).toBeTrue();
     expect(lockerData.totalCoinsLocked).toEqual(storage.totalCoinsLocked);

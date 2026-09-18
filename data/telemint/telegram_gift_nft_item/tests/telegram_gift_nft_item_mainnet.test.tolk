@@ -161,7 +161,7 @@ get fun `test telegram gift static-data and unauthorized transfer dispatch`() {
     val staticTxs = item.sendTelegramGiftNftItemGetStaticData(
         sender.address,
         1,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(staticTxs).toHaveSuccessfulTx<TelegramGiftNftItemGetStaticData>({
         from: sender.address,
@@ -177,7 +177,7 @@ get fun `test telegram gift static-data and unauthorized transfer dispatch`() {
         null,
         0,
         inlineEmptyForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
     expect(transferTxs).toHaveFailedTx<TelegramGiftNftItemTransfer>({
         from: sender.address,

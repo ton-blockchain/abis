@@ -33,7 +33,7 @@ get fun `test getgems nft item v2 mainnet get static data succeeds`() {
     val txs = item.sendGetgemsNftItemV2GetStaticData(
         sender.address,
         1,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<GetgemsNftItemV2GetStaticData>({
@@ -56,7 +56,7 @@ get fun `test getgems nft item v2 rejects unauthorized transfer`() {
         null,
         0,
         getgemsNftV2InlineEmptyForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<GetgemsNftItemV2Transfer>({

@@ -43,13 +43,13 @@ get fun `test evaa blank decodes local master upgrade header and emits revert ca
         tail: emptyTail(),
     });
 
-    blank.deploy(master.address, { value: ton("1"), bounce: false });
+    blank.deploy(master.address, { value: grams("1"), bounce: false });
 
     val txs = blank.sendEvaaBlankIncomingUpgrade(
         master.address,
         blankUpgradeHeaderWithoutInfo(),
         emptyTail(),
-        { value: ton("0.2"), bounce: false },
+        { value: grams("0.2"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx({

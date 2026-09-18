@@ -31,7 +31,7 @@ fun deployWalletHighloadV1r2(): WalletHighloadV1r2 {
     val sender = testing.treasury("wallet-highload-v1r2-local-deployer");
     val wallet = WalletHighloadV1r2.fromStorage(walletHighloadV1r2Storage());
 
-    val txs = wallet.deploy(sender.address, { value: ton("1"), bounce: false });
+    val txs = wallet.deploy(sender.address, { value: grams("1"), bounce: false });
     expect(txs).toHaveSuccessfulTx({
         from: sender.address,
         to: wallet.address,
@@ -87,7 +87,7 @@ get fun `test highload wallet v1r2 local accepts plain internal transfer without
     val txs = wallet.sendAny(
         sender.address,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx({

@@ -80,7 +80,7 @@ get fun `test mintless master accepts provide wallet address and top up`() {
         11,
         owner,
         true,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(provideTxs).toHaveSuccessfulTx<MintlessJettonMasterProvideWalletAddress>({
         from: sender.address,
@@ -91,7 +91,7 @@ get fun `test mintless master accepts provide wallet address and top up`() {
     val topUpTxs = master.sendMintlessJettonMasterTopUp(
         sender.address,
         12,
-        { value: ton("0.01"), bounce: false },
+        { value: grams("0.01"), bounce: false },
     );
     expect(topUpTxs).toHaveSuccessfulTx<MintlessJettonMasterTopUp>({
         from: sender.address,
@@ -109,7 +109,7 @@ get fun `test mintless master rejects unauthorized admin messages`() {
         sender.address,
         21,
         sender.address,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(changeAdminTxs).toHaveFailedTx<MintlessJettonMasterChangeAdmin>({
         from: sender.address,
@@ -120,7 +120,7 @@ get fun `test mintless master rejects unauthorized admin messages`() {
     val dropAdminTxs = master.sendMintlessJettonMasterDropAdmin(
         sender.address,
         22,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(dropAdminTxs).toHaveFailedTx<MintlessJettonMasterDropAdmin>({
         from: sender.address,
@@ -132,7 +132,7 @@ get fun `test mintless master rejects unauthorized admin messages`() {
         sender.address,
         23,
         emptyMintlessMetadataTail(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(changeMetadataTxs).toHaveFailedTx<MintlessJettonMasterChangeMetadataUri>({
         from: sender.address,

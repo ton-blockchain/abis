@@ -191,7 +191,7 @@ get fun `test multisig order v2 local initialized getter after source init`() {
         parent.address,
         createMessage({
             bounce: false,
-            value: ton("0.2"),
+            value: grams("0.2"),
             dest: { stateInit: order.stateInit },
             body: MultisigOrderV2Init {
                 queryId: 3,
@@ -242,7 +242,7 @@ get fun `test multisig v2 mainnet accepts plain internal transfer`() {
     val txs = multisig.sendAny(
         sender.address,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx({
@@ -259,7 +259,7 @@ get fun `test multisig v2 mainnet accepts typed text comment`() {
     val txs = multisig.sendMultisigV2TextComment(
         sender.address,
         emptyTextCommentTail(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<MultisigV2TextComment>({
@@ -281,7 +281,7 @@ get fun `test multisig v2 mainnet rejects unauthorized new order`() {
         0,
         futureExpirationDate(),
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<MultisigV2NewOrder>({
@@ -299,7 +299,7 @@ get fun `test multisig order v2 mainnet rejects unauthorized approval`() {
         sender.address,
         2,
         0,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<MultisigOrderV2Approve>({
@@ -316,7 +316,7 @@ get fun `test multisig order v2 mainnet rejects unknown opcode`() {
     val txs = order.sendAny(
         sender.address,
         unknownBodyWithQuery(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx({

@@ -64,7 +64,7 @@ get fun `test Getgems Lucky Buy attempt recognizes marketplace relay prefix`() {
     val txs = contract.sendGetgemsLuckyBuyAttemptMarketplaceRelay(
         sender.address,
         action,
-        { value: ton("0.05"), bounce: true },
+        { value: grams("0.05"), bounce: true },
     );
 
     expect(txs).toHaveFailedTx<GetgemsLuckyBuyAttemptMarketplaceRelay>({

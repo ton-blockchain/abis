@@ -255,7 +255,7 @@ get fun `test evaa master classic local getters match saved storage`() {
     val master = EvaaMasterClassic.fromStorage(loaded.storage);
     val deployer = testing.treasury("evaa-master-classic-local-deployer");
 
-    master.deploy(deployer.address, { value: ton("1"), bounce: false });
+    master.deploy(deployer.address, { value: grams("1"), bounce: false });
     expectGettersMatchStorage(master, loaded);
 }
 

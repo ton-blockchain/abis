@@ -117,7 +117,7 @@ get fun `test moon booster rejects unauthorized close through wrapper`() {
     val txs = contract.sendMoonBoosterCloseExpired(
         sender.address,
         1,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<MoonBoosterCloseExpired>({

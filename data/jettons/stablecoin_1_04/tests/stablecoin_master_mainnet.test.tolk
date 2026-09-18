@@ -61,7 +61,7 @@ get fun `test stablecoin master accepts provide wallet address and top up`() {
         11,
         owner,
         true,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(provideTxs).toHaveSuccessfulTx<StablecoinMasterProvideWalletAddress>({
         from: sender.address,
@@ -72,7 +72,7 @@ get fun `test stablecoin master accepts provide wallet address and top up`() {
     val topUpTxs = master.sendStablecoinMasterTopUp(
         sender.address,
         12,
-        { value: ton("0.01"), bounce: false },
+        { value: grams("0.01"), bounce: false },
     );
     expect(topUpTxs).toHaveSuccessfulTx<StablecoinMasterTopUp>({
         from: sender.address,
@@ -90,7 +90,7 @@ get fun `test stablecoin master rejects unauthorized admin messages`() {
         sender.address,
         21,
         sender.address,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(changeAdminTxs).toHaveFailedTx<StablecoinMasterChangeAdmin>({
         from: sender.address,
@@ -102,7 +102,7 @@ get fun `test stablecoin master rejects unauthorized admin messages`() {
         sender.address,
         22,
         emptyStablecoinMetadataTail(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(changeMetadataTxs).toHaveFailedTx<StablecoinMasterChangeMetadataUri>({
         from: sender.address,

@@ -116,7 +116,7 @@ get fun `test wallet vesting mainnet accepts plain internal transfer`() {
     val txs = wallet.sendAny(
         sender.address,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx({
@@ -134,7 +134,7 @@ get fun `test wallet vesting mainnet rejects invalid external signed request`() 
     wallet.sendAny(
         sender.address,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     val result = wallet.sendExternalWalletVestingSignedExternal(

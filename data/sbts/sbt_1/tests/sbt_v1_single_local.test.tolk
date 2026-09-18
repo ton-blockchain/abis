@@ -50,7 +50,7 @@ get fun `test sbt v1 single local get static data succeeds`() {
     val txs = single.sendSbtV1SingleGetStaticData(
         sender.address,
         1,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<SbtV1SingleGetStaticData>({
@@ -73,7 +73,7 @@ get fun `test sbt v1 single local request owner succeeds`() {
         sender.address,
         createEmptyCell(),
         false,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<SbtV1SingleRequestOwner>({
@@ -99,7 +99,7 @@ get fun `test sbt v1 single local rejects transfer`() {
         null,
         0,
         sbtV1InlineEmptyForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<SbtV1SingleTransfer>({
@@ -121,7 +121,7 @@ get fun `test sbt v1 single local editor updates content`() {
         editor.address,
         4,
         newContent,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<SbtV1SingleEditContent>({
@@ -143,7 +143,7 @@ get fun `test sbt v1 single local rejects unauthorized edit content`() {
         sender.address,
         5,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<SbtV1SingleEditContent>({
@@ -168,7 +168,7 @@ get fun `test sbt v1 single local transfers editorship`() {
         false,
         0,
         sbtV1InlineEmptyForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<SbtV1SingleTransferEditorship>({
@@ -194,7 +194,7 @@ get fun `test sbt v1 single local rejects unauthorized transfer editorship`() {
         false,
         0,
         sbtV1InlineEmptyForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<SbtV1SingleTransferEditorship>({

@@ -162,7 +162,7 @@ get fun `test stakee pool local wrapper full-data decodes borrower maps`() {
     val pool = StakeePool.fromStorage(loaded.storage);
     val deployer = testing.treasury("stakee-pool-storage-deployer");
 
-    pool.deploy(deployer.address, { value: ton("1"), bounce: false });
+    pool.deploy(deployer.address, { value: grams("1"), bounce: false });
     expect(scripts.isContractDeployed(pool.address)).toBeTrue();
 
     val fullData = pool.getPoolFullDataRaw();

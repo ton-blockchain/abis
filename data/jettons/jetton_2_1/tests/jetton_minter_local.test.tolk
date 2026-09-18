@@ -34,7 +34,7 @@ fun deployJetton21Minter(admin: address): JettonMinter {
         admin,
         createMessage({
             bounce: false,
-            value: ton("1"),
+            value: grams("1"),
             dest: { stateInit: minter.stateInit },
             body: TopUpTons {},
         }),
@@ -99,7 +99,7 @@ get fun `test jetton 2.1 minter mints and rejects unauthorized admin`() {
         admin.address,
         21,
         owner.address,
-        ton("0.25"),
+        grams("0.25"),
         {
             queryId: 21,
             jettonAmount: 1000,
@@ -108,7 +108,7 @@ get fun `test jetton 2.1 minter mints and rejects unauthorized admin`() {
             forwardTonAmount: 0,
             forwardPayload: emptyJetton21ForwardPayload(),
         },
-        { value: ton("0.5"), bounce: false },
+        { value: grams("0.5"), bounce: false },
     );
     expect(mintTxs).toHaveSuccessfulTx<MintNewJettons>({
         from: admin.address,
@@ -127,7 +127,7 @@ get fun `test jetton 2.1 minter mints and rejects unauthorized admin`() {
         attacker.address,
         22,
         attacker.address,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(rejectedTxs).toHaveFailedTx<ChangeMinterAdmin>({
         from: attacker.address,

@@ -106,7 +106,7 @@ get fun `test smart account factory collection getters with populated content`()
         saOrdinaryCode: liveStorage.saOrdinaryCode,
     });
 
-    factory.deploy(deployer.address, { value: ton("1"), bounce: false });
+    factory.deploy(deployer.address, { value: grams("1"), bounce: false });
     expect(scripts.isContractDeployed(factory.address)).toBeTrue();
 
     val collectionData = factory.getCollectionData();

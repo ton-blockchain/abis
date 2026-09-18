@@ -41,7 +41,7 @@ fun deployLocalSbtV1Single(owner: address, editor: address, authority: address):
     val deployer = testing.treasury("sbt-v1-single-local-deployer");
     val single = SbtV1Single.fromStorage(localSbtV1SingleStorage(owner, editor, authority));
 
-    val txs = single.deploy(deployer.address, { value: ton("1"), bounce: false });
+    val txs = single.deploy(deployer.address, { value: grams("1"), bounce: false });
     expect(txs).toHaveSuccessfulTx({
         from: deployer.address,
         to: single.address,

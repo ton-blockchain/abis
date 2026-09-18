@@ -23,8 +23,8 @@ const PINNED_MAINNET_BLOCK = 83374121
 const STONFI_FACTORY_ADDRESS = "EQDC9EI4cr5mG68Bw3gcErGwSNjRum_11UedLmyLYzBuanXZ"
 const DEDUST_FACTORY_ADDRESS = "EQB6LdK8fjkBe-H9oupkUH9xWDouKwwwvW_r-P66kit913n_"
 
-fun stonfiFactory(): StonksPumpVirtualFactoryStonfi {
-    return StonksPumpVirtualFactoryStonfi.fromAddress(address(STONFI_FACTORY_ADDRESS));
+fun stonfiFactory(): StonksPumpVirtualFactory {
+    return StonksPumpVirtualFactory.fromAddress(address(STONFI_FACTORY_ADDRESS));
 }
 
 fun hasBocMagic(bytes: slice): bool {
@@ -35,7 +35,7 @@ fun hasBocMagic(bytes: slice): bool {
 }
 
 fun loadStonfiStorage(
-    contract: StonksPumpVirtualFactoryStonfi,
+    contract: StonksPumpVirtualFactory,
 ): StonksPumpVirtualFactoryStonfiStorage {
     val account = testing.getAccountState(contract.address);
     expect(account).toBeNotNull();

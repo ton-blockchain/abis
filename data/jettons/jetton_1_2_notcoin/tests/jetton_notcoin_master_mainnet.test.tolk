@@ -56,7 +56,7 @@ get fun `test jetton notcoin master accepts provide wallet address and top up`()
         11,
         owner,
         true,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(provideTxs).toHaveSuccessfulTx<JettonNotcoinMasterProvideWalletAddress>({
         from: sender.address,
@@ -67,7 +67,7 @@ get fun `test jetton notcoin master accepts provide wallet address and top up`()
     val topUpTxs = master.sendJettonNotcoinMasterTopUp(
         sender.address,
         12,
-        { value: ton("0.01"), bounce: false },
+        { value: grams("0.01"), bounce: false },
     );
     expect(topUpTxs).toHaveSuccessfulTx<JettonNotcoinMasterTopUp>({
         from: sender.address,
@@ -85,7 +85,7 @@ get fun `test jetton notcoin master rejects admin messages after drop admin`() {
         sender.address,
         21,
         sender.address,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(changeAdminTxs).toHaveFailedTx<JettonNotcoinMasterChangeAdmin>({
         from: sender.address,
@@ -96,7 +96,7 @@ get fun `test jetton notcoin master rejects admin messages after drop admin`() {
     val dropAdminTxs = master.sendJettonNotcoinMasterDropAdmin(
         sender.address,
         22,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(dropAdminTxs).toHaveFailedTx<JettonNotcoinMasterDropAdmin>({
         from: sender.address,
@@ -108,7 +108,7 @@ get fun `test jetton notcoin master rejects admin messages after drop admin`() {
         sender.address,
         23,
         emptyJettonNotcoinMetadataTail(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(changeMetadataTxs).toHaveFailedTx<JettonNotcoinMasterChangeMetadataUri>({
         from: sender.address,

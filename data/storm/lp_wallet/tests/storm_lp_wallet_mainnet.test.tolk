@@ -16,8 +16,8 @@ const PINNED_MAINNET_BLOCK = 71589284
 
 const MAINNET_STORM_LP_WALLET_ADDRESS = "EQAlGBmBJdmQTy9ny3-jvfcGPdg1vcX3TEFgN2tdb14skfhI"
 
-fun mainnetStormLpWallet(): StormLpWalletCode {
-    return StormLpWalletCode.fromAddress(address(MAINNET_STORM_LP_WALLET_ADDRESS));
+fun mainnetStormLpWallet(): StormLpWallet {
+    return StormLpWallet.fromAddress(address(MAINNET_STORM_LP_WALLET_ADDRESS));
 }
 
 fun hasBocMagic(bytes: slice): bool {
@@ -27,7 +27,7 @@ fun hasBocMagic(bytes: slice): bool {
     return bytes.preloadUint(32) == EXPECTED_BOC_MAGIC;
 }
 
-fun loadStormLpWalletStorageFromFork(wallet: StormLpWalletCode): StormLpWalletStorage {
+fun loadStormLpWalletStorageFromFork(wallet: StormLpWallet): StormLpWalletStorage {
     val account = testing.getAccountState(wallet.address);
     expect(account).toBeNotNull();
 

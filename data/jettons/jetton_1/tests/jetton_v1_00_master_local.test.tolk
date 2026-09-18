@@ -14,7 +14,7 @@ get fun `test jetton v1 00 master local deploy and getter`() {
         jettonWalletCode: createEmptyCell(),
     });
 
-    val txs = master.deploy(admin.address, { value: ton("1"), bounce: false });
+    val txs = master.deploy(admin.address, { value: grams("1"), bounce: false });
     expect(txs).toHaveSuccessfulTx({
         from: admin.address,
         to: master.address,

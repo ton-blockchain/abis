@@ -29,7 +29,7 @@ fun lockupVestingStorage(): LockupVestingStorage {
         totalDuration: TEST_TOTAL_DURATION,
         unlockPeriod: TEST_UNLOCK_PERIOD,
         cliffDuration: TEST_CLIFF_DURATION,
-        totalAmount: ton("100"),
+        totalAmount: grams("100"),
         allowElector: false,
     };
 }
@@ -38,7 +38,7 @@ fun deployLockupVesting(): LockupVesting {
     val sender = testing.treasury("lockup-vesting-local-deployer");
     val wallet = LockupVesting.fromStorage(lockupVestingStorage());
 
-    val txs = wallet.deploy(sender.address, { value: ton("1"), bounce: false });
+    val txs = wallet.deploy(sender.address, { value: grams("1"), bounce: false });
     expect(txs).toHaveSuccessfulTx({
         from: sender.address,
         to: wallet.address,
@@ -58,14 +58,14 @@ get fun `test lockup vesting local getters through wrapper`() {
     expect(lockupData.totalDuration).toEqual(TEST_TOTAL_DURATION);
     expect(lockupData.unlockPeriod).toEqual(TEST_UNLOCK_PERIOD);
     expect(lockupData.cliffDuration).toEqual(TEST_CLIFF_DURATION);
-    expect(lockupData.totalAmount).toEqual(ton("100"));
+    expect(lockupData.totalAmount).toEqual(grams("100"));
     expect(lockupData.allowElector).toBeFalse();
 }
 
 get fun `test lockup vesting local locked amount schedule`() {
     val wallet = deployLockupVesting();
 
-    expect(wallet.getLockedAmount(TEST_START_TIME - 1)).toEqual(ton("100"));
+    expect(wallet.getLockedAmount(TEST_START_TIME - 1)).toEqual(grams("100"));
     expect(wallet.getLockedAmount(TEST_START_TIME + TEST_TOTAL_DURATION + 1)).toEqual(0);
 }
 

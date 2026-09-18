@@ -32,7 +32,7 @@ fun deployLocalJetton2Master(admin: address): Jetton2Master {
     }
     val deployMsg = createMessage({
         bounce: false,
-        value: ton("1"),
+        value: grams("1"),
         dest: { stateInit: master.stateInit },
         body: Jetton2MasterTopUp { queryId: 0 },
     });
@@ -69,7 +69,7 @@ fun mintToLocalJetton2Wallet(
         admin,
         queryId,
         owner,
-        ton("0.25"),
+        grams("0.25"),
         {
             queryId,
             amount,
@@ -78,7 +78,7 @@ fun mintToLocalJetton2Wallet(
             forwardTonAmount: 0,
             forwardPayload: jetton2InlineEmptyForwardPayload(),
         },
-        { value: ton("0.5"), bounce: false },
+        { value: grams("0.5"), bounce: false },
     );
 
     expect(mintTxs).toHaveSuccessfulTx<Jetton2MasterMint>({

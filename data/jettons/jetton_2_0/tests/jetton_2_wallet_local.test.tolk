@@ -25,7 +25,7 @@ get fun `test jetton v2 wallet transfer and burn update balances`() {
         null,
         0,
         jetton2InlineEmptyForwardPayload(),
-        { value: ton("0.5"), bounce: false },
+        { value: grams("0.5"), bounce: false },
     );
     expect(transferTxs).toHaveSuccessfulTx<Jetton2WalletTransfer>({
         from: owner.address,
@@ -48,7 +48,7 @@ get fun `test jetton v2 wallet transfer and burn update balances`() {
         200,
         admin.address,
         null,
-        { value: ton("0.3"), bounce: false },
+        { value: grams("0.3"), bounce: false },
     );
     expect(burnTxs).toHaveSuccessfulTx<Jetton2WalletBurn>({
         from: owner.address,
@@ -80,7 +80,7 @@ get fun `test jetton v2 wallet top up and rejected messages`() {
     val topUpTxs = wallet.sendJetton2WalletTopUp(
         attacker.address,
         42,
-        { value: ton("0.01"), bounce: false },
+        { value: grams("0.01"), bounce: false },
     );
     expect(topUpTxs).toHaveSuccessfulTx<Jetton2WalletTopUp>({
         from: attacker.address,
@@ -97,7 +97,7 @@ get fun `test jetton v2 wallet top up and rejected messages`() {
         null,
         0,
         jetton2InlineEmptyForwardPayload(),
-        { value: ton("0.2"), bounce: false },
+        { value: grams("0.2"), bounce: false },
     );
     expect(unauthorizedTransferTxs).toHaveFailedTx<Jetton2WalletTransfer>({
         from: attacker.address,
@@ -109,7 +109,7 @@ get fun `test jetton v2 wallet top up and rejected messages`() {
     val unknownTxs = wallet.sendAny(
         attacker.address,
         unknownBody,
-        { value: ton("0.01"), bounce: false },
+        { value: grams("0.01"), bounce: false },
     );
     expect(unknownTxs).toHaveFailedTx({
         from: attacker.address,

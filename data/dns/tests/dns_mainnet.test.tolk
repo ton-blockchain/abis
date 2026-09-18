@@ -164,7 +164,7 @@ get fun `test dns domain item rejects unauthorized transfer`() {
         null,
         0,
         dnsInlineEmptyForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<DnsDomainItemTransfer>({

@@ -74,7 +74,7 @@ get fun `test preprocessed wallet v2 mainnet accepts plain internal transfer wit
     val txs = wallet.sendAny(
         sender.address,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx({

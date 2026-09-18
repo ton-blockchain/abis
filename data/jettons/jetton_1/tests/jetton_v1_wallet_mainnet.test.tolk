@@ -38,7 +38,7 @@ get fun `test jetton v1 wallet rejects unauthorized transfer`() {
         null,
         0,
         emptyForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<JettonTransfer>({

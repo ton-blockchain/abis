@@ -52,7 +52,7 @@ get fun `test jetton notcoin wallet accepts top up`() {
     val txs = wallet.sendJettonNotcoinWalletTopUp(
         sender.address,
         31,
-        { value: ton("0.01"), bounce: false },
+        { value: grams("0.01"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<JettonNotcoinWalletTopUp>({
@@ -77,7 +77,7 @@ get fun `test jetton notcoin wallet rejects unauthorized owner transfer and burn
         null,
         0,
         emptyJettonNotcoinForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
     expect(transferTxs).toHaveFailedTx<JettonNotcoinWalletTransfer>({
         from: sender.address,
@@ -91,7 +91,7 @@ get fun `test jetton notcoin wallet rejects unauthorized owner transfer and burn
         1,
         sender.address,
         null,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(burnTxs).toHaveFailedTx<JettonNotcoinWalletBurn>({
         from: sender.address,

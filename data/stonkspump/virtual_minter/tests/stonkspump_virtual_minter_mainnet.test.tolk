@@ -17,8 +17,8 @@ const PINNED_MAINNET_BLOCK = 83374121
 const MINTER_ADDRESS = "EQDQD7VxjuodGDa20e-oacYLIncmKe047qDSWhrGWFub4p_1"
 const ZERO_ADDRESS = "0:0000000000000000000000000000000000000000000000000000000000000000"
 
-fun minter(): StonksPumpVirtualMinterStonfi {
-    return StonksPumpVirtualMinterStonfi.fromAddress(address(MINTER_ADDRESS));
+fun minter(): StonksPumpVirtualMinter {
+    return StonksPumpVirtualMinter.fromAddress(address(MINTER_ADDRESS));
 }
 
 fun hasBocMagic(bytes: slice): bool {
@@ -28,7 +28,7 @@ fun hasBocMagic(bytes: slice): bool {
     return bytes.preloadUint(32) == EXPECTED_BOC_MAGIC;
 }
 
-fun loadMinterStorage(contract: StonksPumpVirtualMinterStonfi): StonksPumpVirtualMinterStorage {
+fun loadMinterStorage(contract: StonksPumpVirtualMinter): StonksPumpVirtualMinterStorage {
     val account = testing.getAccountState(contract.address);
     expect(account).toBeNotNull();
 

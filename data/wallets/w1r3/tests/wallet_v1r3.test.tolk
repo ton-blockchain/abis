@@ -71,7 +71,7 @@ get fun `test wallet v1r3 mainnet accepts plain internal transfer`() {
     val txs = wallet.sendAny(
         sender.address,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx({
@@ -84,7 +84,7 @@ get fun `test wallet v1r3 mainnet accepts plain internal transfer`() {
 
 get fun `test wallet v1r3 mainnet rejects invalid external signed request`() {
     val wallet = walletV1r3();
-    testing.topUp(wallet.address, ton("1"));
+    testing.topUp(wallet.address, grams("1"));
 
     val result = wallet.sendExternalWalletV1r3SignedExternal(
         zeroSignature(),

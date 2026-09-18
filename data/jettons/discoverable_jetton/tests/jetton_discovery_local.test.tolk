@@ -11,7 +11,7 @@ get fun `test jetton discovery local deploy and provide wallet address`() {
         jettonWalletCode: createEmptyCell(),
     });
 
-    val deployTxs = discovery.deploy(sender.address, { value: ton("1"), bounce: false });
+    val deployTxs = discovery.deploy(sender.address, { value: grams("1"), bounce: false });
     expect(deployTxs).toHaveSuccessfulTx({
         from: sender.address,
         to: discovery.address,
@@ -23,7 +23,7 @@ get fun `test jetton discovery local deploy and provide wallet address`() {
         31,
         sender.address,
         true,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(provideTxs).toHaveSuccessfulTx<ProvideWalletAddress>({

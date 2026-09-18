@@ -79,7 +79,7 @@ fun deployGetgemsNftAuctionV4R1Fixture(): GetgemsNftAuctionV4R1Fixture {
 
     val deployMsg = createMessage({
         bounce: false,
-        value: ton("0.05"),
+        value: grams("0.05"),
         dest: { stateInit: fixture.auction.stateInit },
         body: GetgemsNftAuctionV4R1DeployAuction { queryId: 0 },
     });

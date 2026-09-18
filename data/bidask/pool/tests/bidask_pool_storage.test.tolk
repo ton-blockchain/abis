@@ -172,7 +172,7 @@ get fun `test bidask pool wrapper getters match saved local storage`() {
     val pool = BidaskPool.fromStorage(storage);
     val deployer = testing.treasury("bidask-pool-storage-deployer");
 
-    pool.deploy(deployer.address, { value: ton("1"), bounce: false });
+    pool.deploy(deployer.address, { value: grams("1"), bounce: false });
     expect(scripts.isContractDeployed(pool.address)).toBeTrue();
 
     expectBidaskPoolGettersMatchStorage(pool, storage);

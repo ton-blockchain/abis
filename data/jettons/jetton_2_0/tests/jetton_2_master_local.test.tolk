@@ -46,7 +46,7 @@ get fun `test jetton v2 master accepts discovery and top up but rejects non admi
         11,
         owner.address,
         true,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(provideTxs).toHaveSuccessfulTx<Jetton2MasterProvideWalletAddress>({
         from: sender.address,
@@ -57,7 +57,7 @@ get fun `test jetton v2 master accepts discovery and top up but rejects non admi
     val topUpTxs = master.sendJetton2MasterTopUp(
         sender.address,
         12,
-        { value: ton("0.01"), bounce: false },
+        { value: grams("0.01"), bounce: false },
     );
     expect(topUpTxs).toHaveSuccessfulTx<Jetton2MasterTopUp>({
         from: sender.address,
@@ -70,7 +70,7 @@ get fun `test jetton v2 master accepts discovery and top up but rejects non admi
         sender.address,
         13,
         sender.address,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(changeAdminTxs).toHaveFailedTx<Jetton2MasterChangeAdmin>({
         from: sender.address,

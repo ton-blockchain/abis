@@ -56,7 +56,7 @@ get fun `test discoverable jetton master accepts provide wallet address`() {
         11,
         owner,
         true,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<ProvideWalletAddress>({
@@ -75,7 +75,7 @@ get fun `test discoverable jetton master rejects unauthorized admin change`() {
         sender.address,
         13,
         sender.address,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<JettonChangeAdmin>({

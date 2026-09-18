@@ -26,7 +26,7 @@ fun deployJetton21Wallet(owner: address, minter: address, balance: coins): Jetto
         owner,
         createMessage({
             bounce: false,
-            value: ton("1"),
+            value: grams("1"),
             dest: { stateInit: wallet.stateInit },
             body: TopUpTons {},
         }),
@@ -78,7 +78,7 @@ get fun `test jetton 2.1 wallet local getter storage and minter credit`() {
         null,
         0,
         emptyJetton21WalletPayload(),
-        { value: ton("0.3"), bounce: false },
+        { value: grams("0.3"), bounce: false },
     );
     expect(creditTxs).toHaveSuccessfulTx<InternalTransferStep>({
         from: minter.address,
@@ -112,7 +112,7 @@ get fun `test jetton 2.1 wallet rejects unauthorized transfer and unknown opcode
         null,
         0,
         emptyJetton21WalletPayload(),
-        { value: ton("0.3"), bounce: false },
+        { value: grams("0.3"), bounce: false },
     );
     expect(transferTxs).toHaveFailedTx<AskToTransfer>({
         from: attacker.address,
@@ -124,7 +124,7 @@ get fun `test jetton 2.1 wallet rejects unauthorized transfer and unknown opcode
     val unknownTxs = wallet.sendAny(
         attacker.address,
         unknownBody,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(unknownTxs).toHaveFailedTx({
         from: attacker.address,

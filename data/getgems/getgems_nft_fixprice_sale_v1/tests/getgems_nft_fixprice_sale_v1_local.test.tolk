@@ -81,7 +81,7 @@ fun deployLocalGetgemsNftFixpriceSaleV1(
         royaltyAddress,
     );
 
-    val txs = sale.deploy(marketplaceAddress, { value: ton("1"), bounce: false });
+    val txs = sale.deploy(marketplaceAddress, { value: grams("1"), bounce: false });
     expect(txs).toHaveSuccessfulTx({
         from: marketplaceAddress,
         to: sale.address,
@@ -195,7 +195,7 @@ get fun `test getgems sale v1 local ownership assigned initializes sale`() {
         17,
         owner.address,
         emptyForwardPayload(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(initTxs).toHaveSuccessfulTx<GetgemsNftFixpriceSaleV1OwnershipAssigned>({
         from: nft.address,
@@ -236,7 +236,7 @@ get fun `test getgems sale v1 local rejects unauthorized init and underfunded bu
         18,
         owner.address,
         emptyForwardPayload(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(rogueTxs).toHaveFailedTx<GetgemsNftFixpriceSaleV1OwnershipAssigned>({
         from: rogue.address,
@@ -250,7 +250,7 @@ get fun `test getgems sale v1 local rejects unauthorized init and underfunded bu
         19,
         owner.address,
         emptyForwardPayload(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(initTxs).toHaveSuccessfulTx<GetgemsNftFixpriceSaleV1OwnershipAssigned>({
         from: nft.address,
@@ -261,7 +261,7 @@ get fun `test getgems sale v1 local rejects unauthorized init and underfunded bu
     val buyTxs = sale.sendGetgemsNftFixpriceSaleV1Buy(
         buyer.address,
         20,
-        { value: ton("0.5"), bounce: false },
+        { value: grams("0.5"), bounce: false },
     );
     expect(buyTxs).toHaveFailedTx<GetgemsNftFixpriceSaleV1Buy>({
         from: buyer.address,

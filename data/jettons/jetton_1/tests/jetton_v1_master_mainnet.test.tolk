@@ -35,7 +35,7 @@ get fun `test jetton v1 master rejects unauthorized admin change`() {
         sender.address,
         2,
         sender.address,
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<JettonV1ChangeAdmin>({

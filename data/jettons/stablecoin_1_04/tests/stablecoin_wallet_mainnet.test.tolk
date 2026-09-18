@@ -50,7 +50,7 @@ get fun `test stablecoin wallet accepts top up`() {
     val txs = wallet.sendStablecoinWalletTopUp(
         sender.address,
         31,
-        { value: ton("0.01"), bounce: false },
+        { value: grams("0.01"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<StablecoinWalletTopUp>({
@@ -75,7 +75,7 @@ get fun `test stablecoin wallet rejects unauthorized transfer and status update`
         null,
         0,
         emptyStablecoinForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
     expect(transferTxs).toHaveFailedTx<StablecoinWalletTransfer>({
         from: sender.address,
@@ -87,7 +87,7 @@ get fun `test stablecoin wallet rejects unauthorized transfer and status update`
         sender.address,
         42,
         1,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(statusTxs).toHaveFailedTx<StablecoinWalletSetStatus>({
         from: sender.address,

@@ -111,7 +111,7 @@ get fun `test tsusde wallet accepts funding-only top up`() {
     val txs = contract.sendTsusdeWalletTopUp(
         sender.address,
         emptyTail(),
-        { value: ton("0.01"), bounce: false },
+        { value: grams("0.01"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<TsusdeWalletTopUp>({

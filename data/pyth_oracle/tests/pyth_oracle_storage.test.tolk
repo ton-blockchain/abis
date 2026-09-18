@@ -93,7 +93,7 @@ get fun `test pyth oracle local wrapper getters match saved storage`() {
     val oracle = PythOracle.fromStorage(loaded.storage);
     val deployer = testing.treasury("pyth-oracle-storage-deployer");
 
-    oracle.deploy(deployer.address, { value: ton("1"), bounce: false });
+    oracle.deploy(deployer.address, { value: grams("1"), bounce: false });
     expect(scripts.isContractDeployed(oracle.address)).toBeTrue();
 
     expect(oracle.getSingleUpdateFee()).toEqual(loaded.priceFeeds.singleUpdateFee);

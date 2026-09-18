@@ -87,7 +87,7 @@ get fun `test getgems marketplace v2 mainnet ignores empty internal message`() {
     val txs = marketplace.sendAny(
         sender.address,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx({

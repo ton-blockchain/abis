@@ -87,7 +87,7 @@ fun expectTreasuryStateMatchesStorage(
     val fees = treasury.getTreasuryFees(1);
     val maxBurnableTokens = treasury.getMaxBurnableTokens();
     val surplus = treasury.getSurplus();
-    val maxPunishment = treasury.getMaxPunishment(ton("1"));
+    val maxPunishment = treasury.getMaxPunishment(grams("1"));
 
     expect(scripts.isContractDeployed(treasury.address)).toBeTrue();
     expect(storage.totalCoins).toEqual(EXPECTED_TOTAL_COINS);

@@ -98,7 +98,7 @@ get fun `test Catizen in-game task accepts a task record`() {
     val txs = contract.sendCatizenInGameTaskRecord(
         sender.address,
         beginCell().storeUint(0x43415449, 32).endCell(),
-        { value: ton("0.008"), bounce: false },
+        { value: grams("0.008"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<CatizenInGameTaskRecord>({
@@ -116,7 +116,7 @@ get fun `test Catizen in-game task rejects an unauthorized owner withdrawal`() {
     val txs = contract.sendCatizenOwnerGramWithdrawal(
         sender.address,
         1,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<CatizenOwnerGramWithdrawal>({
@@ -133,7 +133,7 @@ get fun `test Catizen in-game task rejects an underfunded text comment`() {
     val txs = contract.sendCatizenTextComment(
         sender.address,
         createEmptyCell().beginParse(),
-        { value: ton("0.001"), bounce: false },
+        { value: grams("0.001"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<CatizenTextComment>({

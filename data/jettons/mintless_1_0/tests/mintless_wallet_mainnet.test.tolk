@@ -61,7 +61,7 @@ get fun `test mintless wallet accepts top up`() {
     val txs = wallet.sendMintlessJettonWalletTopUp(
         sender.address,
         31,
-        { value: ton("0.01"), bounce: false },
+        { value: grams("0.01"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<MintlessJettonWalletTopUp>({
@@ -86,7 +86,7 @@ get fun `test mintless wallet rejects unauthorized owner transfer and burn`() {
         null,
         0,
         emptyMintlessForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
     expect(transferTxs).toHaveFailedTx<MintlessJettonWalletTransfer>({
         from: sender.address,
@@ -100,7 +100,7 @@ get fun `test mintless wallet rejects unauthorized owner transfer and burn`() {
         1,
         sender.address,
         null,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
     expect(burnTxs).toHaveFailedTx<MintlessJettonWalletBurn>({
         from: sender.address,
@@ -118,7 +118,7 @@ get fun `test mintless wallet rejects unknown opcode`() {
     val txs = wallet.sendAny(
         sender.address,
         unknownMintlessWalletBody(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx({

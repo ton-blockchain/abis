@@ -16,8 +16,8 @@ const MAINNET_VAULT_ADDRESS = "0:33e9e84d7cbefff0d23b395875420e3a1ecb82e241692be
 const MAINNET_VAMM_ADDRESS = "0:3c9316d4a2f2b6a76d69e794bd89903499b5f798f66eb3afeb0241e2a16f6236"
 const MAINNET_REFERRAL_ADDRESS = "0:ecc63e6669c64b30b3af569ce9eb83e8eb6dbe4bd88d821400ed646a0a4ba85b"
 
-fun mainnetStormPositionManager(): StormPositionManagerLibrary {
-    return StormPositionManagerLibrary.fromAddress(address(MAINNET_POSITION_MANAGER_ADDRESS));
+fun mainnetStormPositionManager(): StormPositionManager {
+    return StormPositionManager.fromAddress(address(MAINNET_POSITION_MANAGER_ADDRESS));
 }
 
 fun expectEmptyCell(cellValue: cell): void {
@@ -25,7 +25,7 @@ fun expectEmptyCell(cellValue: cell): void {
 }
 
 fun loadStormPositionManagerStorageFromFork(
-    pm: StormPositionManagerLibrary,
+    pm: StormPositionManager,
 ): StormPositionManagerStorage {
     val account = testing.getAccountState(pm.address);
     expect(account).toBeNotNull();

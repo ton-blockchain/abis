@@ -188,7 +188,7 @@ get fun `test evaa master pyth local wrapper getters match saved storage`() {
     val master = EvaaMasterPyth.fromStorage(storage);
     val deployer = testing.treasury("evaa-master-pyth-storage-deployer");
 
-    master.deploy(deployer.address, { value: ton("1"), bounce: false });
+    master.deploy(deployer.address, { value: grams("1"), bounce: false });
     expect(scripts.isContractDeployed(master.address)).toBeTrue();
 
     val upgradeGetter = master.getUpgradeConfig();

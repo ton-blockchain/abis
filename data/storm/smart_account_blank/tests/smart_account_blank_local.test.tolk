@@ -58,7 +58,7 @@ get fun `test smart account blank local nft identity getter`() {
         balances: [],
     });
 
-    contract.deploy(deployer.address, { value: ton("1"), bounce: false });
+    contract.deploy(deployer.address, { value: grams("1"), bounce: false });
     expect(scripts.isContractDeployed(contract.address)).toBeTrue();
 
     val nftData = contract.getNftData();

@@ -36,7 +36,7 @@ get fun `test getgems nft editable item v2 mainnet get static data succeeds`() {
     val txs = item.sendGetgemsNftEditableItemV2GetStaticData(
         sender.address,
         1,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<GetgemsNftEditableItemV2GetStaticData>({
@@ -55,7 +55,7 @@ get fun `test getgems nft editable item v2 rejects unauthorized edit content`() 
         sender.address,
         2,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<GetgemsNftEditableItemV2EditContent>({
@@ -79,7 +79,7 @@ get fun `test getgems nft editable item v2 rejects unauthorized transfer editors
         null,
         0,
         getgemsNftV2InlineEmptyForwardPayload(),
-        { value: ton("0.1"), bounce: false },
+        { value: grams("0.1"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<GetgemsNftEditableItemV2TransferEditorship>({

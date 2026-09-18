@@ -78,7 +78,7 @@ get fun `test wallet v5r1 mainnet accepts plain internal transfer`() {
     val txs = wallet.sendAny(
         sender.address,
         createEmptyCell(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx({
@@ -101,7 +101,7 @@ get fun `test wallet v5r1 mainnet ignores invalid internal signed request`() {
         null,
         null,
         zeroSignature(),
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<WalletSignedInternalV5r1>({

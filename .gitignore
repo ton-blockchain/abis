@@ -12,3 +12,16 @@ scripts/
 sources/
 .gen/
 tongo/
+
+# Acton related files
+.studio/
+gen/
+lcov.info
+libraries.toml
+global.libraries.toml
+
+# Mnemonic and wallet files
+.env
+*.mnemonic
+wallets.toml
+global.wallets.toml

@@ -48,7 +48,7 @@ get fun `test nft v1 collection mainnet royalty request succeeds`() {
     val txs = collection.sendNftV1GetRoyaltyParams(
         sender.address,
         1,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveSuccessfulTx<NftV1GetRoyaltyParams>({
@@ -67,7 +67,7 @@ get fun `test nft v1 collection rejects unauthorized admin change`() {
         sender.address,
         2,
         sender.address,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<NftV1ChangeAdmin>({
@@ -89,7 +89,7 @@ get fun `test nft v1 editable collection rejects unauthorized content change`() 
         3,
         { collectionMetadata: before.collectionMetadata, commonContent: createEmptyCell() },
         royalty,
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<NftV1ChangeContent>({

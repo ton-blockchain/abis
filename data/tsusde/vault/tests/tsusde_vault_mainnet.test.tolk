@@ -127,7 +127,7 @@ get fun `test tsusde vault recognizes owner management opcode`() {
             classlibHeader: zeroClasslibHeader(),
             amount: 1,
         },
-        { value: ton("0.05"), bounce: false },
+        { value: grams("0.05"), bounce: false },
     );
 
     expect(txs).toHaveFailedTx<TsusdeVaultSetMintNanos>({

@@ -114,7 +114,7 @@ get fun `test ff vault embeds unstake operation in pinned pyth request`() {
         address(ADMIN_ADDRESS),
         createMessage({
             bounce: false,
-            value: ton("1"),
+            value: grams("1"),
             dest: contract.address,
             body: FfVaultUnstakeExecute { queryId, priceUpdateData, amountToUnstake, itemIndex },
         }),
