@@ -7,6 +7,12 @@ Versioned release policy is described in [RELEASING.md](RELEASING.md).
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-09-18
+
+### Changed
+
+- Build the catalog with Acton 1.2.0, which bundles Tolk 1.4.2. No interface changed; every entry's `compiler_version` did
+
 ## [0.1.1] - 2026-09-15
 
 This is a test build.
