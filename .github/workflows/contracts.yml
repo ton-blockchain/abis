@@ -15,10 +15,6 @@ concurrency:
 
 permissions: { }
 
-env:
-  ACTON_VERSION: "trunk"
-  CARGO_TERM_COLOR: always
-
 jobs:
   rust:
     name: Rust and generated files
