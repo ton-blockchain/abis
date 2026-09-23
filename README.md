@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **298 contract entries**, **345 unique contract code hashes**, and **343 unique known contract addresses**.
+Current catalog size: **299 contract entries**, **346 unique contract code hashes**, and **344 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1343 unique opcode prefixes** and **606 unique get-method names**.
+Across the generated public catalog, the repository declares **1352 unique opcode prefixes** and **606 unique get-method names**.
 
 Each curated project group normally includes:
 
@@ -71,7 +71,7 @@ Each curated project group normally includes:
 
 | Project | Coverage | Contract entries |
 | --- | --- | --- |
-| EVAA | Lending protocol master and user contracts, including Pyth and classic master variants. | `EvaaMasterPyth`, `EvaaMasterClassic`, `EvaaUser`, `EvaaBlank` |
+| EVAA | Lending protocol master and user contracts, including Pyth and classic master variants, and the legacy user withdraw flow still served to older user code. | `EvaaMasterPyth`, `EvaaMasterClassic`, `EvaaUser`, `EvaaUserLegacy`, `EvaaBlank` |
 | Aqua Protocol | Aqua USD master vault and jetton master interface. | `AquaUsdMasterVault` |
 | Pyth Oracle | Pyth price oracle contract for feed updates, governance state, guardian sets, and price getters. | `PythOracle` |
 | Affluent | Pools, accounts, batch, multiply vaults, lending vaults, and FactorialTON jetton contracts. | `Pool`, `Account`, `Batch`, `MultiplyVault`, `MultiplyVaultV2`, `LendingVault`, `FactorialTonMinter`, `FactorialTonWallet` |

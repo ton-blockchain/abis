@@ -9,6 +9,8 @@ evaa_contracts_v9_commit = "https://github.com/evaafi/contracts/commit/d9138cb24
 evaa_sdk = "https://github.com/evaafi/sdk"
 evaa_sdk_commit = "https://github.com/evaafi/sdk/commit/f29ea811075823b4749247fa78f9fdd23e721a9f"
 evaa_liquidator_bot = "https://github.com/evaafi/liquidator-bot-v2-pub"
+evaa_contracts_v7_commit = "https://github.com/evaafi/contracts/commit/9948dce"
+evaa_user_legacy_verified_source = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/b1/ed3af875b6a8878a0c914c03be387c297f79b38ad03c7eb78239313e57e70b"
 
 [[links]]
 kind = "source"
@@ -68,3 +70,24 @@ display_name = "EVAA Blank"
 types = "blank/types/evaa_blank.types.tolk"
 hashes = ["e2f78a44f379cc7b03628d7d9c1a044e58eff0e87fea97944d29202263c68c20"]
 known_addresses = []
+
+[contracts.EvaaUserLegacy]
+display_name = "EVAA User Legacy"
+description = "User position running code up to version 7, still served by the standalone withdraw flow of the masters"
+types = "user_legacy/types/evaa_user_legacy.types.tolk"
+hashes = ["b1ed3af875b6a8878a0c914c03be387c297f79b38ad03c7eb78239313e57e70b"]
+known_addresses = ["EQA8uCdMC1v1-9XqPwxQV7IU_sVgocwGBA_gK_RSt3Q47JdI"]
+
+[[contracts.EvaaUserLegacy.links]]
+kind = "source"
+title = "EVAA contracts v7"
+url = "https://github.com/evaafi/contracts/tree/9948dce"
+
+[[contracts.EvaaUserLegacy.links]]
+kind = "source"
+title = "Verified FunC source bundle"
+url = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/b1/ed3af875b6a8878a0c914c03be387c297f79b38ad03c7eb78239313e57e70b"
+
+[contracts.EvaaUserLegacy.instances.main_pool_user]
+address = "EQA8uCdMC1v1-9XqPwxQV7IU_sVgocwGBA_gK_RSt3Q47JdI"
+network = "mainnet"

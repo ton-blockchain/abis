@@ -16,6 +16,7 @@ Versioned release policy is described in [RELEASING.md](RELEASING.md).
 - Storm Trade Smart Account signed `change_hot_key`, `self_deposit_native` and `self_deposit_jetton` external bodies and a second Smart Account code hash
 - tgBTC Teleport and Coordinator event ABIs
 - Tegro Finance pool ABI with the `swap_ton` body and forward payload intents
+- EVAA legacy user ABI with the standalone `withdraw` command, callback and excess bodies
 
 ## [0.1.2] - 2026-09-18
 

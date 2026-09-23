@@ -1824,6 +1824,15 @@ depends = []
 [contracts.EvaaUser.wrappers.tolk]
 output-dir = "data/evaa/user/wrappers"
 
+[contracts.EvaaUserLegacy]
+display-name = "EVAA User Legacy"
+src = "data/evaa/user_legacy/testdata/EvaaUserLegacy.boc"
+types = "data/evaa/user_legacy/types/evaa_user_legacy.types.tolk"
+depends = []
+
+[contracts.EvaaUserLegacy.wrappers.tolk]
+output-dir = "data/evaa/user_legacy/wrappers"
+
 [contracts.EvaaBlank]
 display-name = "EVAA Blank"
 src = "data/evaa/blank/testdata/EvaaBlank.boc"
@@ -2615,6 +2624,7 @@ evaa-master-pyth-message-bodies-test = "acton test data/evaa/master_pyth/tests/e
 evaa-master-classic-mainnet-test = "acton test data/evaa/master_classic/tests/evaa_master_classic_mainnet.test.tolk --fork-net mainnet --fork-block-number 71635640 --show-bodies"
 evaa-master-classic-message-bodies-test = "acton test data/evaa/master_classic/tests/evaa_master_classic_message_bodies.test.tolk --show-bodies"
 evaa-user-storage-test = "acton test data/evaa/user/tests/evaa_user_storage.test.tolk --show-bodies"
+evaa-user-legacy-message-bodies-test = "acton test data/evaa/user_legacy/tests/evaa_user_legacy_message_bodies.test.tolk --show-bodies"
 evaa-blank-code-test = "acton test data/evaa/blank/tests/evaa_blank_code.test.tolk --show-bodies"
 evaa-blank-message-bodies-test = "acton test data/evaa/blank/tests/evaa_blank_message_bodies.test.tolk --show-bodies"
 nominator-pool-mainnet-test = "acton test data/nominator_pool/pool/tests/nominator_pool_storage.test.tolk --fork-net mainnet --fork-block-number 71810991 --show-bodies"
@@ -3104,6 +3114,7 @@ acton run dedust-liquidity-deposit-v2-message-bodies-test
 acton run dedust-v2-cpmm-storage-test
 acton run evaa-blank-message-bodies-test
 acton run evaa-user-storage-test
+acton run evaa-user-legacy-message-bodies-test
 acton run hipo-bill-message-bodies-test
 acton run hipo-loan-message-bodies-test
 acton run hipo-wallet-message-bodies-test
