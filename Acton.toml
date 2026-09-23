@@ -1122,6 +1122,15 @@ depends = []
 [contracts.TgbtcCoordinator.wrappers.tolk]
 output-dir = "data/tgbtc/coordinator/wrappers"
 
+[contracts.TegroPool]
+display-name = "Tegro Finance Pool"
+src = "data/tegro/testdata/TegroPool.boc"
+types = "data/tegro/types/tegro_pool.types.tolk"
+depends = []
+
+[contracts.TegroPool.wrappers.tolk]
+output-dir = "data/tegro/wrappers"
+
 [contracts.DedustLiquidityDepositV2]
 display-name = "DeDust Liquidity Deposit V2"
 src = "data/dedust/liquidity_deposit/testdata/DedustLiquidityDepositV2.boc"
@@ -2555,6 +2564,7 @@ invoices-message-bodies-test = "acton test data/invoices/tests/invoices_message_
 comments-message-bodies-test = "acton test data/comments/tests/comments_message_bodies.test.tolk --show-bodies"
 tgbtc-teleport-message-bodies-test = "acton test data/tgbtc/teleport/tests/tgbtc_teleport_message_bodies.test.tolk --show-bodies"
 tgbtc-coordinator-message-bodies-test = "acton test data/tgbtc/coordinator/tests/tgbtc_coordinator_message_bodies.test.tolk --show-bodies"
+tegro-pool-message-bodies-test = "acton test data/tegro/tests/tegro_pool_message_bodies.test.tolk --show-bodies"
 daolama-message-bodies-test = "acton test data/daolama/tests/daolama_vault_message_bodies.test.tolk --show-bodies"
 daolama-storage-test = "acton test data/daolama/tests/daolama_vault_storage.test.tolk --show-bodies"
 wton-message-bodies-test = "acton test data/megatonfi/tests/wton_message_bodies.test.tolk --show-bodies"
@@ -2923,6 +2933,7 @@ acton run invoices-message-bodies-test
 acton run comments-message-bodies-test
 acton run tgbtc-teleport-message-bodies-test
 acton run tgbtc-coordinator-message-bodies-test
+acton run tegro-pool-message-bodies-test
 acton run omniston-fee-vault-message-bodies-test
 acton run pyth-oracle-message-bodies-test
 acton run storage-contract-message-bodies-test

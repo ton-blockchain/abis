@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **297 contract entries**, **344 unique contract code hashes**, and **342 unique known contract addresses**.
+Current catalog size: **298 contract entries**, **345 unique contract code hashes**, and **343 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1340 unique opcode prefixes** and **606 unique get-method names**.
+Across the generated public catalog, the repository declares **1343 unique opcode prefixes** and **606 unique get-method names**.
 
 Each curated project group normally includes:
 
@@ -49,6 +49,7 @@ Each curated project group normally includes:
 | Storm Trade | Perpetual DEX vaults, vAMMs, smart accounts with their signed hot key rotation and self-deposit externals, factory, current and legacy position managers, referral/executor collections and items, prelaunch, LP minter/wallet, and proxy sender. | `StormVault`, `StormVaultNative`, `StormVamm`, `StormVammCoinm`, `SmartAccount`, `SmartAccountBlank`, `SmartAccountFactory`, `StormPositionManager`, `StormPositionManagerLegacy`, `StormReferral`, `StormReferralCollection`, `StormExecutor`, `StormExecutorCollection`, `StormPrelaunch`, `StormLpMinter`, `StormLpWallet`, `StormProxySender` |
 | Megaton Finance | Router, exchange/LP Jetton master, wrapped TON minter, and deterministic wrapped TON wallet. | `MegatonRouter`, `MegatonExchange`, `WtonMinter`, `WtonWallet` |
 | Moon.cx | Constant-product pool, CLMM range, booster, order factory, and both historical order revisions. | `MoonPool`, `MoonClmmRange`, `MoonBooster`, `MoonOrderFactory`, `MoonOrderOld`, `MoonOrderNew` |
+| Tegro Finance | GRAM/Jetton AMM pool with the `swap_ton` body and the Jetton-forwarded swap and liquidity payloads. | `TegroPool` |
 | Signed Cross-DEX | Private signed executor with replay protection and callback-driven multi-protocol routing. | `SignedCrossDexExecutor` |
 | ForTON FRT/GRAM Route | Five-contract coordinator, dispatcher, orchestrator, worker, and executor chain for a routed Jetton exchange through a STON.fi pool. | `FrtGramAdapterCoordinator`, `FrtGramAdapterDispatcher`, `FrtGramAdapterOrchestrator`, `FrtGramAdapterWorker`, `FrtGramAdapterExecutor` |
 

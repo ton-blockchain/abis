@@ -1,0 +1,29 @@
+[project]
+name = "tegro"
+category = "TON DEX contracts"
+description = "Tegro Finance DEX pool contract"
+
+[sources]
+tegro_finance_api = "https://github.com/TegroTON/API-DEX-TON-Blockchain"
+tongo_tegro_schema = "https://github.com/tonkeeper/tongo/blob/master/abi/schemas/tegro.xml"
+
+[[links]]
+kind = "website"
+title = "Tegro Finance"
+url = "https://tegro.finance"
+
+[[links]]
+kind = "source"
+title = "Tegro Finance public DEX API"
+url = "https://github.com/TegroTON/API-DEX-TON-Blockchain"
+
+[contracts.TegroPool]
+display_name = "Tegro Finance Pool"
+description = "GRAM/Jetton AMM pool with direct GRAM swaps and Jetton-forwarded swap and liquidity intents"
+types = "types/tegro_pool.types.tolk"
+hashes = ["fac189434d0857cadff56706bc4bc8fcb185a7417318726f809d0a152029a573"]
+known_addresses = ["EQBGgPAzqX72LyeA8QqpfCQ8Ii8l-KgHUeJ9w_jgNPMwnQcl"]
+
+[contracts.TegroPool.instances.mainnet]
+address = "EQBGgPAzqX72LyeA8QqpfCQ8Ii8l-KgHUeJ9w_jgNPMwnQcl"
+network = "mainnet"

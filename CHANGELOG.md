@@ -15,6 +15,7 @@ Versioned release policy is described in [RELEASING.md](RELEASING.md).
 - DeDust v2 Operator relay ABI, the Pool v2 `collect_fees` and `configure_start_time` commands, and two more Pool v2 code hashes
 - Storm Trade Smart Account signed `change_hot_key`, `self_deposit_native` and `self_deposit_jetton` external bodies and a second Smart Account code hash
 - tgBTC Teleport and Coordinator event ABIs
+- Tegro Finance pool ABI with the `swap_ton` body and forward payload intents
 
 ## [0.1.2] - 2026-09-18
 
