@@ -1,0 +1,37 @@
+[project]
+name = "tgbtc"
+category = "TON bridge contracts"
+description = "TON Teleport BTC bridge teleport and oracle coordinator contracts"
+
+[sources]
+teleport_contracts = "https://github.com/RSquad/ton-teleport-btc"
+teleport_events = "https://github.com/RSquad/ton-teleport-btc/blob/master/contracts/teleport/events.fc"
+coordinator_events = "https://github.com/RSquad/ton-teleport-btc/blob/master/contracts/coordinator/events.fc"
+periphery_event_parser = "https://github.com/RSquad/ton-teleport-btc-periphery/blob/master/lib/pkg/ton/teleportcontract/teleport_contract_event_parser.go"
+
+[[links]]
+kind = "source"
+title = "TON Teleport BTC smart contracts"
+url = "https://github.com/RSquad/ton-teleport-btc"
+
+[contracts.TgbtcTeleport]
+display_name = "tgBTC Teleport"
+description = "Bridge contract that mints tgBTC for verified Bitcoin deposits and emits pegout events"
+types = "teleport/types/tgbtc_teleport.types.tolk"
+hashes = ["08758ae63a0d40b28ed5578d2c3d4a6eb38a4dba04f0dd3be545e10e7d00c4b8"]
+known_addresses = ["EQC6o-Ri4Q3R3H1xOTaPawZ964iqha3TzJGAmpi8h4XqcP3-"]
+
+[contracts.TgbtcTeleport.instances.mainnet]
+address = "EQC6o-Ri4Q3R3H1xOTaPawZ964iqha3TzJGAmpi8h4XqcP3-"
+network = "mainnet"
+
+[contracts.TgbtcCoordinator]
+display_name = "tgBTC Coordinator"
+description = "Masterchain coordinator of the oracle distributed key generation"
+types = "coordinator/types/tgbtc_coordinator.types.tolk"
+hashes = ["8f8500836773265485f607b49e83cb9ee97e118ee0e8af9d57de73efc3abe87c"]
+known_addresses = ["Ef_q19o4m94xfF-yhYB85Qe6rTHDX-VTSzxBh4XpAfZMaOvk"]
+
+[contracts.TgbtcCoordinator.instances.mainnet]
+address = "Ef_q19o4m94xfF-yhYB85Qe6rTHDX-VTSzxBh4XpAfZMaOvk"
+network = "mainnet"

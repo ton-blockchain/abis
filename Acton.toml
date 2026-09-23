@@ -1104,6 +1104,24 @@ depends = []
 [contracts.DedustOperatorV2.wrappers.tolk]
 output-dir = "data/dedust/operator/wrappers"
 
+[contracts.TgbtcTeleport]
+display-name = "tgBTC Teleport"
+src = "data/tgbtc/teleport/testdata/TgbtcTeleport.boc"
+types = "data/tgbtc/teleport/types/tgbtc_teleport.types.tolk"
+depends = []
+
+[contracts.TgbtcTeleport.wrappers.tolk]
+output-dir = "data/tgbtc/teleport/wrappers"
+
+[contracts.TgbtcCoordinator]
+display-name = "tgBTC Coordinator"
+src = "data/tgbtc/coordinator/testdata/TgbtcCoordinator.boc"
+types = "data/tgbtc/coordinator/types/tgbtc_coordinator.types.tolk"
+depends = []
+
+[contracts.TgbtcCoordinator.wrappers.tolk]
+output-dir = "data/tgbtc/coordinator/wrappers"
+
 [contracts.DedustLiquidityDepositV2]
 display-name = "DeDust Liquidity Deposit V2"
 src = "data/dedust/liquidity_deposit/testdata/DedustLiquidityDepositV2.boc"
@@ -2535,6 +2553,8 @@ signed-cross-dex-executor-mainnet-test = "acton test data/signed_cross_dex/execu
 signed-cross-dex-executor-message-bodies-test = "acton test data/signed_cross_dex/executor/tests/signed_cross_dex_executor_message_bodies.test.tolk --show-bodies"
 invoices-message-bodies-test = "acton test data/invoices/tests/invoices_message_bodies.test.tolk --show-bodies"
 comments-message-bodies-test = "acton test data/comments/tests/comments_message_bodies.test.tolk --show-bodies"
+tgbtc-teleport-message-bodies-test = "acton test data/tgbtc/teleport/tests/tgbtc_teleport_message_bodies.test.tolk --show-bodies"
+tgbtc-coordinator-message-bodies-test = "acton test data/tgbtc/coordinator/tests/tgbtc_coordinator_message_bodies.test.tolk --show-bodies"
 daolama-message-bodies-test = "acton test data/daolama/tests/daolama_vault_message_bodies.test.tolk --show-bodies"
 daolama-storage-test = "acton test data/daolama/tests/daolama_vault_storage.test.tolk --show-bodies"
 wton-message-bodies-test = "acton test data/megatonfi/tests/wton_message_bodies.test.tolk --show-bodies"
@@ -2901,6 +2921,8 @@ acton run hipo-collection-message-bodies-test
 acton run hipo-parent-message-bodies-test
 acton run invoices-message-bodies-test
 acton run comments-message-bodies-test
+acton run tgbtc-teleport-message-bodies-test
+acton run tgbtc-coordinator-message-bodies-test
 acton run omniston-fee-vault-message-bodies-test
 acton run pyth-oracle-message-bodies-test
 acton run storage-contract-message-bodies-test

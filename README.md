@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **295 contract entries**, **342 unique contract code hashes**, and **340 unique known contract addresses**.
+Current catalog size: **297 contract entries**, **344 unique contract code hashes**, and **342 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1337 unique opcode prefixes** and **606 unique get-method names**.
+Across the generated public catalog, the repository declares **1340 unique opcode prefixes** and **606 unique get-method names**.
 
 Each curated project group normally includes:
 
@@ -98,6 +98,7 @@ Each curated project group normally includes:
 | Payment Channels | Asynchronous two-party payment channel with cooperative and uncooperative settlement.   | `AsyncPaymentChannel` |
 | GRAM | Proof-of-work GRAM miner with adaptive complexity and signed administration.            | `GramMiner` |
 | Cocoon | Confidential-compute Root, Proxy, Client, Worker, and control Wallet contracts.          | `CocoonRoot`, `CocoonProxy`, `CocoonClient`, `CocoonWorker`, `CocoonWallet` |
+| tgBTC | TON Teleport BTC bridge teleport with its mint, burn and new-key events, and the oracle coordinator with its DKG-completed event. | `TgbtcTeleport`, `TgbtcCoordinator` |
 | TAC | TAC-compatible Jetton master with EVM token-address discovery.                            | `TacJetton` |
 | XTR | Telegram Stars purchase orchestration, versioned user/payment routing, and supply accounting. | `XtrMaster` |
 | TonPay | Historical Store v11 and Invoice v9 contracts confirmed from exact official sources and live deployments. | `TonpayStoreV11`, `TonpayInvoiceV9` |
