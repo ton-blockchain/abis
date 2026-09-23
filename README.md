@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **288 contract entries**, **333 unique contract code hashes**, and **331 unique known contract addresses**.
+Current catalog size: **290 contract entries**, **335 unique contract code hashes**, and **333 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1305 unique opcode prefixes** and **601 unique get-method names**.
+Across the generated public catalog, the repository declares **1310 unique opcode prefixes** and **601 unique get-method names**.
 
 Each curated project group normally includes:
 
@@ -101,7 +101,7 @@ Each curated project group normally includes:
 | XTR | Telegram Stars purchase orchestration, versioned user/payment routing, and supply accounting. | `XtrMaster` |
 | TonPay | Historical Store v11 and Invoice v9 contracts confirmed from exact official sources and live deployments. | `TonpayStoreV11`, `TonpayInvoiceV9` |
 | Tonkeeper Subscriptions | Subscription V1 and V2 wallet/plugin contracts.                                         | `SubscriptionV1`, `SubscriptionV2` |
-| TON Cron | Cron interface implementations with `get_cron_info` and `cron_trigger` external bodies. | `Cron` |
+| TON Cron | Cron interface implementations with `get_cron_info` and `cron_trigger` external bodies, the reference cron contract with its init, notify, reward and destroyed bodies, and the Wallet V5 DNS renewal top-upper. | `Cron`, `CronContract`, `DnsRenewalTopUpper` |
 | Wallet 2FA Extensions | Tonkeeper and MyTonWallet wallet extension contracts.                            | `Tonkeeper2fa`, `MyTonWallet2fa` |
 
 ## Contributing

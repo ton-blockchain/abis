@@ -1869,6 +1869,24 @@ depends = []
 [contracts.Cron.wrappers.tolk]
 output-dir = "data/cron/wrappers"
 
+[contracts.CronContract]
+display-name = "TON Cron contract"
+src = "data/cron/testdata/CronContract.boc"
+types = "data/cron/types/cron_contract.types.tolk"
+depends = []
+
+[contracts.CronContract.wrappers.tolk]
+output-dir = "data/cron/wrappers"
+
+[contracts.DnsRenewalTopUpper]
+display-name = "DNS Renewal Top-Upper"
+src = "data/cron/testdata/DnsRenewalTopUpper.boc"
+types = "data/cron/types/dns_renewal_top_upper.types.tolk"
+depends = []
+
+[contracts.DnsRenewalTopUpper.wrappers.tolk]
+output-dir = "data/cron/wrappers"
+
 [contracts.AsyncPaymentChannel]
 display-name = "TON Asynchronous Payment Channel"
 src = "data/payment_channels/async/testdata/AsyncPaymentChannel.boc"
@@ -2510,6 +2528,8 @@ system-elector-mainnet-test = "acton test data/system/elector/tests/elector_main
 system-config-storage-test = "acton test data/system/config/tests/config_storage.test.tolk --fork-net mainnet --fork-block-number 71907711 --show-bodies"
 cron-mainnet-test = "acton test data/cron/tests/cron_storage.test.tolk --fork-net mainnet --fork-block-number 71819864 --show-bodies"
 cron-message-bodies-test = "acton test data/cron/tests/cron_message_bodies.test.tolk --show-bodies"
+cron-contract-message-bodies-test = "acton test data/cron/tests/cron_contract_message_bodies.test.tolk --show-bodies"
+dns-renewal-top-upper-message-bodies-test = "acton test data/cron/tests/dns_renewal_top_upper_message_bodies.test.tolk --show-bodies"
 payment-channel-storage-test = "acton test data/payment_channels/async/tests/payment_channel_storage.test.tolk --show-bodies"
 payment-channel-message-bodies-test = "acton test data/payment_channels/async/tests/payment_channel_message_bodies.test.tolk --show-bodies"
 payment-channel-mainnet-test = "acton test data/payment_channels/async/tests/payment_channel_mainnet.test.tolk --fork-net mainnet --fork-block-number 58429533 --show-bodies"
@@ -3001,6 +3021,8 @@ acton run bemo-unstake-request-message-bodies-test
 acton run bidask-damm-pool-storage-test
 acton run bidask-pool-factory-local-test
 acton run cron-message-bodies-test
+acton run cron-contract-message-bodies-test
+acton run dns-renewal-top-upper-message-bodies-test
 acton run dedust-liquidity-deposit-v2-message-bodies-test
 acton run dedust-v2-cpmm-storage-test
 acton run evaa-blank-message-bodies-test

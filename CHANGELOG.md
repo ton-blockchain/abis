@@ -7,6 +7,10 @@ Versioned release policy is described in [RELEASING.md](RELEASING.md).
 
 ## [Unreleased]
 
+### Added
+
+- TON Cron reference contract ABI with the `cron_init`, `cron_notify`, `cron_reward` and `cron_destroyed` bodies, plus the Wallet V5 DNS renewal top-upper
+
 ## [0.1.2] - 2026-09-18
 
 ### Changed
