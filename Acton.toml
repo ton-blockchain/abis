@@ -2788,6 +2788,7 @@ storm-prelaunch-message-bodies-test = "acton test data/storm/prelaunch/tests/sto
 storm-referral-message-bodies-test = "acton test data/storm/referral/tests/storm_referral_message_bodies.test.tolk --show-bodies"
 storm-referral-collection-message-bodies-test = "acton test data/storm/referral_collection/tests/storm_referral_collection_message_bodies.test.tolk --show-bodies"
 storm-smart-account-mainnet-test = "acton test data/storm/smart_account/tests/smart_account_mainnet.test.tolk --fork-net mainnet --fork-block-number 71591177 --show-bodies"
+storm-smart-account-external-message-bodies-test = "acton test data/storm/smart_account/tests/smart_account_external_message_bodies.test.tolk --show-bodies"
 storm-smart-account-blank-local-test = "acton test data/storm/smart_account_blank/tests/smart_account_blank_local.test.tolk --show-bodies"
 storm-smart-account-factory-message-bodies-test = "acton test data/storm/smart_account_factory/tests/smart_account_factory_message_bodies.test.tolk --show-bodies"
 storm-vamm-message-bodies-test = "acton test data/storm/vamm/tests/storm_vamm_message_bodies.test.tolk --show-bodies"
@@ -2987,6 +2988,7 @@ acton run storage-provider-message-bodies-test
 acton run storm-lp-wallet-message-bodies-test
 acton run storm-referral-collection-message-bodies-test
 acton run storm-smart-account-mainnet-test
+acton run storm-smart-account-external-message-bodies-test
 acton run storm-vault-native-message-bodies-test
 acton run system-config-storage-test
 acton run tonkeeper-2fa-message-bodies-test

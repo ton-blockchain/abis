@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **295 contract entries**, **341 unique contract code hashes**, and **339 unique known contract addresses**.
+Current catalog size: **295 contract entries**, **342 unique contract code hashes**, and **340 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1334 unique opcode prefixes** and **606 unique get-method names**.
+Across the generated public catalog, the repository declares **1337 unique opcode prefixes** and **606 unique get-method names**.
 
 Each curated project group normally includes:
 
@@ -46,7 +46,7 @@ Each curated project group normally includes:
 | TonFun | Both deployed TonFun bonding-curve Jetton wallet revisions, the BCL master they pair with, and the Blum Memepad minter and wallet with their buy, sell, unlock and log bodies. | `TonFunBclWalletV1`, `TonFunBclWalletV2`, `TonFunBclMasterV1`, `BlumMemepadMinter`, `BlumMemepadWallet` |
 | StonksPump | Virtual-liquidity Jetton minters and deployment factories for STON.fi and DeDust launch flows, plus the deployed custom tax Jetton wallet. | `StonksPumpVirtualMinter`, `StonksPumpVirtualFactory`, `StonksPumpCustomJettonWallet` |
 | Grambo | Bonding-curve launchpad registry, Jetton master, and activated Jetton wallet contracts. | `GramboFactory`, `GramboJettonMaster`, `GramboJettonWallet` |
-| Storm Trade | Perpetual DEX vaults, vAMMs, smart accounts, factory, current and legacy position managers, referral/executor collections and items, prelaunch, LP minter/wallet, and proxy sender. | `StormVault`, `StormVaultNative`, `StormVamm`, `StormVammCoinm`, `SmartAccount`, `SmartAccountBlank`, `SmartAccountFactory`, `StormPositionManager`, `StormPositionManagerLegacy`, `StormReferral`, `StormReferralCollection`, `StormExecutor`, `StormExecutorCollection`, `StormPrelaunch`, `StormLpMinter`, `StormLpWallet`, `StormProxySender` |
+| Storm Trade | Perpetual DEX vaults, vAMMs, smart accounts with their signed hot key rotation and self-deposit externals, factory, current and legacy position managers, referral/executor collections and items, prelaunch, LP minter/wallet, and proxy sender. | `StormVault`, `StormVaultNative`, `StormVamm`, `StormVammCoinm`, `SmartAccount`, `SmartAccountBlank`, `SmartAccountFactory`, `StormPositionManager`, `StormPositionManagerLegacy`, `StormReferral`, `StormReferralCollection`, `StormExecutor`, `StormExecutorCollection`, `StormPrelaunch`, `StormLpMinter`, `StormLpWallet`, `StormProxySender` |
 | Megaton Finance | Router, exchange/LP Jetton master, wrapped TON minter, and deterministic wrapped TON wallet. | `MegatonRouter`, `MegatonExchange`, `WtonMinter`, `WtonWallet` |
 | Moon.cx | Constant-product pool, CLMM range, booster, order factory, and both historical order revisions. | `MoonPool`, `MoonClmmRange`, `MoonBooster`, `MoonOrderFactory`, `MoonOrderOld`, `MoonOrderNew` |
 | Signed Cross-DEX | Private signed executor with replay protection and callback-driven multi-protocol routing. | `SignedCrossDexExecutor` |
