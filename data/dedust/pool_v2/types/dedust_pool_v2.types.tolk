@@ -443,6 +443,34 @@ type DedustPoolV2IncomingMessage =
     | DedustPoolV2ProvidePoolState
     | DedustPoolV2ConfigureTradeFee
     | DedustPoolV2ResetGas
+    | DedustPoolV2CollectFees
+    | DedustPoolV2ConfigureStartTime
+
+/// Operator command withdrawing accumulated protocol fees to the given recipients.
+struct (0x0b429f52) DedustPoolV2CollectFees {
+    /// Query id of the command.
+    queryId: uint64
+    /// Amount of the first asset to withdraw.
+    asset0Amount: coins
+    /// Recipient of the first asset.
+    asset0Destination: address
+    /// Optional payload attached to the first payout.
+    asset0Payload: cell?
+    /// Amount of the second asset to withdraw.
+    asset1Amount: coins
+    /// Recipient of the second asset.
+    asset1Destination: address?
+    /// Optional payload attached to the second payout.
+    asset1Payload: cell?
+}
+
+/// Operator command setting the time after which swaps are accepted.
+struct (0x7ed7f6ce) DedustPoolV2ConfigureStartTime {
+    /// Query id of the command.
+    queryId: uint64
+    /// Unix time after which swaps are accepted.
+    startAt: uint32
+}
 
 /// Internal payout/callback bodies and external event bodies emitted by Pool v2.
 type DedustPoolV2OutgoingMessage =

@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **294 contract entries**, **338 unique contract code hashes**, and **336 unique known contract addresses**.
+Current catalog size: **295 contract entries**, **341 unique contract code hashes**, and **339 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1330 unique opcode prefixes** and **606 unique get-method names**.
+Across the generated public catalog, the repository declares **1334 unique opcode prefixes** and **606 unique get-method names**.
 
 Each curated project group normally includes:
 
@@ -38,7 +38,7 @@ Each curated project group normally includes:
 | --- | --- | --- |
 | STON.fi | DEX core v1 router, pool, LP account, LP wallet, plus v2 router revisions, pool variants, LP account, LP wallet, vault, farming collection/NFT, and the Escrow Position, Factory, and Vault family. | `StonfiRouterV1`, `StonfiPoolV1`, `StonfiLpAccountV1`, `StonfiLpWalletV1`, `StonfiRouterV2`, `StonfiPoolV2ConstProduct`, `StonfiPoolV2Stableswap`, `StonfiPoolV2WeightedStableswap`, `StonfiPoolV2WeightedConstProduct`, `StonfiLpAccountV2`, `StonfiLpWalletV2`, `StonfiVaultV2`, `StonfiFarmCollection`, `StonfiFarmNft`, `StonfiEscrowPosition`, `StonfiEscrowFactory`, `StonfiEscrowVault` |
 | Omniston | Standalone STON.fi Omniston Fee-Vault Minter for DeDust/Tonco referral-fee vault derivation, fee deposits, and payout routing. | `OmnistonFeeVault` |
-| DeDust | Protocol v1 and v2 core contracts, both verified CPMM v2 pool revisions, two x1000 wallet revisions, and Uranus launchpad revisions. | `DedustFactoryV1`, `DedustVaultNativeV1`, `DedustVaultJettonV1`, `DedustPoolV1`, `DedustLiquidityDepositV1`, `DedustFactoryV2`, `DedustVaultNativeV2`, `DedustVaultJettonV2`, `DedustPoolV2`, `DedustLiquidityDepositV2`, `DedustV2Cpmm`, `DedustX1000WalletV1`, `DedustX1000WalletV2`, `DedustUranusFactoryV3`, `DedustUranusMemeV2`, `DedustUranusMemeV3`, `DedustUranusMemeWalletV3` |
+| DeDust | Protocol v1 and v2 core contracts, both verified CPMM v2 pool revisions, the v2 Operator relay with its fee-collection and start-time commands, two x1000 wallet revisions, and Uranus launchpad revisions. | `DedustFactoryV1`, `DedustVaultNativeV1`, `DedustVaultJettonV1`, `DedustPoolV1`, `DedustLiquidityDepositV1`, `DedustFactoryV2`, `DedustVaultNativeV2`, `DedustVaultJettonV2`, `DedustPoolV2`, `DedustOperatorV2`, `DedustLiquidityDepositV2`, `DedustV2Cpmm`, `DedustX1000WalletV1`, `DedustX1000WalletV2`, `DedustUranusFactoryV3`, `DedustUranusMemeV2`, `DedustUranusMemeV3`, `DedustUranusMemeWalletV3` |
 | Coffee Swap | DEX factory/init, vaults, pool variants, pool creator, liquidity depository, current and historical LP wallets, staking, CrossDex profiles, and current/legacy MEV Protectors. | `CoffeeFactory`, `CoffeeInit`, `CoffeeVaultNative`, `CoffeeVaultJetton`, `CoffeeVaultExtra`, `CoffeePoolConstantProduct`, `CoffeePoolCurveFiStable`, `CoffeePoolCreator`, `CoffeeLiquidityDepository`, `JettonWalletCoffeeLp`, `CoffeeStakingMaster`, `CoffeeStakingVault`, `CoffeeStakingItem`, `CoffeeCrossDex`, `CoffeeCrossDexLegacy`, `CoffeeCrossDexBidask`, `CoffeeMevProtector`, `CoffeeMevProtectorLegacy` |
 | TONCO | Router, pool, account, pool factory, and position NFT. | `Router`, `Pool`, `Account`, `PoolFactory`, `PositionNFT` |
 | Bidask | DLMM/DAMM pool factory, pool, range, LP multitoken, internal liquidity vault, DAMM pool, and DAMM LP wallet. | `BidaskPoolFactory`, `BidaskPool`, `BidaskRange`, `BidaskLpMultitoken`, `BidaskInternalLiquidityVault`, `BidaskDammPool`, `BidaskDammLpWallet` |

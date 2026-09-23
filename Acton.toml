@@ -1095,6 +1095,15 @@ depends = []
 [contracts.DedustPoolV2.wrappers.tolk]
 output-dir = "data/dedust/pool_v2/wrappers"
 
+[contracts.DedustOperatorV2]
+display-name = "DeDust Operator V2"
+src = "data/dedust/operator/testdata/DedustOperatorV2.boc"
+types = "data/dedust/operator/types/dedust_operator_v2.types.tolk"
+depends = []
+
+[contracts.DedustOperatorV2.wrappers.tolk]
+output-dir = "data/dedust/operator/wrappers"
+
 [contracts.DedustLiquidityDepositV2]
 display-name = "DeDust Liquidity Deposit V2"
 src = "data/dedust/liquidity_deposit/testdata/DedustLiquidityDepositV2.boc"
@@ -2654,6 +2663,7 @@ dedust-vault-jetton-v2-mainnet-test = "acton test data/dedust/vault_jetton/tests
 dedust-vault-jetton-v2-message-bodies-test = "acton test data/dedust/vault_jetton/tests/dedust_vault_jetton_v2_message_bodies.test.tolk --show-bodies"
 dedust-pool-v2-mainnet-test = "acton test data/dedust/pool_v2/tests/dedust_pool_v2_mainnet.test.tolk --fork-net mainnet --fork-block-number 71186170 --show-bodies"
 dedust-pool-v2-message-bodies-test = "acton test data/dedust/pool_v2/tests/dedust_pool_v2_message_bodies.test.tolk --show-bodies"
+dedust-operator-message-bodies-test = "acton test data/dedust/operator/tests/dedust_operator_message_bodies.test.tolk --show-bodies"
 dedust-liquidity-deposit-v2-storage-test = "acton test data/dedust/liquidity_deposit/tests/dedust_liquidity_deposit_v2_storage.test.tolk --fork-net mainnet --fork-block-number 71184765 --show-bodies"
 dedust-liquidity-deposit-v2-message-bodies-test = "acton test data/dedust/liquidity_deposit/tests/dedust_liquidity_deposit_v2_message_bodies.test.tolk --show-bodies"
 dedust-v2-cpmm-storage-test = "acton test data/dedust/cpmm_v2/tests/dedust_v2_cpmm_storage.test.tolk --show-bodies"
@@ -2882,6 +2892,7 @@ acton run bidask-pool-storage-test
 acton run moon-clmm-range-message-bodies-test
 acton run daolama-message-bodies-test
 acton run dedust-pool-v2-message-bodies-test
+acton run dedust-operator-message-bodies-test
 acton run dedust-vault-jetton-v2-message-bodies-test
 acton run evaa-master-classic-message-bodies-test
 acton run gram-miner-message-bodies-test

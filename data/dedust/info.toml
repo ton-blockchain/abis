@@ -127,11 +127,29 @@ network = "mainnet"
 [contracts.DedustPoolV2]
 display_name = "DeDust Pool V2"
 types = "pool_v2/types/dedust_pool_v2.types.tolk"
-hashes = ["1275095b6da3911292406f4f4386f9e780099b854c6dee9ee2895ddce70927c1"]
+hashes = [
+  "1275095b6da3911292406f4f4386f9e780099b854c6dee9ee2895ddce70927c1",
+  "778f0d3fe6482c50888970df5e787f40f3a4ab282170c035a5920877058c99d3",
+  "c0f9d14fbc8e14f0d72cba2214165eee35836ab174130912baf9dbfa43ead562",
+]
 known_addresses = [
   "EQA-X_yo3fzzbDbJ_0bzFWKqtRuZFIRa1sJsveZJ1YpViO3r",
   "EQABt8YegyD7VJnZdFVwom8wwqp0E0X8tN2Y6NhrDmbrnSXP",
+  "EQA4oAz-VzjgBvW2KU8hhDwcnww9ewuLhpmpRfzF-9oAIUTj",
+  "EQD_lmyEh5Crgy3YeAU54GAQyhjML-yvzJaAe6Y9NfsKftQf",
 ]
+
+[contracts.DedustPoolV2.variants.operator_managed_pool_a]
+address = "EQA4oAz-VzjgBvW2KU8hhDwcnww9ewuLhpmpRfzF-9oAIUTj"
+code_hash = "778f0d3fe6482c50888970df5e787f40f3a4ab282170c035a5920877058c99d3"
+known_addresses = ["EQA4oAz-VzjgBvW2KU8hhDwcnww9ewuLhpmpRfzF-9oAIUTj"]
+network = "mainnet"
+
+[contracts.DedustPoolV2.variants.operator_managed_pool_b]
+address = "EQD_lmyEh5Crgy3YeAU54GAQyhjML-yvzJaAe6Y9NfsKftQf"
+code_hash = "c0f9d14fbc8e14f0d72cba2214165eee35836ab174130912baf9dbfa43ead562"
+known_addresses = ["EQD_lmyEh5Crgy3YeAU54GAQyhjML-yvzJaAe6Y9NfsKftQf"]
+network = "mainnet"
 
 [[contracts.DedustPoolV2.links]]
 kind = "docs"
@@ -207,6 +225,22 @@ network = "mainnet"
 address = "EQD026kOv4j6-56O6y8kbaaFZdQhVkh4RbEGrQND7XJMlgLf"
 code_hash = "5851780d2386e989b9ab956da7cec5c69a667b9e525f628dcba5eb02c1ee0367"
 known_addresses = ["EQD026kOv4j6-56O6y8kbaaFZdQhVkh4RbEGrQND7XJMlgLf"]
+network = "mainnet"
+
+[contracts.DedustOperatorV2]
+display_name = "DeDust Operator V2"
+description = "Role-bound relay deployed by the Factory that forwards admin commands to pools and vaults"
+types = "operator/types/dedust_operator_v2.types.tolk"
+hashes = ["2dbbf4ce98dd9d41e2eba5b88f74faed0ffe50136930617bf5973e4972977cc9"]
+known_addresses = ["EQAnGFrXSIhBBWNBH7zhwawl1R5Ff9sbQ4G2drrgp_3ZNITM"]
+
+[[contracts.DedustOperatorV2.links]]
+kind = "docs"
+title = "DeDust Factory reference"
+url = "https://docs.dedust.io/reference/factory"
+
+[contracts.DedustOperatorV2.instances.fee_collector]
+address = "EQAnGFrXSIhBBWNBH7zhwawl1R5Ff9sbQ4G2drrgp_3ZNITM"
 network = "mainnet"
 
 [contracts.DedustX1000WalletV1]
