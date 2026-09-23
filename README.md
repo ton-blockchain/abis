@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **290 contract entries**, **335 unique contract code hashes**, and **333 unique known contract addresses**.
+Current catalog size: **291 contract entries**, **335 unique contract code hashes**, and **333 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1310 unique opcode prefixes** and **601 unique get-method names**.
+Across the generated public catalog, the repository declares **1311 unique opcode prefixes** and **601 unique get-method names**.
 
 Each curated project group normally includes:
 
@@ -94,6 +94,7 @@ Each curated project group normally includes:
 | Project | Coverage                                                                                | Contract entries |
 | --- |-----------------------------------------------------------------------------------------| --- |
 | Invoices | Payload-only invoice body ABI for GRAM and Jetton payment payloads.                     | `InvoicesPayloadInterface` |
+| Comments | Payload-only ABI for plain and encrypted text comment bodies.                       | `CommentsPayloadInterface` |
 | Payment Channels | Asynchronous two-party payment channel with cooperative and uncooperative settlement.   | `AsyncPaymentChannel` |
 | GRAM | Proof-of-work GRAM miner with adaptive complexity and signed administration.            | `GramMiner` |
 | Cocoon | Confidential-compute Root, Proxy, Client, Worker, and control Wallet contracts.          | `CocoonRoot`, `CocoonProxy`, `CocoonClient`, `CocoonWorker`, `CocoonWallet` |
