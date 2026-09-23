@@ -11,6 +11,7 @@ Versioned release policy is described in [RELEASING.md](RELEASING.md).
 
 - TON Cron reference contract ABI with the `cron_init`, `cron_notify`, `cron_reward` and `cron_destroyed` bodies, plus the Wallet V5 DNS renewal top-upper
 - Payload-only text comment interface covering plain and encrypted comment bodies
+- TonFun BCL master and Blum Memepad minter and wallet ABIs with buy, sell, unlock, payout and event log bodies
 
 ## [0.1.2] - 2026-09-18
 
