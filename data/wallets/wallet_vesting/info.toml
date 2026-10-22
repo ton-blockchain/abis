@@ -3,8 +3,8 @@ name = "wallets/wallet_vesting"
 category = "standard TON vesting wallets"
 
 [sources]
-ton_docs_vesting = "https://docs.ton.org/standard/vesting"
-ton_docs_vesting_blockchain_basics = "https://docs.ton.org/blockchain-basics/standard/vesting"
+ton_docs_vesting = "https://docs.ton.org/contracts/standard/vesting"
+ton_docs_vesting_blockchain_basics = "https://docs.ton.org/contracts/standard/vesting"
 vesting_contract = "https://github.com/ton-blockchain/vesting-contract"
 vesting_wallet_func = "https://raw.githubusercontent.com/ton-blockchain/vesting-contract/main/contracts/vesting_wallet.fc"
 

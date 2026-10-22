@@ -7,7 +7,7 @@ description = "TEP-85 SBT item contracts with curated Getgems source variants"
 tep_85 = "https://github.com/ton-blockchain/TEPs/blob/master/text/0085-sbt-standard.md"
 tep_62 = "https://github.com/ton-blockchain/TEPs/blob/master/text/0062-nft-standard.md"
 ton_docs_sbt = "https://docs.ton.org/standard/tokens/nft/sbt"
-ton_docs_nft_api = "https://docs.ton.org/blockchain-basics/standard/tokens/nft/api"
+ton_docs_nft_api = "https://docs.ton.org/contracts/standard/tokens/nft/api"
 getgems_nft_contracts = "https://github.com/getgems-io/nft-contracts"
 getgems_sbt_doc = "https://github.com/getgems-io/nft-contracts/blob/main/sbt.md"
 
