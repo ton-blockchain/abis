@@ -7,6 +7,8 @@ Versioned release policy is described in [RELEASING.md](RELEASING.md).
 
 ## [Unreleased]
 
+## [0.1.3] - 2026-10-22
+
 ### Added
 
 - TON Cron reference contract ABI with the `cron_init`, `cron_notify`, `cron_reward` and `cron_destroyed` bodies, plus the Wallet V5 DNS renewal top-upper
@@ -17,6 +19,10 @@ Versioned release policy is described in [RELEASING.md](RELEASING.md).
 - tgBTC Teleport and Coordinator event ABIs
 - Tegro Finance pool ABI with the `swap_ton` body and forward payload intents
 - EVAA legacy user ABI with the standalone `withdraw` command, callback and excess bodies
+
+### Fixed
+
+- Correct links to TON documentation
 
 ## [0.1.2] - 2026-09-18
 

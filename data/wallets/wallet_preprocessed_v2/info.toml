@@ -3,13 +3,13 @@ name = "wallets"
 category = "standard TON wallets"
 
 [sources]
-ton_docs_preprocessed_v2_spec = "https://docs.ton.org/blockchain-basics/standard/wallets/preprocessed-v2/specification"
-ton_docs_preprocessed_v2_interact = "https://docs.ton.org/standard/wallets/preprocessed-v2/interact"
+ton_docs_preprocessed_v2_spec = "https://docs.ton.org/contracts/standard/wallets/preprocessed-v2/specification"
+ton_docs_preprocessed_v2_interact = "https://docs.ton.org/contracts/standard/wallets/preprocessed-v2/interact"
 
 [[links]]
 kind = "spec"
 title = "Preprocessed Wallet V2 specification"
-url = "https://docs.ton.org/blockchain-basics/standard/wallets/preprocessed-v2/specification"
+url = "https://docs.ton.org/contracts/standard/wallets/preprocessed-v2/specification"
 
 [[links]]
 kind = "docs"

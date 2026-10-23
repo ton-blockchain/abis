@@ -3,8 +3,8 @@ name = "wallets/lockup_vesting"
 category = "standard TON lockup wallets"
 
 [sources]
-ton_docs_lockup_wallet = "https://docs.ton.org/blockchain-basics/standard/wallets/lockup"
-ton_docs_vesting = "https://docs.ton.org/blockchain-basics/standard/vesting"
+ton_docs_lockup_wallet = "https://docs.ton.org/contracts/standard/wallets/lockup"
+ton_docs_vesting = "https://docs.ton.org/contracts/standard/vesting"
 lockup_wallet_contract = "https://github.com/ton-blockchain/lockup-wallet-contract"
 lockup_vesting_func = "https://raw.githubusercontent.com/ton-blockchain/lockup-wallet-contract/main/vesting/vesting-lockup-wallet.fc"
 lockup_vesting_fift = "https://raw.githubusercontent.com/ton-blockchain/lockup-wallet-contract/main/vesting/vesting-lockup-wallet-code.fif"
@@ -13,12 +13,12 @@ lockup_vesting_readme = "https://github.com/ton-blockchain/lockup-wallet-contrac
 [[links]]
 kind = "docs"
 title = "TON lockup wallet documentation"
-url = "https://docs.ton.org/blockchain-basics/standard/wallets/lockup"
+url = "https://docs.ton.org/contracts/standard/wallets/lockup"
 
 [[links]]
 kind = "docs"
 title = "TON vesting documentation"
-url = "https://docs.ton.org/blockchain-basics/standard/vesting"
+url = "https://docs.ton.org/contracts/standard/vesting"
 
 [[links]]
 kind = "source"

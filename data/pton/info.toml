@@ -10,9 +10,9 @@ pton_reference_commit = "https://github.com/ston-fi/pton-contracts/tree/fbc4bfc7
 tep_74 = "https://github.com/ton-blockchain/TEPs/blob/master/text/0074-jettons-standard.md"
 tep_89 = "https://github.com/ton-blockchain/TEPs/blob/master/text/0089-jetton-wallet-discovery.md"
 tep_161_pr = "https://github.com/ton-blockchain/TEPs/pull/161"
-ton_docs_jetton_api = "https://docs.ton.org/blockchain-basics/standard/tokens/jettons/api"
-ton_docs_jetton_wallet_data = "https://docs.ton.org/blockchain-basics/standard/tokens/jettons/wallet-data"
-ton_docs_jetton_supply_data = "https://docs.ton.org/blockchain-basics/standard/tokens/jettons/supply-data"
+ton_docs_jetton_api = "https://docs.ton.org/contracts/standard/tokens/jettons/api"
+ton_docs_jetton_wallet_data = "https://docs.ton.org/contracts/standard/tokens/jettons/wallet-data"
+ton_docs_jetton_supply_data = "https://docs.ton.org/contracts/standard/tokens/jettons/supply-data"
 
 [[links]]
 kind = "source"

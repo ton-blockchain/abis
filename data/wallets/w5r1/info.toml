@@ -3,8 +3,8 @@ name = "wallets"
 category = "standard TON wallets"
 
 [sources]
-ton_docs_wallet_v5 = "https://docs.ton.org/blockchain-basics/standard/wallets/v5"
-ton_docs_wallet_v5_api = "https://docs.ton.org/blockchain-basics/standard/wallets/v5-api"
+ton_docs_wallet_v5 = "https://docs.ton.org/contracts/standard/wallets/v5"
+ton_docs_wallet_v5_api = "https://docs.ton.org/contracts/standard/wallets/v5-api"
 ton_wallet_contract_v5 = "https://github.com/ton-blockchain/wallet-contract-v5"
 ton_wallet_contract_v5_types_tlb = "https://github.com/ton-blockchain/wallet-contract-v5/blob/main/types.tlb"
 ton_wallet_contract_v5_func = "https://github.com/ton-blockchain/wallet-contract-v5/blob/main/contracts/wallet_v5.fc"
@@ -20,7 +20,7 @@ known_addresses = ["UQBuPuy0bnowA2cukDKw__YVX04CsUpXprpzM39CgFPTmePf"]
 [[contracts.WalletV5r1.links]]
 kind = "docs"
 title = "TON Wallet V5 documentation"
-url = "https://docs.ton.org/blockchain-basics/standard/wallets/v5"
+url = "https://docs.ton.org/contracts/standard/wallets/v5"
 
 [[contracts.WalletV5r1.links]]
 kind = "source"

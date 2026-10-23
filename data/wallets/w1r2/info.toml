@@ -3,7 +3,7 @@ name = "wallets/w1r2"
 category = "standard TON wallets"
 
 [sources]
-ton_docs_wallet_history = "https://docs.ton.org/blockchain-basics/standard/wallets/history"
+ton_docs_wallet_history = "https://docs.ton.org/contracts/standard/wallets/history"
 ton_wallet_v1_fift = "https://raw.githubusercontent.com/ton-blockchain/ton/master/crypto/smartcont/new-wallet.fif"
 toncenter_v3_wallet_states = "https://toncenter.com/api/v3/walletStates"
 toncenter_v3_account_states = "https://toncenter.com/api/v3/accountStates"
@@ -11,7 +11,7 @@ toncenter_v3_account_states = "https://toncenter.com/api/v3/accountStates"
 [[links]]
 kind = "docs"
 title = "TON wallet history"
-url = "https://docs.ton.org/blockchain-basics/standard/wallets/history"
+url = "https://docs.ton.org/contracts/standard/wallets/history"
 
 [[links]]
 kind = "source"

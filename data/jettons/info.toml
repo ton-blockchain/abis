@@ -6,7 +6,7 @@ description = "TEP-74 and TEP 89 Jetton masters and wallets"
 [sources]
 tep_74 = "https://github.com/ton-blockchain/TEPs/blob/master/text/0074-jettons-standard.md"
 tep_89 = "https://github.com/ton-blockchain/TEPs/blob/master/text/0089-jetton-wallet-discovery.md"
-ton_docs_comparison = "https://docs.ton.org/blockchain-basics/standard/tokens/jettons/comparison"
+ton_docs_comparison = "https://docs.ton.org/contracts/standard/tokens/jettons/comparison"
 ton_docs_usdt_example = "https://docs.ton.org/ecosystem/appkit/jettons"
 jetton_2_version_history = "https://github.com/ton-blockchain/jetton-contract/blob/jetton-2.0/VERSION_HISTORY.md"
 jetton_2_repo = "https://github.com/ton-blockchain/jetton-contract/tree/jetton-2.0"
@@ -21,7 +21,7 @@ tep_526 = "https://github.com/ton-blockchain/TEPs/blob/master/text/0526-scaled-u
 [[links]]
 kind = "docs"
 title = "TON Jetton comparison"
-url = "https://docs.ton.org/blockchain-basics/standard/tokens/jettons/comparison"
+url = "https://docs.ton.org/contracts/standard/tokens/jettons/comparison"
 
 [[links]]
 kind = "spec"

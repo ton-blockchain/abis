@@ -1,10 +1,10 @@
 [package]
 name = "abis"
 description = "ABI schema catalog"
-version = "0.1.2"
+version = "0.1.3"
 
 [toolchain]
-acton = "1.2.0"
+acton = "1.2.1"
 
 [contracts.Locker]
 display-name = "Locker"
