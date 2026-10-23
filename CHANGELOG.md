@@ -7,6 +7,17 @@ Versioned release policy is described in [RELEASING.md](RELEASING.md).
 
 ## [Unreleased]
 
+### Added
+
+- TON Cron reference contract ABI with the `cron_init`, `cron_notify`, `cron_reward` and `cron_destroyed` bodies, plus the Wallet V5 DNS renewal top-upper
+- Payload-only text comment interface covering plain and encrypted comment bodies
+- TonFun BCL master and Blum Memepad minter and wallet ABIs with buy, sell, unlock, payout and event log bodies
+- DeDust v2 Operator relay ABI, the Pool v2 `collect_fees` and `configure_start_time` commands, and two more Pool v2 code hashes
+- Storm Trade Smart Account signed `change_hot_key`, `self_deposit_native` and `self_deposit_jetton` external bodies and a second Smart Account code hash
+- tgBTC Teleport and Coordinator event ABIs
+- Tegro Finance pool ABI with the `swap_ton` body and forward payload intents
+- EVAA legacy user ABI with the standalone `withdraw` command, callback and excess bodies
+
 ## [0.1.2] - 2026-09-18
 
 ### Changed

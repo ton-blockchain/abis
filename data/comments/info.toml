@@ -1,0 +1,20 @@
+[project]
+name = "comments"
+category = "TON message conventions"
+description = "Payload-only ABI for plain and encrypted text comments carried by internal messages"
+
+[sources]
+ton_docs_internal_messages = "https://docs.ton.org/v3/documentation/smart-contracts/message-management/internal-messages"
+ton_docs_encrypted_comments = "https://docs.ton.org/v3/guidelines/dapps/asset-processing/payments-processing#encrypted-comments"
+
+[[links]]
+kind = "docs"
+title = "TON internal message conventions"
+url = "https://docs.ton.org/v3/documentation/smart-contracts/message-management/internal-messages"
+
+[contracts.CommentsPayloadInterface]
+display_name = "Text comments"
+description = "Plain text comment and encrypted text comment bodies"
+types = "types/comments.types.tolk"
+hashes = []
+known_addresses = []

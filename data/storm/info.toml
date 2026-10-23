@@ -80,8 +80,20 @@ network = "mainnet"
 [contracts.SmartAccount]
 display_name = "Storm Trade Smart Account"
 types = "smart_account/types/smart_account.types.tolk"
-hashes = ["91beb72642b69dd1217ddf6f488a9391b4d4b83d0131856b1157106091886f56"]
-known_addresses = ["EQAlEeKROSs9N0UbTw2lWgns8EKjaNs7HmAwVpHc-L_MMjBd"]
+hashes = [
+  "91beb72642b69dd1217ddf6f488a9391b4d4b83d0131856b1157106091886f56",
+  "2e619cb66edae3bab309ee5b6b7966adc1e33503062cb3cb2fa7c4b08c371a87",
+]
+known_addresses = [
+  "EQAlEeKROSs9N0UbTw2lWgns8EKjaNs7HmAwVpHc-L_MMjBd",
+  "EQAXC_pWPL-AhTQ_bovlA3ASAhKjo3Tsn_0nnv3DkWFbJGgg",
+]
+
+[contracts.SmartAccount.variants.self_deposit_revision]
+address = "EQAXC_pWPL-AhTQ_bovlA3ASAhKjo3Tsn_0nnv3DkWFbJGgg"
+code_hash = "2e619cb66edae3bab309ee5b6b7966adc1e33503062cb3cb2fa7c4b08c371a87"
+known_addresses = ["EQAXC_pWPL-AhTQ_bovlA3ASAhKjo3Tsn_0nnv3DkWFbJGgg"]
+network = "mainnet"
 
 [contracts.SmartAccount.instances.factory_deploy_sample]
 address = "EQAlEeKROSs9N0UbTw2lWgns8EKjaNs7HmAwVpHc-L_MMjBd"

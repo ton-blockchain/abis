@@ -5,6 +5,9 @@ description = "TON cron interface implementations exposing get_cron_info and cro
 
 [sources]
 dune_cron_trigger_candidates = "https://dune.com/queries/7671804"
+cron_contract_source = "https://github.com/xssnick/cron-contract"
+cron_contract_verified_source = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/7a/b49ee8a64007c60738e36d82381c75f0b9983b6961eed34de6a558ecee9d97"
+dns_renewal_top_upper_verified_source = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/a3/005f689590a92a47fb7726a31088427aa11515aef51ffc3b4488e468dabb82"
 
 [contracts.Cron]
 display_name = "TON Cron interface"
@@ -24,4 +27,41 @@ network = "mainnet"
 
 [contracts.Cron.instances.trigger_body_variant]
 address = "EQBHR_AgOg4GJ1CDr_L2N8MO0rYNDL2jcZCmWriJhXiuBw3c"
+network = "mainnet"
+
+[contracts.CronContract]
+display_name = "TON Cron contract"
+description = "Reference cron contract that stores one message, lets any provider trigger it on schedule and pays the trigger reward"
+types = "types/cron_contract.types.tolk"
+hashes = ["7ab49ee8a64007c60738e36d82381c75f0b9983b6961eed34de6a558ecee9d97"]
+known_addresses = ["EQC9dMilNGCh7G658nWSpuH_sc-jdwBfg9xmf24xs0CFMbEo"]
+
+[[contracts.CronContract.links]]
+kind = "source"
+title = "xssnick/cron-contract"
+url = "https://github.com/xssnick/cron-contract"
+
+[[contracts.CronContract.links]]
+kind = "source"
+title = "Verified Tolk source bundle"
+url = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/7a/b49ee8a64007c60738e36d82381c75f0b9983b6961eed34de6a558ecee9d97"
+
+[contracts.CronContract.instances.reward_sender]
+address = "EQC9dMilNGCh7G658nWSpuH_sc-jdwBfg9xmf24xs0CFMbEo"
+network = "mainnet"
+
+[contracts.DnsRenewalTopUpper]
+display_name = "DNS Renewal Top-Upper"
+description = "Derives and funds the cron contract that calls a Wallet V5 renewal extension for the owner's .ton domains"
+types = "types/dns_renewal_top_upper.types.tolk"
+hashes = ["a3005f689590a92a47fb7726a31088427aa11515aef51ffc3b4488e468dabb82"]
+known_addresses = ["EQBnjr4pryD3K0BK29jYfRLLEfOR349IhgGt4za0MPE5YK8C"]
+
+[[contracts.DnsRenewalTopUpper.links]]
+kind = "source"
+title = "Verified Tolk source bundle"
+url = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/a3/005f689590a92a47fb7726a31088427aa11515aef51ffc3b4488e468dabb82"
+
+[contracts.DnsRenewalTopUpper.instances.mainnet]
+address = "EQBnjr4pryD3K0BK29jYfRLLEfOR349IhgGt4za0MPE5YK8C"
 network = "mainnet"

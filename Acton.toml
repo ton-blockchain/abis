@@ -1095,6 +1095,42 @@ depends = []
 [contracts.DedustPoolV2.wrappers.tolk]
 output-dir = "data/dedust/pool_v2/wrappers"
 
+[contracts.DedustOperatorV2]
+display-name = "DeDust Operator V2"
+src = "data/dedust/operator/testdata/DedustOperatorV2.boc"
+types = "data/dedust/operator/types/dedust_operator_v2.types.tolk"
+depends = []
+
+[contracts.DedustOperatorV2.wrappers.tolk]
+output-dir = "data/dedust/operator/wrappers"
+
+[contracts.TgbtcTeleport]
+display-name = "tgBTC Teleport"
+src = "data/tgbtc/teleport/testdata/TgbtcTeleport.boc"
+types = "data/tgbtc/teleport/types/tgbtc_teleport.types.tolk"
+depends = []
+
+[contracts.TgbtcTeleport.wrappers.tolk]
+output-dir = "data/tgbtc/teleport/wrappers"
+
+[contracts.TgbtcCoordinator]
+display-name = "tgBTC Coordinator"
+src = "data/tgbtc/coordinator/testdata/TgbtcCoordinator.boc"
+types = "data/tgbtc/coordinator/types/tgbtc_coordinator.types.tolk"
+depends = []
+
+[contracts.TgbtcCoordinator.wrappers.tolk]
+output-dir = "data/tgbtc/coordinator/wrappers"
+
+[contracts.TegroPool]
+display-name = "Tegro Finance Pool"
+src = "data/tegro/testdata/TegroPool.boc"
+types = "data/tegro/types/tegro_pool.types.tolk"
+depends = []
+
+[contracts.TegroPool.wrappers.tolk]
+output-dir = "data/tegro/wrappers"
+
 [contracts.DedustLiquidityDepositV2]
 display-name = "DeDust Liquidity Deposit V2"
 src = "data/dedust/liquidity_deposit/testdata/DedustLiquidityDepositV2.boc"
@@ -1788,6 +1824,15 @@ depends = []
 [contracts.EvaaUser.wrappers.tolk]
 output-dir = "data/evaa/user/wrappers"
 
+[contracts.EvaaUserLegacy]
+display-name = "EVAA User Legacy"
+src = "data/evaa/user_legacy/testdata/EvaaUserLegacy.boc"
+types = "data/evaa/user_legacy/types/evaa_user_legacy.types.tolk"
+depends = []
+
+[contracts.EvaaUserLegacy.wrappers.tolk]
+output-dir = "data/evaa/user_legacy/wrappers"
+
 [contracts.EvaaBlank]
 display-name = "EVAA Blank"
 src = "data/evaa/blank/testdata/EvaaBlank.boc"
@@ -1867,6 +1912,24 @@ types = "data/cron/types/cron.types.tolk"
 depends = []
 
 [contracts.Cron.wrappers.tolk]
+output-dir = "data/cron/wrappers"
+
+[contracts.CronContract]
+display-name = "TON Cron contract"
+src = "data/cron/testdata/CronContract.boc"
+types = "data/cron/types/cron_contract.types.tolk"
+depends = []
+
+[contracts.CronContract.wrappers.tolk]
+output-dir = "data/cron/wrappers"
+
+[contracts.DnsRenewalTopUpper]
+display-name = "DNS Renewal Top-Upper"
+src = "data/cron/testdata/DnsRenewalTopUpper.boc"
+types = "data/cron/types/dns_renewal_top_upper.types.tolk"
+depends = []
+
+[contracts.DnsRenewalTopUpper.wrappers.tolk]
 output-dir = "data/cron/wrappers"
 
 [contracts.AsyncPaymentChannel]
@@ -2454,6 +2517,33 @@ depends = []
 [contracts.TonFunBclWalletV2.wrappers.tolk]
 output-dir = "data/tonfun/wallet/wrappers"
 
+[contracts.TonFunBclMasterV1]
+display-name = "TonFun BCL Master V1"
+src = "data/tonfun/bcl_master/testdata/TonFunBclMasterV1.boc"
+types = "data/tonfun/bcl_master/types/tonfun_bcl_master_v1.types.tolk"
+depends = []
+
+[contracts.TonFunBclMasterV1.wrappers.tolk]
+output-dir = "data/tonfun/bcl_master/wrappers"
+
+[contracts.BlumMemepadMinter]
+display-name = "Blum Memepad Minter"
+src = "data/tonfun/memepad/testdata/BlumMemepadMinter.boc"
+types = "data/tonfun/memepad/types/blum_memepad_minter.types.tolk"
+depends = []
+
+[contracts.BlumMemepadMinter.wrappers.tolk]
+output-dir = "data/tonfun/memepad/wrappers"
+
+[contracts.BlumMemepadWallet]
+display-name = "Blum Memepad Wallet"
+src = "data/tonfun/memepad/testdata/BlumMemepadWallet.boc"
+types = "data/tonfun/memepad/types/blum_memepad_wallet.types.tolk"
+depends = []
+
+[contracts.BlumMemepadWallet.wrappers.tolk]
+output-dir = "data/tonfun/memepad/wrappers"
+
 [contracts.JettonVesting]
 display-name = "Jetton Vesting"
 src = "data/jetton_vesting/testdata/JettonVesting.boc"
@@ -2480,6 +2570,10 @@ catizen-in-game-task-test = "acton test data/catizen/tests --fork-net mainnet --
 signed-cross-dex-executor-mainnet-test = "acton test data/signed_cross_dex/executor/tests/signed_cross_dex_executor_mainnet.test.tolk --fork-net mainnet --fork-block-number 83514993 --show-bodies"
 signed-cross-dex-executor-message-bodies-test = "acton test data/signed_cross_dex/executor/tests/signed_cross_dex_executor_message_bodies.test.tolk --show-bodies"
 invoices-message-bodies-test = "acton test data/invoices/tests/invoices_message_bodies.test.tolk --show-bodies"
+comments-message-bodies-test = "acton test data/comments/tests/comments_message_bodies.test.tolk --show-bodies"
+tgbtc-teleport-message-bodies-test = "acton test data/tgbtc/teleport/tests/tgbtc_teleport_message_bodies.test.tolk --show-bodies"
+tgbtc-coordinator-message-bodies-test = "acton test data/tgbtc/coordinator/tests/tgbtc_coordinator_message_bodies.test.tolk --show-bodies"
+tegro-pool-message-bodies-test = "acton test data/tegro/tests/tegro_pool_message_bodies.test.tolk --show-bodies"
 daolama-message-bodies-test = "acton test data/daolama/tests/daolama_vault_message_bodies.test.tolk --show-bodies"
 daolama-storage-test = "acton test data/daolama/tests/daolama_vault_storage.test.tolk --show-bodies"
 wton-message-bodies-test = "acton test data/megatonfi/tests/wton_message_bodies.test.tolk --show-bodies"
@@ -2510,6 +2604,8 @@ system-elector-mainnet-test = "acton test data/system/elector/tests/elector_main
 system-config-storage-test = "acton test data/system/config/tests/config_storage.test.tolk --fork-net mainnet --fork-block-number 71907711 --show-bodies"
 cron-mainnet-test = "acton test data/cron/tests/cron_storage.test.tolk --fork-net mainnet --fork-block-number 71819864 --show-bodies"
 cron-message-bodies-test = "acton test data/cron/tests/cron_message_bodies.test.tolk --show-bodies"
+cron-contract-message-bodies-test = "acton test data/cron/tests/cron_contract_message_bodies.test.tolk --show-bodies"
+dns-renewal-top-upper-message-bodies-test = "acton test data/cron/tests/dns_renewal_top_upper_message_bodies.test.tolk --show-bodies"
 payment-channel-storage-test = "acton test data/payment_channels/async/tests/payment_channel_storage.test.tolk --show-bodies"
 payment-channel-message-bodies-test = "acton test data/payment_channels/async/tests/payment_channel_message_bodies.test.tolk --show-bodies"
 payment-channel-mainnet-test = "acton test data/payment_channels/async/tests/payment_channel_mainnet.test.tolk --fork-net mainnet --fork-block-number 58429533 --show-bodies"
@@ -2528,6 +2624,7 @@ evaa-master-pyth-message-bodies-test = "acton test data/evaa/master_pyth/tests/e
 evaa-master-classic-mainnet-test = "acton test data/evaa/master_classic/tests/evaa_master_classic_mainnet.test.tolk --fork-net mainnet --fork-block-number 71635640 --show-bodies"
 evaa-master-classic-message-bodies-test = "acton test data/evaa/master_classic/tests/evaa_master_classic_message_bodies.test.tolk --show-bodies"
 evaa-user-storage-test = "acton test data/evaa/user/tests/evaa_user_storage.test.tolk --show-bodies"
+evaa-user-legacy-message-bodies-test = "acton test data/evaa/user_legacy/tests/evaa_user_legacy_message_bodies.test.tolk --show-bodies"
 evaa-blank-code-test = "acton test data/evaa/blank/tests/evaa_blank_code.test.tolk --show-bodies"
 evaa-blank-message-bodies-test = "acton test data/evaa/blank/tests/evaa_blank_message_bodies.test.tolk --show-bodies"
 nominator-pool-mainnet-test = "acton test data/nominator_pool/pool/tests/nominator_pool_storage.test.tolk --fork-net mainnet --fork-block-number 71810991 --show-bodies"
@@ -2606,6 +2703,7 @@ dedust-vault-jetton-v2-mainnet-test = "acton test data/dedust/vault_jetton/tests
 dedust-vault-jetton-v2-message-bodies-test = "acton test data/dedust/vault_jetton/tests/dedust_vault_jetton_v2_message_bodies.test.tolk --show-bodies"
 dedust-pool-v2-mainnet-test = "acton test data/dedust/pool_v2/tests/dedust_pool_v2_mainnet.test.tolk --fork-net mainnet --fork-block-number 71186170 --show-bodies"
 dedust-pool-v2-message-bodies-test = "acton test data/dedust/pool_v2/tests/dedust_pool_v2_message_bodies.test.tolk --show-bodies"
+dedust-operator-message-bodies-test = "acton test data/dedust/operator/tests/dedust_operator_message_bodies.test.tolk --show-bodies"
 dedust-liquidity-deposit-v2-storage-test = "acton test data/dedust/liquidity_deposit/tests/dedust_liquidity_deposit_v2_storage.test.tolk --fork-net mainnet --fork-block-number 71184765 --show-bodies"
 dedust-liquidity-deposit-v2-message-bodies-test = "acton test data/dedust/liquidity_deposit/tests/dedust_liquidity_deposit_v2_message_bodies.test.tolk --show-bodies"
 dedust-v2-cpmm-storage-test = "acton test data/dedust/cpmm_v2/tests/dedust_v2_cpmm_storage.test.tolk --show-bodies"
@@ -2730,6 +2828,7 @@ storm-prelaunch-message-bodies-test = "acton test data/storm/prelaunch/tests/sto
 storm-referral-message-bodies-test = "acton test data/storm/referral/tests/storm_referral_message_bodies.test.tolk --show-bodies"
 storm-referral-collection-message-bodies-test = "acton test data/storm/referral_collection/tests/storm_referral_collection_message_bodies.test.tolk --show-bodies"
 storm-smart-account-mainnet-test = "acton test data/storm/smart_account/tests/smart_account_mainnet.test.tolk --fork-net mainnet --fork-block-number 71591177 --show-bodies"
+storm-smart-account-external-message-bodies-test = "acton test data/storm/smart_account/tests/smart_account_external_message_bodies.test.tolk --show-bodies"
 storm-smart-account-blank-local-test = "acton test data/storm/smart_account_blank/tests/smart_account_blank_local.test.tolk --show-bodies"
 storm-smart-account-factory-message-bodies-test = "acton test data/storm/smart_account_factory/tests/smart_account_factory_message_bodies.test.tolk --show-bodies"
 storm-vamm-message-bodies-test = "acton test data/storm/vamm/tests/storm_vamm_message_bodies.test.tolk --show-bodies"
@@ -2803,6 +2902,8 @@ telegram-gift-nft-item-message-bodies-test = "acton test data/telemint/telegram_
 tonfun-bcl-wallet-v1-mainnet-test = "acton test data/tonfun/wallet/tests/tonfun_bcl_wallet_v1_mainnet.test.tolk --fork-net mainnet --fork-block-number 41153367 --show-bodies"
 tonfun-bcl-wallet-v2-mainnet-test = "acton test data/tonfun/wallet/tests/tonfun_bcl_wallet_v2_mainnet.test.tolk --fork-net mainnet --fork-block-number 42790177 --show-bodies"
 tonfun-bcl-wallet-message-bodies-test = "acton test data/tonfun/wallet/tests/tonfun_bcl_wallet_message_bodies.test.tolk --show-bodies"
+tonfun-bcl-master-message-bodies-test = "acton test data/tonfun/bcl_master/tests/tonfun_bcl_master_message_bodies.test.tolk --show-bodies"
+blum-memepad-message-bodies-test = "acton test data/tonfun/memepad/tests/blum_memepad_message_bodies.test.tolk --show-bodies"
 nominator-pool-a78c23-mainnet-test = "acton test data/nominator_pool/pool/tests/nominator_pool_a78c23_mainnet.test.tolk --fork-net mainnet --fork-block-number 83587997 --show-bodies"
 
 compile-all-contracts = "acton build"
@@ -2832,12 +2933,17 @@ acton run bidask-pool-storage-test
 acton run moon-clmm-range-message-bodies-test
 acton run daolama-message-bodies-test
 acton run dedust-pool-v2-message-bodies-test
+acton run dedust-operator-message-bodies-test
 acton run dedust-vault-jetton-v2-message-bodies-test
 acton run evaa-master-classic-message-bodies-test
 acton run gram-miner-message-bodies-test
 acton run hipo-collection-message-bodies-test
 acton run hipo-parent-message-bodies-test
 acton run invoices-message-bodies-test
+acton run comments-message-bodies-test
+acton run tgbtc-teleport-message-bodies-test
+acton run tgbtc-coordinator-message-bodies-test
+acton run tegro-pool-message-bodies-test
 acton run omniston-fee-vault-message-bodies-test
 acton run pyth-oracle-message-bodies-test
 acton run storage-contract-message-bodies-test
@@ -2925,6 +3031,7 @@ acton run storage-provider-message-bodies-test
 acton run storm-lp-wallet-message-bodies-test
 acton run storm-referral-collection-message-bodies-test
 acton run storm-smart-account-mainnet-test
+acton run storm-smart-account-external-message-bodies-test
 acton run storm-vault-native-message-bodies-test
 acton run system-config-storage-test
 acton run tonkeeper-2fa-message-bodies-test
@@ -3001,10 +3108,13 @@ acton run bemo-unstake-request-message-bodies-test
 acton run bidask-damm-pool-storage-test
 acton run bidask-pool-factory-local-test
 acton run cron-message-bodies-test
+acton run cron-contract-message-bodies-test
+acton run dns-renewal-top-upper-message-bodies-test
 acton run dedust-liquidity-deposit-v2-message-bodies-test
 acton run dedust-v2-cpmm-storage-test
 acton run evaa-blank-message-bodies-test
 acton run evaa-user-storage-test
+acton run evaa-user-legacy-message-bodies-test
 acton run hipo-bill-message-bodies-test
 acton run hipo-loan-message-bodies-test
 acton run hipo-wallet-message-bodies-test
@@ -3046,6 +3156,8 @@ acton run gaspump-events-test
 acton run telegram-gift-nft-item-message-bodies-test
 acton run tonfun-bcl-wallet-v2-mainnet-test
 acton run tonfun-bcl-wallet-message-bodies-test
+acton run tonfun-bcl-master-message-bodies-test
+acton run blum-memepad-message-bodies-test
 acton run dedust-uranus-meme-v2-mainnet-test
 acton run nominator-pool-a78c23-mainnet-test
 acton run jvault-pool-message-bodies-test

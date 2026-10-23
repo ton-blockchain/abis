@@ -271,6 +271,51 @@ fun SmartAccount.sendExternalStormExecuteOrdersBundleExternal(
     return net.sendExternal(msg);
 }
 
+fun SmartAccount.sendExternalStormChangeHotKey(
+    self,
+    queryId: uint64,
+    signature: bits512,
+    signedPayload: StormSignedChangeKeyPayload,
+): ExternalSendResult {
+    val body = StormChangeHotKey {
+        queryId,
+        signature,
+        signedPayload: signedPayload.toCell(),
+    };
+    val msg = net.createExternalMessage(self.address, body);
+    return net.sendExternal(msg);
+}
+
+fun SmartAccount.sendExternalStormSelfDepositNative(
+    self,
+    queryId: uint64,
+    signature: bits512,
+    signedPayload: StormSignedSelfDepositNativePayload,
+): ExternalSendResult {
+    val body = StormSelfDepositNative {
+        queryId,
+        signature,
+        signedPayload: signedPayload.toCell(),
+    };
+    val msg = net.createExternalMessage(self.address, body);
+    return net.sendExternal(msg);
+}
+
+fun SmartAccount.sendExternalStormSelfDepositJetton(
+    self,
+    queryId: uint64,
+    signature: bits512,
+    signedPayload: StormSignedSelfDepositJettonPayload,
+): ExternalSendResult {
+    val body = StormSelfDepositJetton {
+        queryId,
+        signature,
+        signedPayload: signedPayload.toCell(),
+    };
+    val msg = net.createExternalMessage(self.address, body);
+    return net.sendExternal(msg);
+}
+
 /// Send an external-in message to the contract with a custom body cell
 fun SmartAccount.sendAnyExternal(self, body: cell): ExternalSendResult {
     val msg = net.createExternalMessage(self.address, body);

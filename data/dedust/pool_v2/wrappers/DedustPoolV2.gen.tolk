@@ -235,6 +235,51 @@ fun DedustPoolV2.sendDedustPoolV2ResetGas(
     return net.send(from, genericMsg);
 }
 
+fun DedustPoolV2.sendDedustPoolV2CollectFees(
+    self,
+    from: address,
+    queryId: uint64,
+    asset0Amount: coins,
+    asset0Destination: address,
+    asset0Payload: cell?,
+    asset1Amount: coins,
+    asset1Destination: address?,
+    asset1Payload: cell?,
+    config: SendParams = {},
+): SendResultList {
+    val genericMsg = createMessage({
+        bounce: config.bounce,
+        value: config.value,
+        dest: self.address,
+        body: DedustPoolV2CollectFees {
+            queryId,
+            asset0Amount,
+            asset0Destination,
+            asset0Payload,
+            asset1Amount,
+            asset1Destination,
+            asset1Payload,
+        },
+    });
+    return net.send(from, genericMsg);
+}
+
+fun DedustPoolV2.sendDedustPoolV2ConfigureStartTime(
+    self,
+    from: address,
+    queryId: uint64,
+    startAt: uint32,
+    config: SendParams = {},
+): SendResultList {
+    val genericMsg = createMessage({
+        bounce: config.bounce,
+        value: config.value,
+        dest: self.address,
+        body: DedustPoolV2ConfigureStartTime { queryId, startAt },
+    });
+    return net.send(from, genericMsg);
+}
+
 /// Send message to the contract with a custom body cell
 fun DedustPoolV2.sendAny(self, from: address, body: cell, config: SendParams = {}): SendResultList {
     val genericMsg = createMessage({

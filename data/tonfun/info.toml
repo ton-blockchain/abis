@@ -1,11 +1,14 @@
 [project]
 name = "TonFun"
 category = "TON token launchpad"
-description = "TonFun bonding-curve Jetton wallet revisions"
+description = "TonFun and Blum Memepad bonding-curve Jetton masters and wallets"
 
 [sources]
 tep_74 = "https://github.com/ton-blockchain/TEPs/blob/master/text/0074-jettons-standard.md"
 acton_verifier = "https://verifier.acton.monster/api/v1/openapi.json"
+verifier_registry_bcl_master = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/01/96d7fcc720254282347d98d1e723de0e9d5b90918695a8ecf69af91bbb4fa0"
+verifier_registry_memepad_minter = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/03/ddca0fffb09c2933451cb62dc612f8cfe5ff3e6e3d578ae98be838b4207b31"
+verifier_registry_memepad_wallet = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/a4/6ef8746f4ea669c2ce9455be129b693cd1c638cb021faaac58c7df01e0a163"
 
 [[links]]
 kind = "spec"
@@ -39,4 +42,52 @@ network = "mainnet"
 address = "EQBuUZeNbRdzvKKN8nZFd2Auu_6f03AXl4rvzFo2vTPmx60Q"
 name = "TonFun BCL wallet v2 representative"
 label = "TonFun BCL Wallet V2 representative"
+network = "mainnet"
+
+[contracts.TonFunBclMasterV1]
+display_name = "TonFun BCL Master V1"
+description = "Bonding-curve Jetton master paired with the TonFun BCL wallets"
+types = "bcl_master/types/tonfun_bcl_master_v1.types.tolk"
+hashes = ["0196d7fcc720254282347d98d1e723de0e9d5b90918695a8ecf69af91bbb4fa0"]
+known_addresses = ["EQBWKhnTknSdWJaFMlv0VF72P2x0h_UBtDGuJ-J-cztYleEw"]
+
+[[contracts.TonFunBclMasterV1.links]]
+kind = "source"
+title = "Verified FunC source bundle"
+url = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/01/96d7fcc720254282347d98d1e723de0e9d5b90918695a8ecf69af91bbb4fa0"
+
+[contracts.TonFunBclMasterV1.instances.representative]
+address = "EQBWKhnTknSdWJaFMlv0VF72P2x0h_UBtDGuJ-J-cztYleEw"
+network = "mainnet"
+
+[contracts.BlumMemepadMinter]
+display_name = "Blum Memepad Minter"
+description = "Bonding-curve launchpad Jetton minter with buy, sell and unlock flows and STON.fi listing"
+types = "memepad/types/blum_memepad_minter.types.tolk"
+hashes = ["03ddca0fffb09c2933451cb62dc612f8cfe5ff3e6e3d578ae98be838b4207b31"]
+known_addresses = ["EQAEqrxNjdYVvd3estGzPISjo2z82CeoNBU9KyETmrDm5jMI"]
+
+[[contracts.BlumMemepadMinter.links]]
+kind = "source"
+title = "Verified FunC source bundle"
+url = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/03/ddca0fffb09c2933451cb62dc612f8cfe5ff3e6e3d578ae98be838b4207b31"
+
+[contracts.BlumMemepadMinter.instances.representative]
+address = "EQAEqrxNjdYVvd3estGzPISjo2z82CeoNBU9KyETmrDm5jMI"
+network = "mainnet"
+
+[contracts.BlumMemepadWallet]
+display_name = "Blum Memepad Wallet"
+description = "Launchpad Jetton wallet with curve sell and unlock flows"
+types = "memepad/types/blum_memepad_wallet.types.tolk"
+hashes = ["a46ef8746f4ea669c2ce9455be129b693cd1c638cb021faaac58c7df01e0a163"]
+known_addresses = ["EQDr1Inx-pqVke1783lFSxMK2HMU04DZW6Puh93x4gA32tYO"]
+
+[[contracts.BlumMemepadWallet.links]]
+kind = "source"
+title = "Verified FunC source bundle"
+url = "https://github.com/tolk-labs/verifier-registry/tree/main/sources/a4/6ef8746f4ea669c2ce9455be129b693cd1c638cb021faaac58c7df01e0a163"
+
+[contracts.BlumMemepadWallet.instances.representative]
+address = "EQDr1Inx-pqVke1783lFSxMK2HMU04DZW6Puh93x4gA32tYO"
 network = "mainnet"

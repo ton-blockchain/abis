@@ -857,8 +857,94 @@ type SmartAccountIncomingMessage =
     | StormRemoveAllKeysExceptCurrent
     | StormDepositTon
 
+/// Signed payload of a hot key rotation.
+struct StormSignedChangeKeyPayload {
+    /// Highload-style query id of the signed request.
+    queryId: ExecutorQueryId
+    /// Unix time the request was created.
+    createdAt: uint32
+    /// Smart account the request is bound to.
+    saAddress: address
+    /// New hot public key.
+    newHotKey: uint256
+}
+
+/// Hot key rotation signed by the current hot key and delivered as an external message.
+struct (0x34d2e9f9) StormChangeHotKey {
+    /// Query id of the external message.
+    queryId: uint64
+    /// 512-bit signature over the payload cell.
+    signature: bits512
+    /// Signed payload.
+    signedPayload: Cell<StormSignedChangeKeyPayload>
+}
+
+/// Signed payload of a GRAM self-deposit.
+struct StormSignedSelfDepositNativePayload {
+    /// Highload-style query id of the signed request.
+    externalQueryId: ExecutorQueryId
+    /// Unix time the request was created.
+    createdAt: uint32
+    /// Smart account the request is bound to.
+    saAddress: address
+    /// Query id copied into the deposit message.
+    queryId: uint64
+    /// GRAM amount to deposit.
+    amount: coins
+    /// Native vault that receives the deposit.
+    vaultAddress: address
+}
+
+/// GRAM self-deposit signed by the hot key and delivered as an external message.
+struct (0x558e804a) StormSelfDepositNative {
+    /// Query id of the external message.
+    queryId: uint64
+    /// 512-bit signature over the payload cell.
+    signature: bits512
+    /// Signed payload.
+    signedPayload: Cell<StormSignedSelfDepositNativePayload>
+}
+
+/// Jetton wallet reference carried by a Jetton self-deposit.
+struct StormSelfDepositJettonWallet {
+    /// Smart account's Jetton wallet used for the transfer.
+    jettonWalletAddress: address
+}
+
+/// Signed payload of a Jetton self-deposit.
+struct StormSignedSelfDepositJettonPayload {
+    /// Highload-style query id of the signed request.
+    externalQueryId: ExecutorQueryId
+    /// Unix time the request was created.
+    createdAt: uint32
+    /// Smart account the request is bound to.
+    saAddress: address
+    /// Query id copied into the transfer.
+    queryId: uint64
+    /// Jetton amount to deposit.
+    amount: coins
+    /// Jetton vault that receives the deposit.
+    vaultAddress: address
+    /// Jetton wallet used for the transfer.
+    jettonWallet: Cell<StormSelfDepositJettonWallet>
+}
+
+/// Jetton self-deposit signed by the hot key and delivered as an external message.
+struct (0x01d81ebc) StormSelfDepositJetton {
+    /// Query id of the external message.
+    queryId: uint64
+    /// 512-bit signature over the payload cell.
+    signature: bits512
+    /// Signed payload.
+    signedPayload: Cell<StormSignedSelfDepositJettonPayload>
+}
+
 /// Smart Account Incoming External Message union or alias used by SmartAccount.
-type SmartAccountIncomingExternalMessage = StormExecuteOrdersBundleExternal
+type SmartAccountIncomingExternalMessage =
+    | StormExecuteOrdersBundleExternal
+    | StormChangeHotKey
+    | StormSelfDepositNative
+    | StormSelfDepositJetton
 
 /// Smart Account Outgoing Message union or alias used by SmartAccount.
 type SmartAccountOutgoingMessage =

@@ -2,9 +2,9 @@
 
 This repository contains curated TON ABI data for protocol and contract families.
 
-Current catalog size: **288 contract entries**, **333 unique contract code hashes**, and **331 unique known contract addresses**.
+Current catalog size: **299 contract entries**, **346 unique contract code hashes**, and **344 unique known contract addresses**.
 
-Across the generated public catalog, the repository declares **1305 unique opcode prefixes** and **601 unique get-method names**.
+Across the generated public catalog, the repository declares **1352 unique opcode prefixes** and **606 unique get-method names**.
 
 Each curated project group normally includes:
 
@@ -38,17 +38,18 @@ Each curated project group normally includes:
 | --- | --- | --- |
 | STON.fi | DEX core v1 router, pool, LP account, LP wallet, plus v2 router revisions, pool variants, LP account, LP wallet, vault, farming collection/NFT, and the Escrow Position, Factory, and Vault family. | `StonfiRouterV1`, `StonfiPoolV1`, `StonfiLpAccountV1`, `StonfiLpWalletV1`, `StonfiRouterV2`, `StonfiPoolV2ConstProduct`, `StonfiPoolV2Stableswap`, `StonfiPoolV2WeightedStableswap`, `StonfiPoolV2WeightedConstProduct`, `StonfiLpAccountV2`, `StonfiLpWalletV2`, `StonfiVaultV2`, `StonfiFarmCollection`, `StonfiFarmNft`, `StonfiEscrowPosition`, `StonfiEscrowFactory`, `StonfiEscrowVault` |
 | Omniston | Standalone STON.fi Omniston Fee-Vault Minter for DeDust/Tonco referral-fee vault derivation, fee deposits, and payout routing. | `OmnistonFeeVault` |
-| DeDust | Protocol v1 and v2 core contracts, both verified CPMM v2 pool revisions, two x1000 wallet revisions, and Uranus launchpad revisions. | `DedustFactoryV1`, `DedustVaultNativeV1`, `DedustVaultJettonV1`, `DedustPoolV1`, `DedustLiquidityDepositV1`, `DedustFactoryV2`, `DedustVaultNativeV2`, `DedustVaultJettonV2`, `DedustPoolV2`, `DedustLiquidityDepositV2`, `DedustV2Cpmm`, `DedustX1000WalletV1`, `DedustX1000WalletV2`, `DedustUranusFactoryV3`, `DedustUranusMemeV2`, `DedustUranusMemeV3`, `DedustUranusMemeWalletV3` |
+| DeDust | Protocol v1 and v2 core contracts, both verified CPMM v2 pool revisions, the v2 Operator relay with its fee-collection and start-time commands, two x1000 wallet revisions, and Uranus launchpad revisions. | `DedustFactoryV1`, `DedustVaultNativeV1`, `DedustVaultJettonV1`, `DedustPoolV1`, `DedustLiquidityDepositV1`, `DedustFactoryV2`, `DedustVaultNativeV2`, `DedustVaultJettonV2`, `DedustPoolV2`, `DedustOperatorV2`, `DedustLiquidityDepositV2`, `DedustV2Cpmm`, `DedustX1000WalletV1`, `DedustX1000WalletV2`, `DedustUranusFactoryV3`, `DedustUranusMemeV2`, `DedustUranusMemeV3`, `DedustUranusMemeWalletV3` |
 | Coffee Swap | DEX factory/init, vaults, pool variants, pool creator, liquidity depository, current and historical LP wallets, staking, CrossDex profiles, and current/legacy MEV Protectors. | `CoffeeFactory`, `CoffeeInit`, `CoffeeVaultNative`, `CoffeeVaultJetton`, `CoffeeVaultExtra`, `CoffeePoolConstantProduct`, `CoffeePoolCurveFiStable`, `CoffeePoolCreator`, `CoffeeLiquidityDepository`, `JettonWalletCoffeeLp`, `CoffeeStakingMaster`, `CoffeeStakingVault`, `CoffeeStakingItem`, `CoffeeCrossDex`, `CoffeeCrossDexLegacy`, `CoffeeCrossDexBidask`, `CoffeeMevProtector`, `CoffeeMevProtectorLegacy` |
 | TONCO | Router, pool, account, pool factory, and position NFT. | `Router`, `Pool`, `Account`, `PoolFactory`, `PositionNFT` |
 | Bidask | DLMM/DAMM pool factory, pool, range, LP multitoken, internal liquidity vault, DAMM pool, and DAMM LP wallet. | `BidaskPoolFactory`, `BidaskPool`, `BidaskRange`, `BidaskLpMultitoken`, `BidaskInternalLiquidityVault`, `BidaskDammPool`, `BidaskDammLpWallet` |
 | GasPump | Six deployed bonding-curve master revisions with versioned storage, message, event, and getter ABIs. | `GasPumpMasterV0`, `GasPumpMasterV1`, `GasPumpMasterV2`, `GasPumpMasterV4`, `GasPumpMasterV5` |
-| TonFun | Both deployed TonFun bonding-curve Jetton wallet revisions. | `TonFunBclWalletV1`, `TonFunBclWalletV2` |
+| TonFun | Both deployed TonFun bonding-curve Jetton wallet revisions, the BCL master they pair with, and the Blum Memepad minter and wallet with their buy, sell, unlock and log bodies. | `TonFunBclWalletV1`, `TonFunBclWalletV2`, `TonFunBclMasterV1`, `BlumMemepadMinter`, `BlumMemepadWallet` |
 | StonksPump | Virtual-liquidity Jetton minters and deployment factories for STON.fi and DeDust launch flows, plus the deployed custom tax Jetton wallet. | `StonksPumpVirtualMinter`, `StonksPumpVirtualFactory`, `StonksPumpCustomJettonWallet` |
 | Grambo | Bonding-curve launchpad registry, Jetton master, and activated Jetton wallet contracts. | `GramboFactory`, `GramboJettonMaster`, `GramboJettonWallet` |
-| Storm Trade | Perpetual DEX vaults, vAMMs, smart accounts, factory, current and legacy position managers, referral/executor collections and items, prelaunch, LP minter/wallet, and proxy sender. | `StormVault`, `StormVaultNative`, `StormVamm`, `StormVammCoinm`, `SmartAccount`, `SmartAccountBlank`, `SmartAccountFactory`, `StormPositionManager`, `StormPositionManagerLegacy`, `StormReferral`, `StormReferralCollection`, `StormExecutor`, `StormExecutorCollection`, `StormPrelaunch`, `StormLpMinter`, `StormLpWallet`, `StormProxySender` |
+| Storm Trade | Perpetual DEX vaults, vAMMs, smart accounts with their signed hot key rotation and self-deposit externals, factory, current and legacy position managers, referral/executor collections and items, prelaunch, LP minter/wallet, and proxy sender. | `StormVault`, `StormVaultNative`, `StormVamm`, `StormVammCoinm`, `SmartAccount`, `SmartAccountBlank`, `SmartAccountFactory`, `StormPositionManager`, `StormPositionManagerLegacy`, `StormReferral`, `StormReferralCollection`, `StormExecutor`, `StormExecutorCollection`, `StormPrelaunch`, `StormLpMinter`, `StormLpWallet`, `StormProxySender` |
 | Megaton Finance | Router, exchange/LP Jetton master, wrapped TON minter, and deterministic wrapped TON wallet. | `MegatonRouter`, `MegatonExchange`, `WtonMinter`, `WtonWallet` |
 | Moon.cx | Constant-product pool, CLMM range, booster, order factory, and both historical order revisions. | `MoonPool`, `MoonClmmRange`, `MoonBooster`, `MoonOrderFactory`, `MoonOrderOld`, `MoonOrderNew` |
+| Tegro Finance | GRAM/Jetton AMM pool with the `swap_ton` body and the Jetton-forwarded swap and liquidity payloads. | `TegroPool` |
 | Signed Cross-DEX | Private signed executor with replay protection and callback-driven multi-protocol routing. | `SignedCrossDexExecutor` |
 | ForTON FRT/GRAM Route | Five-contract coordinator, dispatcher, orchestrator, worker, and executor chain for a routed Jetton exchange through a STON.fi pool. | `FrtGramAdapterCoordinator`, `FrtGramAdapterDispatcher`, `FrtGramAdapterOrchestrator`, `FrtGramAdapterWorker`, `FrtGramAdapterExecutor` |
 
@@ -70,7 +71,7 @@ Each curated project group normally includes:
 
 | Project | Coverage | Contract entries |
 | --- | --- | --- |
-| EVAA | Lending protocol master and user contracts, including Pyth and classic master variants. | `EvaaMasterPyth`, `EvaaMasterClassic`, `EvaaUser`, `EvaaBlank` |
+| EVAA | Lending protocol master and user contracts, including Pyth and classic master variants, and the legacy user withdraw flow still served to older user code. | `EvaaMasterPyth`, `EvaaMasterClassic`, `EvaaUser`, `EvaaUserLegacy`, `EvaaBlank` |
 | Aqua Protocol | Aqua USD master vault and jetton master interface. | `AquaUsdMasterVault` |
 | Pyth Oracle | Pyth price oracle contract for feed updates, governance state, guardian sets, and price getters. | `PythOracle` |
 | Affluent | Pools, accounts, batch, multiply vaults, lending vaults, and FactorialTON jetton contracts. | `Pool`, `Account`, `Batch`, `MultiplyVault`, `MultiplyVaultV2`, `LendingVault`, `FactorialTonMinter`, `FactorialTonWallet` |
@@ -94,14 +95,16 @@ Each curated project group normally includes:
 | Project | Coverage                                                                                | Contract entries |
 | --- |-----------------------------------------------------------------------------------------| --- |
 | Invoices | Payload-only invoice body ABI for GRAM and Jetton payment payloads.                     | `InvoicesPayloadInterface` |
+| Comments | Payload-only ABI for plain and encrypted text comment bodies.                       | `CommentsPayloadInterface` |
 | Payment Channels | Asynchronous two-party payment channel with cooperative and uncooperative settlement.   | `AsyncPaymentChannel` |
 | GRAM | Proof-of-work GRAM miner with adaptive complexity and signed administration.            | `GramMiner` |
 | Cocoon | Confidential-compute Root, Proxy, Client, Worker, and control Wallet contracts.          | `CocoonRoot`, `CocoonProxy`, `CocoonClient`, `CocoonWorker`, `CocoonWallet` |
+| tgBTC | TON Teleport BTC bridge teleport with its mint, burn and new-key events, and the oracle coordinator with its DKG-completed event. | `TgbtcTeleport`, `TgbtcCoordinator` |
 | TAC | TAC-compatible Jetton master with EVM token-address discovery.                            | `TacJetton` |
 | XTR | Telegram Stars purchase orchestration, versioned user/payment routing, and supply accounting. | `XtrMaster` |
 | TonPay | Historical Store v11 and Invoice v9 contracts confirmed from exact official sources and live deployments. | `TonpayStoreV11`, `TonpayInvoiceV9` |
 | Tonkeeper Subscriptions | Subscription V1 and V2 wallet/plugin contracts.                                         | `SubscriptionV1`, `SubscriptionV2` |
-| TON Cron | Cron interface implementations with `get_cron_info` and `cron_trigger` external bodies. | `Cron` |
+| TON Cron | Cron interface implementations with `get_cron_info` and `cron_trigger` external bodies, the reference cron contract with its init, notify, reward and destroyed bodies, and the Wallet V5 DNS renewal top-upper. | `Cron`, `CronContract`, `DnsRenewalTopUpper` |
 | Wallet 2FA Extensions | Tonkeeper and MyTonWallet wallet extension contracts.                            | `Tonkeeper2fa`, `MyTonWallet2fa` |
 
 ## Contributing
