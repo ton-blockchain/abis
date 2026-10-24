@@ -7,7 +7,7 @@ Versioned release policy is described in [RELEASING.md](RELEASING.md).
 
 ## [Unreleased]
 
-## [0.1.3] - 2026-10-22
+## [0.1.3] - 2026-10-24
 
 ### Added
 
