@@ -110,6 +110,9 @@ struct HipoTreasuryLoanRequest {
 }
 
 /// Per-round participation record stored in the root participation dictionary.
+/// The seven dictionaries share one cell in `pack_participation`; valid round states
+/// keep at most four non-empty. Preserve this layout when serializing the ABI.
+@overflow1023_policy("suppress")
 struct HipoTreasuryParticipation {
     /// Participation state: open=0, distributing=1, staked=2, validating=3, held=4, recovering=5, burning=6.
     state: uint4

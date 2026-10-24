@@ -25,7 +25,7 @@ fun expectCellOpcode(body: cell, expectedOpcode: uint32): void {
     expect(parsed.loadUint(32)).toEqual(expectedOpcode);
 }
 
-fun loadForwardPayloadRef(mutate payload: RemainingBitsAndRefs): cell {
+fun loadForwardPayloadRef(mutate payload: OmnistonForwardPayloadRemainder): cell {
     expect(payload.remainingBitsCount()).toEqual(1);
     expect(payload.remainingRefsCount()).toEqual(1);
     expect(payload.loadBool()).toBeTrue();
@@ -35,7 +35,10 @@ fun loadForwardPayloadRef(mutate payload: RemainingBitsAndRefs): cell {
     return payloadCell;
 }
 
-fun expectInlineResultCode(mutate payload: RemainingBitsAndRefs, expectedExitCode: uint32): void {
+fun expectInlineResultCode(
+    mutate payload: OmnistonForwardPayloadRemainder,
+    expectedExitCode: uint32,
+): void {
     expect(payload.remainingBitsCount()).toEqual(33);
     expect(payload.remainingRefsCount()).toEqual(0);
     expect(payload.loadBool()).toBeFalse();
